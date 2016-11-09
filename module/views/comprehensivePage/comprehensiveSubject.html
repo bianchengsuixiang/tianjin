@@ -1,0 +1,69 @@
+<header id="homeHeader">
+	<div class="header">
+		<div class="logo" ui-sref="index"></div>
+		<ul class="nav nav-pills" role="tablist">
+		  <li role="presentation"><a href="#/index" ui-sref="index">首页</a></li><!--color:#e4883d;-->
+		  <li role="presentation"><a href="#/sun/home" ui-sref="sun.home">阳光私募</a></li>
+		  <li role="presentation"><a href="#/private/home" ui-sref="private.home">私募股权</a></li>
+		  <li role="presentation"><a href="#/trust/home" ui-sref="trust.home">信托资管</a></li>
+		  <li role="presentation"><a href="#/news/home" ui-sref="news.home">金融资讯</a></li>
+		  <li role="presentation"><a href="#/about" ui-sref="about" >关于天玑</a></li>
+		  <li role="presentation" style="color:#c1bebb;">天玑俱乐部</li>
+		  <li role="presentation" style="color:#c1bebb;">天玑商学院</li>
+		</ul>
+		<div class="login">
+			<div class="unloginBtn">
+				<a href="javascript:void:();" ng-click="loginTab()">登录</a>
+				<a href="javascript:void:();" ng-click="registerTab()">注册</a>
+			</div>
+			<div class="logined_wrap">
+				<div class="userWP">
+					<span class="round"><img src="img/userDefaultAvatar.png"></span>
+					<span>{{userName}}</span>
+					<span class="triangle"></span>
+				</div>
+				<div class="dropBox">
+					<ul>
+						<li class="ToforgetPwd">修改密码</li>
+						<li class="logout" ng-click="loginOutBtn()">退出登录</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<header id="head2" class="hide">
+	<nav>
+		<div class="logo" ui-sref="index"><img src="img/header/logo.png"></div>
+		<ul class="nav">
+			<li><a href="#/index" ui-sref="index">首页</a></li>
+			<li><a href="#/sun/home" ui-sref="sun.home">阳光私募</a></li>
+			<li><a href="#/private/home" ui-sref="private.home">私募股权</a></li>
+			<li><a href="#/trust/home" ui-sref="trust.home">信托资管</a></li>
+			<li><a href="#/news/home" ui-sref="news.home">金融资讯</a></li>
+			<li><a href="#/about" ui-sref="about" >关于天玑</a></li>
+		</ul>
+		<ul class="nav-right">
+			<li>
+				<a class="iconfont" href="#">&#xe93a;</a>
+				<a class="iconfont" href="#">&#xe93b;</a>
+				<a style="font-size: 18px;" class="iconfont" href="#">&#xe92a;</a>
+				<a class="iconfont" href="#">&#xe939;</a>
+			</li>
+			<li class="login_wrap"><!--<a href="javascript:void();" ng-click="loginTab()">登录</a><a href="javascript:void();" ng-click="registerTab()">注册</a>--></li>
+			<li>0755-83695501</li>
+		</ul>
+	</nav>
+</header>
+<section>
+	<div class="homeBanner">
+		<div class="banner-container swiper-container">
+		  	<div class="swiper-wrapper">
+		    	<div class="swiper-slide"><a title="" href="javascript:void();" style="background-image: url(module/views/comprehensivePage/img/luodi/banner.jpg);"></a></div>
+		  	</div>
+		  	<!--<div class="swiper-pagination" id="banner-pagination"></div>-->
+		</div>
+	</div>
+	<div ui-view></div>
+</section>
+<footer ng-include="'module/template/footer.html'"></footer>

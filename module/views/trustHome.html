@@ -1,0 +1,55 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+<div class="trustBanner">
+	<div class="trustBannerSwiper">
+	  	<div class="swiper-wrapper">
+	    	<div class="swiper-slide" onclick="document.location.href='#/pe/zt-2'"><a title="" href="javascript:void();" style="background-image: url(img/home/1.jpg);"></a></div>
+		    <div class="swiper-slide" onclick="document.location.href='#/pe/zt-1'"><a title="" href="javascript:void();" style="background-image: url(img/home/2.jpg);"></a></div>
+		    <div class="swiper-slide" onclick="document.location.href='#/trust/zt-1'"><a title="" href="javascript:void();" style="background-image: url(img/home/3.jpg);"></a></div>
+	  	</div>
+	  	<div class="swiper-pagination" id="trustBanner-pagination"></div>
+	</div>
+</div>
+<section class="hots" >
+	<h4>热门专题</h4>
+	<ul>
+		<li><a title="天玑财富创梦天地私募股权" href="#/pe/zt-2" ui-sref="specialSubject.chuangmengtiandi"><img src="img/trust/hosts-CMTD.jpg" alt="天玑财富创梦天地私募股权"/></a></li>
+		<li><a title="天玑金服产品综合页" href="#/simu/zt-1" ui-sref="simu.zt-1"><img src="img/trust/hosts-ZHY.jpg" alt="天玑金服产品综合页"/></a></li>
+		<li><a title="天玑财富军工新材料私募股权" href="#/trust/zt-1" ui-sref="specialSubject.jungong"><img src="img/trust/hosts-JG.jpg" alt="天玑财富军工新材料私募股权"/></a></li>
+		<li><a title="天玑财富中汇支付Pre-IPO私募股权" href="#/pe/zt-1" ui-sref="specialSubject.zhonghuizhifu"><img src="img/trust/hosts-ZHZF.jpg" alt="天玑财富中汇支付Pre-IPO私募股权"/></a></li>
+	</ul>
+</section>
+<section class="trustRank">
+	<h4>信托收益排名<a href="#/trust/product" ui-sref="trust.product">更多</a></h4>
+	<section>
+		<ul class="trustRankUl">
+			<li><a href="javascript:void();" class="{{item.profit_cate==1?"":"active"}}" ng-click="getProfitCate(item)" ng-repeat="item in profitCate">{{item.name}}</a></li>
+		</ul>
+		<div class="trust-products-list">
+			<li ng-repeat="item in trustProduct10">
+				<div class="productLogo-wrap"><a href="javascript:void();" ng-click="goTrustComDetail(item)"><img ng-src="{{item.picUrl==null?'img/home/defaultImg.jpg':item.picUrl}}"></a></div>
+				<div class="productDetail-wrap">
+					<div><a href="#/trust/productDetail" ui-sref="trust.productDetail"  ng-click="goTrustProDetail(item)">{{item.trust_short_name==null?"--":item.trust_short_name | limitTo:30}}</a></div>
+					<div>
+						<ul>
+							<li><span>投资方向：</span><span>{{item.investment_field_des}}</span></li>
+							<li><span>投资起点：</span><span>{{item.min_investment}}万</span></li>
+							<li><span>投资期限：</span><span>{{item.term_of_investment}}个月</span></li>
+						</ul>
+						<div>
+							<span ng-repeat="tag in item.features">{{tag}}</span>
+						</div>
+					</div>
+				</div>
+				<div class="productRate-wrap">
+					<div>预期年化收益率</div>
+					<div>{{item.expect_annual_yield_start+"-"+item.expect_annual_yield_end+"%"}}</div>
+				</div>
+				<div class="reservation-wrap"><a href="javascript:void();" ng-click="reservationTab(item,'3')">立即预约</a></div>
+			</li>
+		</div>
+	</section>
+</section>

@@ -1,0 +1,19 @@
+[{
+	"shareholder_background":"1",
+	"name":"中央控股"
+},{
+	"shareholder_background":"2",
+	"name":"政府控股"
+},{
+	"shareholder_background":"3",
+	"name":"国有企业控股"
+},{
+	"shareholder_background":"4",
+	"name":"大型名气控股"
+},{
+	"shareholder_background":"5",
+	"name":"金融机构控股"
+},{
+	"shareholder_background":"6",
+	"name":"其他"
+}]

@@ -1,0 +1,28 @@
+[{
+	"fund_type":"1",
+	"name":"天使基金"
+},{
+	"fund_type":"2",
+	"name":"创业基金"
+},{
+	"fund_type":"3",
+	"name":"成长基金"
+},{
+	"fund_type":"4",
+	"name":"FOF基金"
+},{
+	"fund_type":"5",
+	"name":"并购基金"
+},{
+	"fund_type":"6",
+	"name":"政府引导基金"
+},{
+	"fund_type":"7",
+	"name":"基础设施基金"
+},{
+	"fund_type":"8",
+	"name":"房地产基金"
+},{
+	"fund_type":"0",
+	"name":"其他"
+}]

@@ -1,0 +1,22 @@
+[{
+	"trust_company":"1",
+	"name":"中信信托"
+},{
+	"trust_company":"2",
+	"name":"中融信托"
+},{
+	"trust_company":"3",
+	"name":"中江信托"
+},{
+	"trust_company":"4",
+	"name":"四川信托"
+},{
+	"trust_company":"4",
+	"name":"国民信托"
+},{
+	"trust_company":"4",
+	"name":"方正东亚"
+},{
+	"trust_company":"4",
+	"name":"其他"
+}]

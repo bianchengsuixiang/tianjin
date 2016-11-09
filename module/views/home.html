@@ -1,0 +1,352 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+<header id="homeHeader">
+	<div class="header">
+		<div class="logo" ui-sref="index"></div>
+		<ul class="nav nav-pills" role="tablist">
+		  <li role="presentation"><a href="#/index" class="currentA" ui-sref="index">首页</a></li><!--color:#e4883d;-->
+		  <li role="presentation"><a href="javascript:void:();" ng-click="sunHome()">阳光私募</a></li>
+		  <li role="presentation"><a href="#/private/home" ui-sref="private.home">私募股权</a></li>
+		  <li role="presentation"><a href="#/trust/home" ui-sref="trust.home">信托资管</a></li>
+		  <li role="presentation"><a href="#/news/home" ui-sref="news.home">金融资讯</a></li>
+		  <li role="presentation"><a href="#/about" ui-sref="about" >关于天玑</a></li>
+		  <li role="presentation" style="color:#c1bebb;">天玑俱乐部</li>
+		  <li role="presentation" style="color:#c1bebb;">天玑商学院</li>
+		</ul>
+		<div class="login">
+			<div class="unloginBtn">
+				<a href="javascript:void:();" ng-click="loginTab()">登录</a>
+				<a href="javascript:void:();" ng-click="registerTab()">注册</a>
+			</div>
+			<div class="logined_wrap">
+				<div class="userWP">
+					<span class="round"><img src="img/userDefaultAvatar.png"></span>
+					<span>{{userName}}</span>
+					<span class="triangle"></span>
+				</div>
+				<div class="dropBox">
+					<ul>
+						<li class="ToforgetPwd">修改密码</li>
+						<li class="logout" ng-click="loginOutBtn()">退出登录</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<header id="head2" ng-hide="headFixed">
+	<nav>
+		<div class="logo" ui-sref="index"><img src="img/header/logo.png"></div>
+		<ul class="nav">
+			<li><a href="#/index" ui-sref="index" class="currentFixedA">首页</a></li>
+			<li><a href="#/sun/home" ui-sref="sun.home">阳光私募</a></li>
+			<li><a href="#/private/home" ui-sref="private.home">私募股权</a></li>
+			<li><a href="#/trust/home" ui-sref="trust.home">信托资管</a></li>
+			<li><a href="#/news/home" ui-sref="news.home">金融资讯</a></li>
+			<li><a href="#/about" ui-sref="about" >关于天玑</a></li>
+		</ul>
+		<ul class="nav-right">
+			<li>
+				<a class="iconfont" href="#">&#xe93a;</a>
+				<a class="iconfont" href="#">&#xe93b;</a>
+				<a style="font-size: 18px;" class="iconfont" href="#">&#xe92a;</a>
+				<a class="iconfont" href="#">&#xe939;</a>
+			</li>
+			<li class="login_wrap">
+				<!--<div class="unloginBtn">
+					<a href="javascript:void();" ng-click="loginTab()">登录</a>
+					<a href="javascript:void();" ng-click="registerTab()">注册</a>
+				</div>
+				<div class="logined_wrap hide">
+					<div class="userWP">
+						<span class="round iconfont">&#xe938;</span>
+						<span>{{userName}}</span>
+						<span class="triangle iconfont">&#xe933;</span>
+					</div>
+					<div class="dropBox">
+						<ul>
+							<li>修改密码</li>
+							<li ng-click="loginOutBtn()">退出登录</li>
+						</ul>
+					</div>
+				</div>-->
+			</li>
+			<li>0755-83695501</li>
+		</ul>
+	</nav>
+</header>
+<section>
+	<div class="homeBanner">
+		<div class="banner-container">
+		  	<div class="swiper-wrapper">
+		    	<div class="swiper-slide" onclick="document.location.href='#/pe/zt-2'"><a title="" href="javascript:void();" style="background-image: url(img/home/1.jpg);"></a></div>
+			    <div class="swiper-slide" onclick="document.location.href='#/pe/zt-1'"><a title="" href="javascript:void();" style="background-image: url(img/home/2.jpg);"></a></div>
+			    <div class="swiper-slide" onclick="document.location.href='#/trust/zt-1'"><a title="" href="javascript:void();" style="background-image: url(img/home/3.jpg);"></a></div>
+		  	</div>
+		  	<div class="swiper-pagination" id="banner-pagination"></div>
+		</div>
+	</div>
+	<div class="section">
+		<div class="section1"><!--阳光私募-->
+			<h4>阳光私募<a ui-sref="sun.home" href="#/sun/home">更多</a></h4>
+			<div class="section1-l" ng-repeat="item in homeSunPros">
+				<div ng-include="sunUrl"></div>
+			</div>
+			<!--<div class="section1-c">
+				<div ng-include="sunUrl"></div>
+			</div>
+			<div class="section1-r">
+				<div ng-include="sunUrl"></div>
+			</div>-->
+		</div>
+		<div class="clear"></div>
+		<div class="section2"><!--私募股权-->
+			<h4>私募股权<a href="#/private/home" ui-sref="private.home">更多</a></h4>
+			<div ng-repeat="item in homePrivatePros">
+				<div><a href="javascript:void();" ng-click="goPrivateProDetails(item)">{{item.fund_short_name | limitTo:20}}</a></div>
+				<div title="{{item.product_review}}">{{item.product_review==null?"暂无数据":item.product_review | limitTo:38}}</div>
+				<div>
+					<div>
+						<div>募集进度</div>
+						<div>
+							<div class="progress">
+							  	<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+							    	<span class="sr-only">60% Complete</span>
+							  	</div>
+							</div>
+						</div>
+						<div>600万/1000万</div>
+					</div>
+					<div>
+						<div>{{item.min_investment+"&nbsp;万"}}</div>
+						<div>{{item.duration+"&nbsp;"}}</div>
+					</div>
+					<div>
+						<div>投资起点</div>
+						<div>存续期限</div>
+					</div>
+					<div>
+						<span type="button" class="btn" ng-click="goPrivateProDetails(item)">产品详情</span><span type="button" class="btn" ng-click="reservationTab(item,'1')">立即预约</span>
+					</div>
+				</div>
+			</div>
+			<!--<div class="section2-c">
+				<div>{{"高特佳定增壹号基金"}}</div>
+				<div>{{"医疗健康产业top3机构操盘。跨周期抗衰退朝阳产业，指数跑赢大盘30%。"}}</div>
+				<div>
+					<div>
+						<div>募集进度</div>
+						<div>
+							<div class="progress">
+							  	<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+							    	<span class="sr-only">60% Complete</span>
+							  	</div>
+							</div>
+						</div>
+						<div>600万/1000万</div>
+					</div>
+					<div>
+						<div>{{"100&nbsp;万"}}</div>
+						<div>{{"1+1&nbsp;年"}}</div>
+					</div>
+					<div>
+						<div>{{"投资起点"}}</div>
+						<div>{{"存续期限"}}</div>
+					</div>
+					<div>
+						<span type="button" class="btn" ui-sref="private.productDetail">产品详情</span><span type="button" class="btn" ng-click="reservationTab()">立即预约</span>
+					</div>
+				</div>
+			</div>
+			<div class="section2-b">
+				<div>{{"高特佳定增壹号基金"}}</div>
+				<div>{{"医疗健康产业top3机构操盘。跨周期抗衰退朝阳产业，指数跑赢大盘30%。"}}</div>
+				<div>
+					<div>
+						<div>募集进度</div>
+						<div>
+							<div class="progress">
+							  	<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+							    	<span class="sr-only">60% Complete</span>
+							  	</div>
+							</div>
+						</div>
+						<div>600万/1000万</div>
+					</div>
+					<div>
+						<div>{{"100&nbsp;万"}}</div>
+						<div>{{"1+1&nbsp;年"}}</div>
+					</div>
+					<div>
+						<div>{{"投资起点"}}</div>
+						<div>{{"存续期限"}}</div>
+					</div>
+					<div>
+						<span type="button" class="btn" ui-sref="private.productDetail">产品详情</span><span type="button" class="btn" ng-click="reservationTab()">立即预约</span>
+					</div>
+				</div>
+			</div>-->
+		</div>
+		<div class="section3">
+			<h4>信托精品<a href="#/trust/home" ui-sref="trust.home">更多</a></h4><!--信托精品-->
+			<div ng-repeat="item in homeTrustPros">
+				<div><!--div上部分-->
+					<div>
+						<div><img ng-src="{{item.picUrl==null?'img/home/defaultImg.jpg':item.picUrl}}" /></div>
+						<div><a href="javacript:void();" ng-click="goTrustProDetails(item)">{{item.trust_short_name | limitTo:13}}</a></div>
+					</div>
+					<div>
+						<span type="button" class="btn" ng-repeat="tags in item.features">{{tags}}</span>
+						<!--<span type="button" class="btn">投资门槛低</span>
+						<span type="button" class="btn">资金用途明确</span>-->
+					</div>
+				</div>
+				<div><!--div下部分-->
+					<div>预期年化收益</div>
+					<div>{{item.expect_annual_yield_start+"-"+item.expect_annual_yield_end+"%"}}</div>
+					<div><span>{{item.min_investmen==null?"--":item.min_investmen}}</span>&nbsp;万起&nbsp;&nbsp;期限&nbsp;<span>{{item.term_of_investment==null?"--":item.term_of_investment}}</span>个月</div>
+					<div><span type="button" class="btn" ng-click="goTrustProDetails(item)">产品详情</span><span type="button" class="btn" ng-click="reservationTab(item,'3')">立即预约</span></div>
+				</div>
+			</div>
+			<!--<div>
+				<div>
+					<div>
+						<div><img src="img/home/defaultImg.jpg" /></div>
+						<div>{{"中江国际信托-金马420"}}</div>
+					</div>
+					<div>
+						<span type="button" class="btn">收益高</span>
+						<span type="button" class="btn">投资门槛低</span>
+						<span type="button" class="btn">资金用途明确</span>
+					</div>
+				</div>
+				<div>
+					<div>预期年化收益</div>
+					<div>7.5%-7.8%</div>
+					<div><span>{{"100万"}}</span>&nbsp;起&nbsp;&nbsp;期限&nbsp;<span>24个月</span></div>
+					<div><span type="button" class="btn" ui-sref="trust.productDetail">产品详情</span><span type="button" class="btn" ng-click="reservationTab()">立即预约</span></div>
+				</div>
+			</div>
+			<div>
+				<div>
+					<div>
+						<div><img src="img/home/defaultImg.jpg" /></div>
+						<div>{{"中江国际信托-金马420"}}</div>
+					</div>
+					<div>
+						<span type="button" class="btn">收益高</span>
+						<span type="button" class="btn">投资门槛低</span>
+						<span type="button" class="btn">资金用途明确</span>
+					</div>
+				</div>
+				<div>
+					<div>预期年化收益</div>
+					<div>7.5%-7.8%</div>
+					<div><span>{{"100万"}}</span>&nbsp;起&nbsp;&nbsp;期限&nbsp;<span>24个月</span></div>
+					<div><span type="button" class="btn" ui-sref="trust.productDetail">产品详情</span><span type="button" class="btn" ng-click="reservationTab()">立即预约</span></div>
+				</div>
+			</div>-->
+		</div>
+		<div class="section4">
+			<div>
+				<h4>热点资讯<a href="#/news/home" ui-sref="news.home">更多</a></h4>
+				<div>
+					<li ng-repeat="item in homeHotNew">
+						<div><a href="javascript:void();" title="{{item.title}}" ng-click="goNewsDetails(item)">{{item.title | limitTo:24}}</a></div>
+						<div><a href="javascript:void();" ng-click="goNewsDetails(item)">{{item.updateTime | limitTo:10}}</a></div>
+					</li>
+				</div>
+			</div>
+			<div>
+				<h4>媒体报道<a href="#/news/home" ui-sref="news.home">更多</a></h4>
+				<div>
+					<li>
+						<div><a href="javascript:void();" ng-click="goNewsDetails(homeReport)">{{homeReport.title | limitTo:20}}</a></div>
+						<div>
+							<a href="javascript:void();" ng-click="goNewsDetails(homeReport)"><img ng-src="{{homeReport.picUrl}}" /></a>
+							<p><a href="javascript:void();" ng-click="goNewsDetails(homeReport)">{{homeReport.summary}}</a></p>
+						</div>
+					</li>
+					<li ng-repeat="item in homeReports">
+						<div><a href="javascript:void();" ng-click="goNewsDetails(item)">{{item.title}}</a></div>
+						<div><a href="javascript:void();" ng-click="goNewsDetails(item)">{{item.source}}</a></div>
+					</li>
+				</div>
+			</div>
+		</div>
+		<div class="section5">
+			<h4>合作伙伴</h4>
+			<div class="row">
+			  <div class="col-lg-2"></div>
+			  <div class="col-lg-2"></div>
+			  <div class="col-lg-2"></div>
+			  <div class="col-lg-2"></div>
+			  <div class="col-lg-2"></div>
+			  <div class="col-lg-2"></div>
+			  <div class="col-lg-2"></div>
+			  <div class="col-lg-2"></div>
+			  <div class="col-lg-2"></div>
+			  <div class="col-lg-2"></div>
+			  <div class="col-lg-2"></div>
+			  <div class="col-lg-2"></div>
+			</div>
+		</div>
+	</div>
+</section>
+<footer ng-include="'module/template/footer.html'"></footer>
+<!--<div id="login" ng-hide="loginOff" ng-init="loginOff=true">
+	<div>
+		<div><a href="javascript:void();" class="iconfont" ng-click="loginOut()">&#xe908;</a></div>
+		<div>
+			<a href="javascript:void();" ng-style="loginTabStyle" ng-click="loginTab()">登录</a>
+			<a href="javascript:void();"  ng-click="registerTab()" ng-style="registerTabStyle">注册</a>
+		</div>
+		<div>
+			<form method="post" ng-hide="flag1" name="login">
+				<div>请填写手机号</div>
+				<div>
+					<input type="tel" placeholder="手机号" name="tel" ng-model="tel" required ng-minlength="11" ng-maxlength="11" ng-pattern="^1\d{10}$"/>
+					<span style="color:red" ng-show="login.tel.$dirty && login.tel.$invalid">
+					<span ng-show="login.tel.$error.required">请输入手机号</span>
+					<span ng-show="login.tel.$error.tel">请输入正确手机号</span>
+				</div>
+				<div>
+					<input type="password" placeholder="密码" name="pwd" required ng-minlength="6" ng-maxlength="12" />
+					<span style="color:red" ng-show="login.pwd.$dirty && login.pwd.$invalid">
+					<span ng-show="login.pwd.$error.required">请输入密码</span>
+				</div>
+				<div><label><input type="checkbox"/><span>&nbsp;&nbsp;记住我</span></label><a href="">忘记密码?</a></div>
+				<div><button ng-disabled="!login.$valid&&login.tel.$error.required&&login.tel.$error.tel">登录</button></div>
+			</form>
+			<form method="post" ng-hide="flag2" name="register">
+				<div>
+					<input type="text" name="tel" ng-model="registerTel" placeholder="手机号" required ng-minlength="11" ng-maxlength="11" ng-pattern="/^1\d{10}$/"/>
+					<span style="color:red" ng-show="register.tel.$dirty && register.tel.$invalid">
+					<span ng-show="register.tel.$error.required">请输入手机号</span>
+				</div>
+				<div>
+					<input type="text" ng-minlength="4" name="valuecode" ng-model="valuecode" ng-maxlength="4" ng-pattern="/[0-9A-Za-z]{4}$/" required/>
+					<span>TYTD</span>
+				</div>
+				<div>
+					<input type="text" ng-minlength="4" ng-maxlength="4" required/>
+					<span>获取验证码</span>
+				</div>
+				<div><input type="password" placeholder="设置密码(6-12位数字和密码的组合)" ng-minlength="6" ng-maxlength="12" required/></div>
+				<div><input type="text" placeholder="确认密码" required/></div>
+				<div>
+					<label for=""><input type="checkbox" checked="true"/><span>&nbsp;&nbsp;我已阅读并同意</span></label>
+					<a href="">《天玑用户服务协议》</a>
+				</div>
+				<div>
+					<button ng-disabled="!register.$valid&&register.tel.$error.required&&register.tel.$error.tel">立即注册</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>-->
+<!--<div id="register"></div>-->
+		

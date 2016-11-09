@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="module/views/specialSubject/jungong/css/default.css"/>
+	</head>
+	<body>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("body").scrollTop(0);
+			});
+		</script>
+		<div class="body" style="height:643px;background-image: url(module/views/specialSubject/jungong/img/jungong/jungong1.jpg);"></div>	
+		<div class="body" style="height:933px;background-image: url(module/views/specialSubject/jungong/img/jungong/jungong2.jpg);"></div>	
+		<div class="body" style="height:1156px;background-image: url(module/views/specialSubject/jungong/img/jungong/jungong3.jpg);"></div>	
+		<div class="body" style="height:635px;background-image: url(module/views/specialSubject/jungong/img/jungong/jungong4.jpg);"></div>	
+		<div class="body" style="height:647px;background-image: url(module/views/specialSubject/jungong/img/jungong/jungong5.jpg);"></div>	
+		<div class="body" style="height:651px;background-image: url(module/views/specialSubject/jungong/img/jungong/jungong6.jpg);"></div>	
+		<div class="body" style="height:126px;background-image: url(module/views/specialSubject/jungong/img/jungong/jungong2.png);"></div>
+<!--		
+		<div class="bottom">
+			 <img src="module/views/specialSubject/jungong/img/jungong/jungong2.png" class="bottomImg"/>
+		</div>-->
+		
+		<!--底部预约栏-->
+		<link rel="stylesheet" type="text/css" href="css/reservation.css"/>
+		<div ng-controller="reservationFixedCtrl">
+			<div class="reservation-fixed-wrap" ng-hide="reservationFixed1" ng-init="reservationFixed1=false">
+				<div class="main">
+					<div class="folderBtn" ng-click="reservationFixedTabOut()"><div ng-click="reservationFixedTabOut()">点击隐藏</div><div class="iconfont">&#xe92b;</div></div>
+					<div class="contentBox">
+						<div class="phoneBox">
+							<div class="iconfont">&#xe91b;</div>
+							<div>
+								<div>找私募，问天玑金服</div>
+								<div>0755-88695093</div>
+							</div>
+						</div>
+						<div>
+							<div class="inputs-group">
+								<form method="post">
+									<input placeholder="您的姓名"  ng-class="{errInput:input1}" type="text" name="reservationName" ng-model="fixedReservationName" required="required" maxlength="6"/>
+									<span class="err" ng-hide="fixedReservationNameErr" ng-init="fixedReservationNameErr=true">请输入2-6位中文姓名</span>
+									<input placeholder="手机号码"  ng-class="{errInput:input2}" type="text" name="reservationTel" ng-model="fixedReservationTel" maxlength="11" required="required"/>
+									<span class="err" ng-hide="fixedReservationTelErr" ng-init="fixedReservationTelErr=true">请输入有效的手机号</span>
+									<a ng-click="fixedReservationBtn()">立即预约</a>
+								</form>
+							</div>
+							<div class="whiteText">天玑专业投资顾问将在24小时内尽快与您联系</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div id="fixedReservationModal" class="reservation-fixed-wrap folded" ng-hide="reservationFixed2" ng-init="reservationFixed2=true">
+				<div class="main">
+					<div class="folderBtn" ng-click="reservationFixedTabOff()"><div ng-click="reservationFixedTabOff()">点击展开</div><div class="iconfont">&#xe92e;</div></div>
+					<div class="contentBox">
+						<div>
+							只推荐靠谱私募的平台
+						</div>
+						<div class="phoneBox">
+							<div class="iconfont">&#xe91b;</div>
+							<div>0755-88695093</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>

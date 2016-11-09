@@ -1,0 +1,102 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+	
+<!--<link rel="stylesheet" type="text/css" href="css/sunProduct.css"/>-->
+<section id="privateProduct" ng-controller="privateProCtrl">
+	<section class="section-t">
+		<section>
+			<div>基金类型：</div>
+			<div class="fundType">
+				<div>
+					<div class="active divTab" ng-click="managerTab()">全部</div>
+					<div ng-repeat="item in fundType" ng-click="managerTab()" selectId="{{item.fund_type}}" class="divTab {{item.fund_type}}">{{item.name}}</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div>募集状态：</div>
+			<div class="fundStatus">
+				<div>
+					<div class="active divTab" ng-click="managerTab()">全部</div>
+					<div  ng-repeat="item in fundStatus" ng-click="managerTab()" selectId="{{item.fund_status}}" class="divTab {{item.fund_status}}">{{item.name}}</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div>投资起点：</div>
+			<div class="investmentRange">
+				<div>
+					<div class="active divTab" ng-click="managerTab()">全部</div>
+					<div  ng-repeat="item in investmentRange" ng-click="managerTab()" selectId="{{item.investment_range}}" class="divTab {{item.investment_range}}">{{item.name}}</div>
+				</div>
+			</div>
+		</section>	
+	</section>
+	
+	<section class="section-b">
+		<div>
+			<div>
+				<input type="text" placeholder="请输入产品关键字" ng-model="name"/>
+				<div class="iconfont" ng-click="privateSearchPro()">&#xe920;</div>
+			</div>
+			<div>共找到<span>{{privateProSum}}</span>款符合条件的产品</div>
+		</div>
+		<div>
+			<ul>
+				<li>基金名称</li>
+				<li>管理机构</li>
+				<li>基金类型</li>
+				<li>投资方向</li>
+				<li>投资起点</li>
+				<li>存续期限</li>
+				<li>目标规模</li>
+				<li>募集状态</li>
+				<li>操作</li>
+			</ul>
+		</div>
+		<div>
+		<!--	<ul ng-repeat="item in sumProducts | filter:query">
+				<li><a href="#/sun/productDetails" ui-sref="sun.productDetails">{{item.fundShortName==null?'--':item.fundShortName}}</a></li>
+				<li><a href="">{{item.fundManagerName==null?'--':item.fundManagerName}}</a></li>
+				<li>{{item.strategy==null?'--':item.strategy}}</li>
+				<li>{{item.runtime==null?'--':item.runtime}}</li>
+				<li>{{item.sixm==null?'--':item.sixm}}</li>
+				<li>{{item.ret1y==null?'--':item.ret1y}}</li>
+				<li>{{item.cumulativeNavWithdrawal==null?'--':item.cumulativeNavWithdrawal}}</li>
+				<li>{{item.nav==null?'--':item.nav}}</li>
+				<li class="iconfont chart">&nbsp;
+					<!--&#xe99b;
+					<div></div>
+				</li>
+			<ul ng-repeat="item in  PrivateProducts">
+				<li><a href="#/private/productDetail" ui-sref="private.productDetail">{{item.title}}</a></li>
+				<li><a href="">{{item.funderManager}}</a></li>
+				<li>{{item.pattern}}</li>
+				<li>{{item.date}}</li>
+				<li>{{item.income1}}</li>
+				<li>{{item.income2}}</li>
+				<li>{{item.sum}}</li>
+				<li>{{item.latest}}</li>
+				<li class="iconfont">&#xe99b;</li> -->  
+			<ul ng-repeat="item in privateProduct13">
+				<li><a ng-click="goPrivatefundDetail(item)" href="javascript:void();">{{item.fund_short_name==null?"--":item.fund_short_name}}</a></li>
+				<li>{{item.management_org==null?"--":item.management_org}}</li>
+				<li>{{item.fund_type_res==null?"--":item.fund_type_res}}</li>
+				<li>{{item.investment_direction_res==null?"--":item.investment_direction_res}}</li>
+				<li>{{item.investment_range_res==null?"--":item.investment_range_res}}</li>
+				<li>{{item.duration==null?"--":item.duration}}</li>
+				<li>{{item.final_size==null?"--":item.final_size}}</li>
+				<li>{{item.fund_status_res==null?"--":item.fund_status_res}}</li>
+				<li><a href="javascript:void();" class="last" ng-click="reservationTab(item,1)">立即预约</a></li>
+			</ul>
+		</div>
+	</section>
+	<section class="text-center">
+		<link rel="stylesheet" type="text/css" href="css/privateProPager.css"/>
+		<div></div>
+		<div id="privateProPager"></div>
+	</section>
+</section>

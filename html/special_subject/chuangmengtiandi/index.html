@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv='X-UA-Compatible' content='IE=8'>
+		<title>创梦天地</title>
+		<script type="text/javascript" src="js/jquery-1.8.2.min.js" ></script>
+		<link href="../../../img/favicon.ico" rel="icon" type="image/x-icon" />
+<!--		<script type="text/javascript" src="js/jquery.indexSlidePattern.js" ></script>-->
+		<script type="text/javascript" src="js/default.js"></script>
+		<script src="../special_common/js/common.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../../../lib/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../lib/css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../lib/css/nprogress.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../css/home.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../css/footer.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../lib/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../special_common/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/default.css"/>
+	</head>
+	<body>
+		<header id="homeHeader">
+			<div class="header">
+				<div class="logo" onclick="document.location.href='../../../index.html'"></div>
+				<ul class="nav nav-pills" role="tablist">
+				  <li role="presentation"><a href="../../../index.html" class="currentA" ui-sref="index">首页</a></li><!--color:#e4883d;-->
+				  <li role="presentation"><a href="../../../index.html#/sun/sun/home" ui-sref="sun.home">阳光私募</a></li>
+				  <li role="presentation"><a href="../../../index.html#/private/private/home" ui-sref="private.home">私募股权</a></li>
+				  <li role="presentation"><a href="../../../index.html#/trust/trust/home" ui-sref="trust.home">信托资管</a></li>
+				  <li role="presentation"><a href="../../../index.html#/news/news/home" ui-sref="news.home">金融资讯</a></li>
+				  <li role="presentation"><a href="../../../index.html#/about" ui-sref="about" >关于天玑</a></li>
+				  <li role="presentation" style="color:#c1bebb;">天玑俱乐部</li>
+				  <li role="presentation" style="color:#c1bebb;">天玑商学院</li>
+				</ul>
+				<div class="login">
+					
+					<div class="unloginBtn">
+						<a href="javascript:void:();" ng-click="loginTab()">登录</a>
+						<a href="javascript:void:();" ng-click="registerTab()">注册</a>
+					</div>
+					<div class="logined_wrap">
+						<div class="userWP">
+							<span class="round"><img src="img/userDefaultAvatar.png"></span>
+							<span>{{userName}}</span>
+							<span class="triangle"></span>
+						</div>
+						<div class="dropBox">
+							<ul>
+								<li class="ToforgetPwd">修改密码</li>
+								<li class="logout" ng-click="loginOutBtn()">退出登录</li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</header>
+		<header id="head2" class="hide">
+			<nav>
+				<div class="logo" ui-sref="index"><img src="../../../img/header/logo.png"></div>
+				<ul class="nav">
+					<li><a href="#/index" ui-sref="index" class="currentFixedA">首页</a></li>
+					<li><a href="#/sun/home" ui-sref="sun.home">阳光私募</a></li>
+					<li><a href="#/private/home" ui-sref="private.home">私募股权</a></li>
+					<li><a href="#/trust/home" ui-sref="trust.home">信托资管</a></li>
+					<li><a href="#/news/home" ui-sref="news.home">金融资讯</a></li>
+					<li><a href="#/about" ui-sref="about" >关于天玑</a></li>
+				</ul>
+				<ul class="nav-right">
+					<li>
+						<a class="iconfont" href="#">&#xe93a;</a>
+						<a class="iconfont" href="#">&#xe93b;</a>
+						<a style="font-size: 18px;" class="iconfont" href="#">&#xe92a;</a>
+						<a class="iconfont" href="#">&#xe939;</a>
+					</li>
+					<li class="login_wrap"><a href="javascript:void();" ng-click="loginTab()">登录</a><a href="javascript:void();" ng-click="registerTab()">注册</a></li>
+					<li>0755-83695501</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="main">
+			<img src="img/first1.jpg" alt="" class="firImg"/>
+			<div class="first">
+				<ul id="demo">
+					<li class="active li1">
+						<a href="#"><img src="img/pusi.jpg"  /></a>		
+					</li><li class="li2">
+						<a href="#"><img src="img/lenovo.jpg"  /></a>	
+					</li><li class="li3">
+						<a href="#"><img src="img/ledou.jpg"  /></a>
+					</li><li class="li4">
+						<a href="#"><img src="img/Tencent.jpg"  /></a>	
+					</li><li class="li5">
+						<a href="#"><img src="img/wanda.jpg"  /></a>
+					</li>
+				</ul>
+			</div>
+			<div class="second">
+				<img src="img/second1.jpg" class="sec-img" alt=""/>
+				<img src="img/firArrow.jpg"  class="fiIcon" alt="" />
+			</div>
+			<div class="third">
+				<img src="img/secArrow.jpg" class="secIcon"/>
+				<div id='img'>
+					<img src="img/vanda.png" alt="" class="vanda"/>
+					<img src="img/weiying.jpg" alt=""/>
+					<img src="img/yuewen.jpg" alt=""/>
+					<img src="img/pandaTV.jpg" alt=""/>
+					<img src="img/miaopai.jpg" alt=""/>
+					<img src="img/xinghedongli.jpg" alt=""/>	
+				</div>
+				<p>额度紧张募集中，马上预约，打造"东方迪士尼"商业帝国</p>
+			</div>
+			<div class="wechat">
+				<img src="img/weixin.jpg" alt="" class="weixin"/>
+				<img src="img/triArrow.jpg" class="thiIcon"/>
+			</div>
+		</div>
+		
+		<!--预约弹窗开始-->
+		<div id="reservationModal" class="hide">
+			<div>
+				<div class="reservationOff"><a href="javascript:void();" class="iconfont">&#xe908;</a></div>
+				<div class="reservation">
+					<h3>产品预约</h3>
+					<form method="post">
+						<!--提示的语句：<div class="tips">请输入手机号</div>-->
+						<div class="nameInputBox">
+							<input ng-class="{errInput:input1}" type="text" placeholder="您的姓名" required ng-model="reservationName" required="required" maxlength="6"/>
+							<span class="err" ng-hide="reservationNameErr" ng-init="reservationNameErr=true">请输入2-6位中文姓名</span>
+						</div>
+						<div class="phoneInputBox">
+							<input ng-class="{errInput:input2}" type="text" placeholder="您的手机" name="reservationTel" ng-model="reservationTel" required="required" maxlength="11" required="required"/>
+							<span class="err" ng-hide="reservationTelErr" ng-init="reservationTelErr=true">请输入有效的手机号</span>
+						</div>
+						<div class="sumbitBox"><button ng-click="reservationBtn()">立即预约</button></div>
+						<div class="gray hasBorder">天玑专业投资顾问将尽快与您联系</div>
+						<div class="gray noBorder">
+							<p>如需产品的详细资料</p>
+							<p>请联系我们：0755-88695093</p>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<div class="successReservation hide">
+				<div class="reservationOff"><a href="javascript:void();" class="iconfont" ng-click="reservationTabOff()">&#xe908;</a></div>
+				<div class="reservation">
+					<div class="successIcon"><img src="img/icon-success.png"></div>
+					<div class="tipRow">恭喜你，预约提交成功</div>
+					<div class="sumbitBox"><button type="button">确定</button></div>
+				</div>
+			</div>
+			
+		</div>
+		<!--预约弹窗结束-->
+		<!--登录注册弹窗开始-->
+		<div id="login" class="hide">
+			<div>
+				<div><a href="javascript:void();" class="iconfont" ng-click="loginOut()">&#xe908;</a></div>
+				<div>
+					<a href="javascript:void();" class="loginTitle">登录</a>
+					<a href="javascript:void();" class="registerTitle">注册</a>
+				</div>
+				<div>
+					<form method="post" ng-hide="flag1" name="login" ng-init="falg1=true" class="hide">
+						<div>
+							<input type="text" ng-class="{errInput:input3}" placeholder="手机号" name="loginTel" ng-model="loginTel" required="required" maxlength="11"/>
+							<span class="err" ng-hide="loginTelErr" ng-init="loginTelErr=true">请输入有效的手机号</span>
+						</div>
+						<div>
+							<input type="password" ng-class="{errInput:input4}" placeholder="密码" ng-model="loginPwd" name="pwd" required="required" minlength="6" maxlength="16" />
+							<span class="err" ng-hide="loginPwdErr" ng-init="loginPwdErr=true">密码为6-16位数字或字母</span>
+						</div>
+						<div><label><input type="checkbox" ng-model="rememberChecked"/><span>&nbsp;&nbsp;记住我</span></label><a href="javascript:void();" class="ToforgetPwd">忘记密码?</a></div>
+						<div><button ng-click="loginBtn()">登录</button></div>
+					</form>
+					<form method="post" ng-hide="flag2" name="register" ng-init="flag2=true" class="hide">
+						<div>
+							<input type="text" ng-class="{errInput:input5}" name="tel" ng-model="registerTel" placeholder="手机号" required="required" maxlength="11" />
+							<span class="err" ng-hide="registerTelErr" ng-init="registerTelErr=true">请输入有效手机号</span>
+						</div>
+						<div>
+							<input type="text" ng-class="{errInput:input6}" placeholder="验证码" name="val" ng-model="registerVal" maxlength="4" required="required"/>
+							<span class="err" ng-hide="registerValErr" ng-init="registerValErr=true">请输入4位验证码</span>
+							<span ng-click="getRegisterVal()"><img ng-src="{{reservationImg}}" alt="验证码"  ng-click="getRegisterVal()"/></span>
+						</div>
+						<div>
+							<input type="text" ng-class="{errInput:input7}" placeholder="输入手机验证码" ng-model="registerPhoneCode" minlength="4" maxlength="6" required="required"/>
+							<span class="err" ng-hide="registerPhoneCodeErr" ng-init="registerPhoneCodeErr=true">请输入手机验证码</span>
+							<span  ng-click="getPhoneCode()" ng-style="codeColor">获取验证码</span>
+						</div>
+						<div>
+							<input type="password" ng-class="{errInput:input8}" ng-model="registerPwd" placeholder="密码为6-16位数字或字母" minlength="6" maxlength="16" required="required"/>
+							<span class="err" ng-hide="registerPwdErr" ng-init="registerPwdErr=true">输入6-16位密码</span>
+						</div>
+						<div>
+							<input type="password" ng-class="{errInput:input9}" ng-model="registerRepwd" placeholder="确认密码" required="required" minlength="6" maxlength="16"/>
+							<span class="err" ng-hide="registerRepwdErr" ng-init="registerRepwdErr=true">密码不一致</span>
+						</div>
+						<div>
+							<label><input type="checkbox" ng-model="registerChecked" ng-init="registerChecked=true"/><span>&nbsp;&nbsp;我已阅读并同意</span></label>
+							<a href="javascript:void();" class="Toagreement">《天玑用户服务协议》</a>
+						</div>
+						<div>
+							<button ng-click="registerBtn()">立即注册</button>
+						</div>
+						<!--用户服务协议弹窗开始-->
+						<div class="z-Agreement hide">
+							<div class="Agreement">
+								<div class="Agreement-esc"><span class="iconfont">&#xe908;</span></div>
+								<div class="Agreement-title">
+									<p>天玑金服用户服务协议</p>		
+								</div>
+								<div class="Agreement-content">
+									<div class="Agreement-container">
+										<ul>
+											<li><h4>一、接受条款</h4>
+												“天玑金服”根据以下服务协议为您提供服务。您在使用“天玑金服”提供的服务之前，请仔细阅读本服务协议。
+												“天玑金服”有权在必要时修改本服务协议。服务协议一旦发生变动，将会在重要页面上提示。如果您不同意所改动的内容，
+												您可以主动注销您的用户帐号或者提请“天玑金服”工作人员为您注销。如果您继续使用“天玑金服”的服务，
+												则视为接受服务协议的变动。“天玑金服”保留随时修改或中断服务而不需知照您的权利。“天玑金服”行使修改或中断服务的权利，
+												不需对您或第三方负责。
+											</li><br />
+											<li>
+												<h4>二、服务内容</h4>
+												“天玑金服”目前向用户提供如下服务：阅读“天玑金服”资讯，获取“天玑金服”销售的基金等金融产品信息，咨询服务等。
+											</li><br />
+											<li>
+												<h4>三、特别提醒条款</h4>
+												需要特别提醒您的是“天玑金服”为一家综合网络理财平台，您注册为“天玑金服”用户，
+												根据《私募投资基金募集行为管理办法》需要您符合“合格投资者”标准，即具备相应风险识别能力和风险承担能力，
+												投资于单只私募基金的金额不低于100 万元，且个人金融类资产不低于300万元或者最近三年个人年均收入不低于50万元人民币。
+												您同意本服务协议，并注册成为“天玑金服”特定的合格投资者，方可获得“天玑金服”私募投资基金产品宣传推介服务。
+											</li><br />
+											<li>
+												<h4>四、遵守法律</h4>
+												 您同意遵守中华人民共和国相关法律法规的所有规定，并对以任何方式使用您的密码和您的账户使用本服务的任何行
+												为及其结果承担全部责任。如您的行为违反国家法律和法规的任何规定，有可能构成犯罪，将被追究刑事责任，并由您承担全部法律责任。
+												 同时，如果“天玑金服”有理由认为您的任何行为，包括但不限于您的任何言论和其他行为违反或可能违反国家法律和法规的任何规定，
+												 “天玑金服”可在任何时候不经任何事先通知终止向您提供服务。
+											</li><br />
+											<li>
+												<h4>五、帐号管理</h4>
+												您一旦注册成功，成为“天玑金服”的合法用户，将得到一个密码和用户名，您将对用户名和密码安全负全部责任，
+												而且对以您用户名进行的所有活动和事件负全部责任，您可以随时改变您的密码。若您发现任何非法使用用户帐号或存在安全漏洞的情况，
+												请立即通知“天玑金服”管理员；您必须提供真实的个人资料，并且在发生变动时及时地更新您在“天玑金服”中的个人资料；您应当同意
+												““天玑金服””通过电子邮件不定期向您发送网站更新信息、赞助商广告或其他相关的服务信息。
+											</li><br />
+											<li>
+												<h4>五、帐号管理 </h4>
+												您一旦注册成功，成为“天玑金服”的合法用户，将得到一个密码和用户名，您将对用户名和密码安全负全部责任，
+												而且对以您用户名进行的所有活动和事件负全部责任，您可以随时改变您的密码。若您发现任何非法使用用户帐号或存在安全漏洞的情况，
+												请立即通知“天玑金服”管理员；您必须提供真实的个人资料，并且在发生变动时及时地更新您在“天玑金服”中的个人资料；您应当同意
+												““天玑金服””通过电子邮件不定期向您发送网站更新信息、赞助商广告或其他相关的服务信息。
+											</li><br />
+											<li>
+												<h4>六、用户行为 </h4>
+												您同意将不会利用本服务进行任何违法或不正当的活动，包括但不限于下列行为：
+												<br />
+												<ul>
+													<li>
+														1、发布或以其他方式传送含有下列内容之一的信息：
+													</li>
+													<li>(1)反对宪法所确定的基本原则的。</li>
+													<li>(2)危害国家安全，泄露国家秘密，破坏国家统一的。</li>
+													<li>(3)颠覆国家政权，推翻社会主义制度的。</li>
+													<li>(4)损害国家荣誉和利益的。 </li>
+													<li>(5)煽动民族仇恨、民族歧视，破坏民族团结的。</li> 
+													<li>(6)破坏国家宗教政策，宣扬邪教和封建迷信的。 </li>
+													<li>(7)散布谣言，捏造或歪曲事实，扰乱社会秩序，破坏社会稳定的。</li>
+													<li>(8)散布迷信、淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的。</li>
+													<li>(9)侮辱或者诽谤他人，侵害他人合法权益的。 </li>
+													<li>(10)进行商业广告行为的。 </li>
+													<li>(11)干扰或混乱网络服务，不遵守所有使用网络服务的网络协议、规定、程序和惯例的。 </li>
+													<li>(12)含有法律、行政法规禁止的其他内容的。</li><br />
+													<li>2、您在使用“天玑金服”时，禁止进行以下活动： </li>
+													<li>(1)直接或间接在“天玑金服”宣传其它竞争网站或为其它类似竞争网站做广告。</li>
+													<li>(2)扰乱“天玑金服”社区的秩序，在社区中发布与主题无关的广告或无意义的信息。 </li>
+													<li>(3)大量发布相同的问题或回答。</li> 
+													<li>(4)其它可能对“天玑金服”不利的行为或违反任何中华人民共和国法律的行为。</li>
+												</ul>
+											</li><br />
+											<li>
+												<h4>七、服务终止 </h4>
+												“天玑金服”可随时根据实际情况中断一项或多项网络服务。“天玑金服”不需要对您或第三方负责而可以随时中断服务。
+												若您对后来的服务协议修改有异议，或对“天玑金服”的服务不满，可以行使如下权利：
+												<ul>
+													<li>
+														(1) 停止使用“天玑金服”的服务。
+													</li>
+													<li>(2) 提前结束“天玑金服”的服务。</li>
+													<li>结束服务后，您使用网络服务的权利马上终止。即时起，您没有权利，“天玑金服”也没有义务传送任何未处理的信息或未完成的服务给您或第三方</li>
+												</ul>
+											</li>
+											<li><br />
+												<h4>八、免责声明</h4>
+												1、“天玑金服”不担保以下事宜：
+												<ul>
+													<li>
+														(1) 您个人对网络服务的使用承担风险，“天玑金服”对此不作任何类型的担保，不论是明确的或隐含的，但是不对商业性的隐含担保、特定目的和不违反规定的适当担保作限制。
+													</li>
+													<li>(2) “天玑金服”不担保服务一定能满足您的要求，也不担保服务不会受中断，对服务的及时性、安全性、出错发生都不作担保。</li>
+													<li>(3) “天玑金服”对在“天玑金服”上得到的任何商品购物服务或交易进程，不作担保。</li>
+												</ul><br />
+												2、“天玑金服”对任何直接、间接、偶然、特殊及继起的损害不负责任，这些损害包括但不限于：
+												<ul>
+													<li>(1) 不正当使用网络服务；</li>
+													<li>(2) 在网上购买商品或进行同类型服务；</li>
+													<li>(3) 在网上进行交易；</li>
+													<li>(4) 非法使用网络服务或用户传送的信息有所变动。</li>
+												</ul>
+												这些行为都有可能会导致“天玑金服”的形象受损，“天玑金服”保留自己遭受损害向用户追偿的权利。
+												<ul><br />
+													<li>3、“天玑金服”不对您所发布信息的删除或储存失败负责。“天玑金服”若认定您的行为违背“天玑金服”服务条款的内容和精神的要求，“天玑金服”有权中断对您提供的服务。</li>
+												</ul>
+											</li><br />
+											<li>
+												<h4>九、其他</h4>							
+												<ul>
+													<li>1、“天玑金服”服务条款适用中华人民共和国法律解释。如发生“天玑金服”服务条款与中华人民共和国法律相抵触时，则这些条款将完全按法律规定重新解释，而其它条款则依旧保持对用户产生法律效力和影响。</li>
+													<li>2、与本服务条款发生的争议，由双方友好协商解决，若协商不能解决的，双方均同意将争议提交给华南国际经济贸易仲裁委员会按其届 </li>						
+												</ul>
+											</li>
+									 	</ul>
+										
+									</div>
+								</div>
+								<!--<div class="agree">
+									<div class="agree-btn"><button type="button" class="btn-active">我已阅读上述协议并清楚服务协议内容</button></div>
+								</div>-->
+							</div>
+						</div>
+						<!--用户服务协议弹窗开始-->
+						
+						
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--登录注册弹窗结束-->
+		<!--重置密码 start-->
+		<div id="forgetPwd">
+			<div>
+				<div class="ToClose"><a href="javascript:void();" class="iconfont">&#xe908;</a></div>
+				<div class="title">
+					<a href="javascript:void();" ng-style="loginTabStyle" ng-click="loginTab()">重置密码</a>
+				</div>
+				<div class="main-wrap">
+					<form method="post" name="resetPwd">
+						<div class="singleRow">
+							<input type="text" name="tel" ng-model="registerTel" placeholder="手机号" required ng-minlength="11" ng-maxlength="11" ng-pattern="/^1\d{10}$/"/>
+							<span style="color:red" ng-show="register.tel.$dirty && register.tel.$invalid">
+							<span ng-show="register.tel.$error.required">请输入手机号</span>
+						</div>
+						<div class="singleRow codeWrap">
+							<input placeholder="请输入右侧的验证码" type="text" ng-minlength="4" name="valuecode" ng-model="valuecode" ng-maxlength="4" ng-pattern="/[0-9A-Za-z]{4}$/" required/>
+							<span><img src="img/code.png" alt="验证码"></span>
+						</div>
+						<div class="singleRow sendCode">
+							<input placeholder="手机验证码" type="text" ng-minlength="4" ng-maxlength="4" required/>
+							<span>获取验证码</span>
+						</div>
+						<div class="singleRow">
+							<input type="password" placeholder="新密码（6-12位字母和密码的组合）" ng-minlength="6" ng-maxlength="12" required/>
+						</div>
+						<div class="singleRow resetBtnWrap">
+							<button class="resetBtn" ng-disabled="!register.$valid&&register.tel.$error.required&&register.tel.$error.tel">确定</button>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--重置密码 end-->
+		
+		<script type="text/javascript">
+			//	服务协议窗操作事件
+			$(document).on("click",".Toagreement",function(){
+				$(".z-Agreement").removeClass("hide");
+			});
+			$(document).on("click",".Agreement-esc",function(){
+				$(".z-Agreement").addClass("hide");
+			});
+			//	重置密码窗操作事件
+			$(".ToforgetPwd").click(function(){
+				$("#forgetPwd").show();
+			});
+			$(".ToClose").click(function(){
+				$(this).parents("#forgetPwd").hide();
+			});
+		</script>
+	</body>
+</html>

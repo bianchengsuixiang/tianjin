@@ -1,0 +1,89 @@
+[{
+	"history":"今年以来",
+	"UpOrDown_1":"positive",
+	"yeji":"2.14%",
+	"UpOrDown_2":"negative",
+	"hushen":"-9.04%",
+	"UpOrDown_3":"negative",
+	"TLpingjun":"-0.25%",
+	"TLpaiming":"3531/20149",
+	"fourPaimingC":"best",
+	"fourPaiming":"优"
+},{
+	"history":"近一月",
+	"UpOrDown_1":"positive",
+	"yeji":"2.14%",
+	"UpOrDown_2":"positive",
+	"hushen":"2.04%",
+	"UpOrDown_3":"negative",
+	"TLpingjun":"-0.25%",
+	"TLpaiming":"3531/20149",
+	"fourPaimingC":"best",
+	"fourPaiming":"优"
+},{
+	"history":"近三月",
+	"UpOrDown_1":"positive",
+	"yeji":"2.14%",
+	"UpOrDown_2":"negative",
+	"hushen":"-9.04%",
+	"UpOrDown_3":"negative",
+	"TLpingjun":"-0.25%",
+	"TLpaiming":"3531/20149",
+	"fourPaimingC":"best",
+	"fourPaiming":"优"
+},{
+	"history":"近六月",
+	"UpOrDown_1":"positive",
+	"yeji":"2.14%",
+	"UpOrDown_2":"negative",
+	"hushen":"-9.04%",
+	"UpOrDown_3":"negative",
+	"TLpingjun":"-0.25%",
+	"TLpaiming":"3531/20149",
+	"fourPaimingC":"best",
+	"fourPaiming":"优"
+},{
+	"history":"近一年",
+	"UpOrDown_1":"negative",
+	"yeji":"-2.14%",
+	"UpOrDown_2":"negative",
+	"hushen":"-9.04%",
+	"UpOrDown_3":"negative",
+	"TLpingjun":"-0.25%",
+	"TLpaiming":"3531/20149",
+	"fourPaimingC":"best",
+	"fourPaiming":"优"
+},{
+	"history":"近三年",
+	"UpOrDown_1":"positive",
+	"yeji":"2.14%",
+	"UpOrDown_2":"positive",
+	"hushen":"9.04%",
+	"UpOrDown_3":"negative",
+	"TLpingjun":"-0.25%",
+	"TLpaiming":"3531/20149",
+	"fourPaimingC":"poor",
+	"fourPaiming":"差"
+},{
+	"history":"近五年",
+	"UpOrDown_1":"positive",
+	"yeji":"2.14%",
+	"UpOrDown_2":"negative",
+	"hushen":"-9.04%",
+	"UpOrDown_3":"negative",
+	"TLpingjun":"-0.25%",
+	"TLpaiming":"3531/20149",
+	"fourPaimingC":"mid",
+	"fourPaiming":"良"
+},{
+	"history":"成立以来",
+	"UpOrDown_1":"negative",
+	"yeji":"2.14%",
+	"UpOrDown_2":"positive",
+	"hushen":"1.04%",
+	"UpOrDown_3":"negative",
+	"TLpingjun":"-0.25%",
+	"TLpaiming":"3531/20149",
+	"fourPaimingC":"none",
+	"fourPaiming":"无"
+}]

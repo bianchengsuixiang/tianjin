@@ -1,0 +1,126 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+<section class="sunProduct" ng-controller="sunCompanyCtrl">
+	<section class="section-Y">
+		<section>
+			<div>成立年份：</div>
+			<div class="funderManager">
+				<div>
+					<div class="active manager" ng-click="managerTab()">全部</div>
+             <!--全部  2016年  2015年  2014年  2013年-->
+					<div  ng-repeat="item in dates" ng-click="managerTab(item)" class="manager">{{item.time}}</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div>是否备案：</div>
+		<!--： 全部  未备案  已备案-->
+			<div class="funderCompany">
+				<div>
+					<div class="active company" ng-click="managerTab()">全部</div>
+					<div ng-click="managerTab(item)" class="company">未备案</div>
+					<div ng-click="managerTab(item)" class="company">已备案</div>
+				</div>
+				
+			</div>
+		</section>
+		<section>
+			<div>投资策略：</div>
+			<div class="investPattern">
+				<div>
+					<div class="active pattern" ng-click="managerTab()">全部</div><!--投资策略： 全部  股票策略  宏观策略  管理期货  事件驱动  复合策略 其他策略-->
+					<div  ng-repeat="item in pattern" ng-click="managerTab(item)" class="pattern">{{item.name}}</div>
+					<div class="more" ng-click="moreTab3()" ng-hide="moreOff3">更多<span class="iconfont">&nbsp;&#xe901;</span></div>
+					<div class="fold" ng-click="foldTab3()" ng-hide="foldOn3">收起<span class="iconfont">&nbsp;&#xe904;</span></div>
+				</div>
+				<div ng-hide="moreHide3">
+					<div ng-repeat="item in patterns" ng-click="managerTab(item)"  class="pattern">{{item.name}}</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div>产品类型：</div>
+			<div class="isGrading">
+				<div>
+					<div class="active grading">全部</div>
+					<div ng-click="managerTab(item)" class="grading">信托产品</div>
+					<div ng-click="managerTab(item)" class="grading">自主发行</div>
+					<div ng-click="managerTab(item)" class="grading">公募专户</div>
+					<div ng-click="managerTab(item)" class="grading">券商资管</div>
+					<div ng-click="managerTab(item)" class="grading">期货资管</div>
+					<div ng-click="managerTab(item)" class="grading">有限合伙</div>
+					<div ng-click="managerTab(item)" class="grading">海外基金</div>
+					<div ng-click="managerTab(item)" class="grading">单账户</div>
+					<!--信托产品 自主发行 公募专户 券商资管 期货资管 有限合伙 海外基金 单账户-->
+				</div>
+			</div>
+		</section>
+		<section>
+			<div>所在地区：</div> 
+			<div class="Addres">
+				<div>
+					<div class="active grading">全部</div>
+					<div ng-click="managerTab(item)" class="grading">北京</div>
+					<div ng-click="managerTab(item)" class="grading">上海</div>
+					<div ng-click="managerTab(item)" class="grading">深圳</div>
+					<div ng-click="managerTab(item)" class="grading">广州</div>
+					<div ng-click="managerTab(item)" class="grading">其他</div>
+				</div>
+			</div>
+			
+			<!--北京 上海 深圳 广州 其他-->
+		</section>
+	</section>
+	<section>
+		<div>
+			<div>
+				<input type="text" placeholder="请输入产品关键字" ng-model="query"/>
+				<div class="iconfont">&#xe920;</div>
+			</div>
+			<div>共找到<span>{{"56"}}</span>款符合条件的产品</div>
+		</div>
+		<div>
+			<ul>
+				<!--公司名称 核心人物 成立日期 所在地区 旗下产品 今年收益 累计收益 最新净值-->
+				<li>公司名称</li>
+				<li>核心人物</li>
+				<li>成立日期</li>
+				<li>所在地区</li>
+				<li>旗下产品</li>
+				<li>今年收益</li>
+				<li>累计收益</li>
+				<li>最新净值</li>
+				<!--<li>&nbsp;</li>-->
+				<!--<li>净值走势</li>-->
+			</ul>
+		</div>
+		<div>
+			<ul ng-repeat="item in sumConpanyProducts | filter:query">
+				<li><a href="javascript:void()" ng-click="companyId(item)">{{item.companyName==null?'--':item.companyName}}</a></li>
+				<li><a href="">{{item.keyPerson==null?'--':item.keyPerson}}</a></li>
+				<li>{{item.establishDate==null?'--':item.establishDate}}</li>
+				<li>{{item.city==null?'--':item.city}}</li>
+				<li>{{item.repProduct==null?'--':item.repProduct}}</li>
+				<li>{{item.retYtd==null?'--':item.retYtd}}</li>
+				<li>{{item.retIncep==null?'--':item.retIncep}}</li>
+				<li>{{item.nav==null?'--':item.nav}}</li>
+				<!--<li class="iconfont chart">&nbsp;</li>-->
+			</ul>
+			
+		   	<!--<ul>
+				<li><a href="#/sun/companyDetails" ui-sref="sun.companyDetails">gdfgfdg</a></li>
+				<li><a href="">fgfg</a></li>
+				<li>fgfg</li>
+			</ul>-->
+			
+			
+		</div>
+	</section>
+	<section>
+		<link rel="stylesheet" href="css/privateCompany.css" />
+		<div id="privateCompany"></div>
+	</section>
+</section>

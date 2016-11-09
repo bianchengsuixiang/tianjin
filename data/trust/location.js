@@ -1,0 +1,13 @@
+[{
+	"project_location":"1",
+	"name":"珠三角"
+},{
+	"project_location":"2",
+	"name":"江浙沪"
+},{
+	"project_location":"3",
+	"name":"京津翼"
+},{
+	"project_location":"4",
+	"name":"其他"
+}]

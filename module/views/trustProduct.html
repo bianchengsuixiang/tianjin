@@ -1,0 +1,119 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+	
+<!--<link rel="stylesheet" type="text/css" href="css/sunProduct.css"/>-->
+<section id="trustProduct" ng-controller="trustProCtrl">
+	<section class="section-t">
+		<section>
+			<div>投资起点：</div>
+			<div class="investmentPoint">
+				<div>
+					<div class="active divTab" ng-click="managerTab()">全部</div>
+					<div  ng-repeat="item in investmentPoint" ng-click="managerTab()" selectId="{{item.investment_range}}" class="divTab {{item.investment_range}}">{{item.name}}</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div>投资期限：</div>
+			<div class="investmentExpires">
+				<div>
+					<div class="active divTab" ng-click="managerTab()">全部</div>
+					<div  ng-repeat="item in investmentExpires" ng-click="managerTab()" selectId="{{item.term_of_investment}}" class="divTab {{item.term_of_investment}}">{{item.name}}</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div>预期年化收益：</div>
+			<div class="investmentIncome">
+				<div>
+					<div class="active divTab" ng-click="managerTab()">全部</div>
+					<div  ng-repeat="item in investmentIncome" ng-click="managerTab()" selectId="{{item.expect_annual_yield_start}}" class="divTab {{item.expect_annual_yield_start}}">{{item.name}}</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div>付息方式：</div>
+			<div class="payPattern">
+				<div class="active divTab">全部</div>
+				<div class="divTab {{item.methods_of_bonds}}" selectId="{{item.methods_of_bonds}}" ng-repeat="item in payPattern">{{item.name}}</div>
+			</div>
+		</section>
+		<div class="moreSet">
+			<div ng-hide="moreSet" ng-init="moreSet=false" ng-click="moreTab()">更多设置<span class="iconfont" ng-click="moreTab()">&nbsp;&#xe936;</span></div>
+			<div ng-hide="!moreSet" ng-click="moreTabOff()">更多设置<span class="iconfont" ng-click="moreTabOff()">&nbsp;&#xe933;</span></div>
+		</div>
+		<section ng-hide="trustFilter" ng-init="trustFilter=true">
+			<div>投资领域：</div>
+			<div class="investmentField">
+				<div>
+					<div class="active divTab">全部</div>
+					<div  ng-repeat="item in investmentField" ng-click="managerTab()" selectId="{{item.investment-field}}" class="divTab {{item.investment-field}}">{{item.name}}</div>
+				</div>
+			</div>
+		</section>
+		<section ng-hide="trustFilter">
+			<div>项目所在地：</div>
+			<div class="projectLocation">
+				<div>
+					<div class="active divTab">全部</div>
+					<div  ng-repeat="item in projectLocation" selectId="{{item.project_location}}" class="divTab {{item.project_location}}">{{item.name}}</div>
+				</div>
+			</div>
+		</section>
+		<section ng-hide="trustFilter">
+			<div>信托公司：</div>
+			<div class="trustCompany">
+				<div>
+					<div class="active divTab">全部</div>
+					<div  ng-repeat="item in trustCompany" selectId="{{item.trust_company}}" class="divTab {{item.trust_company}}">{{item.name}}</div>
+				</div>
+			</div>
+		</section>
+		<section class="lastSection"></section>
+	</section>
+	<section class="section-b">
+		<div>
+			<div>
+				<input type="text" placeholder="公司名|全名|法人|股东" ng-model="trustProKewords"/>
+				<div class="iconfont" ng-click="trustSearchPro()">&#xe920;</div>
+			</div>
+			<div>共找到<span>{{trustProSum}}</span>款符合条件的产品</div>
+		</div>
+		<div>
+			<ul>
+				<li>信托公司</li>
+				<li>产品名称</li>
+				<li>预期年化收益</li>
+				<li>投资起点</li>
+				<li>投资期限</li>
+				<li>付息方式</li>
+				<li>投资领域</li>
+				<li>项目所在地</li>
+				<li>产品状态</li>
+				<li>操作</li>
+			</ul>
+		</div>
+		<div>
+			<ul ng-repeat="item in trustProduct13">
+				<li><a href="javascript:void();" ng-click="goTrustComDetail(item)" title="{{item.company_name}}">{{item.company_name==""?"--":item.company_name}}</a></li>
+				<li><a href="javascript:void();"  ng-click="goTrustProDetail(item)" title="{{item.trust_short_name}}">{{item.trust_short_name==null?"--":item.trust_short_name}}</a></li>
+				<li>{{item.expect_annual_yield_start==null?"--":item.expect_annual_yield_start+"-"+item.expect_annual_yield_end==null?"--":item.expect_annual_yield_end+"%"}}</li>
+				<li>{{item.min_investment==null?"--":item.min_investment}}万</li>
+				<li>{{item.term_of_investment==null?"--":item.term_of_investment}}个月</li><!--缺少投资期限-->
+				<li>{{item.methods_of_bonds_des==null?"--":item.methods_of_bonds_des}}</li>
+				<li>{{item.investment_field_des==null?"--":item.investment_field_des}}</li>
+				<li>{{item.project_location_des==null?"--":item.project_location_des}}</li>
+				<li>{{item.product_status_des==null?"--":item.product_status_des}}</li>
+				<li><a href="javascript:void();" class="last" ng-click="reservationTab(item,'3')">立即预约</a></li>
+			</ul>
+		</div>
+	</section>
+	<section class="text-center">
+		<link rel="stylesheet" type="text/css" href="lib/css/kkpagerTrustPro.css"/>
+		<div></div>
+		<div id="trustProPager" class="pagination"></div>
+	</section>
+</section>

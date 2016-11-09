@@ -1,0 +1,115 @@
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+<div class="privateBanner" ng-controller="privateHomeCtrl">
+	<div class="privateBannerSwiper">
+	  	<div class="swiper-wrapper">
+	    	<div class="swiper-slide" onclick="document.location.href='#/pe/zt-2'"><a title="" href="javascript:void();" style="background-image: url(img/home/1.jpg);"></a></div>
+		    <div class="swiper-slide" onclick="document.location.href='#/pe/zt-1'"><a title="" href="javascript:void();" style="background-image: url(img/home/2.jpg);"></a></div>
+		    <div class="swiper-slide" onclick="document.location.href='#/trust/zt-1'"><a title="" href="javascript:void();" style="background-image: url(img/home/3.jpg);"></a></div>
+	  	</div>
+	  	<div class="swiper-pagination" id="banner-pagination"></div>
+	</div>
+</div>
+
+<div class="section2"><!--私募股权-->
+	<h4>优选私募股权<a href="#/private/product" ui-sref="private.product">更多</a></h4>
+	<div ng-repeat="item in priorPrivatefunds3">
+		<div><span type="button" class="btn" ng-click="goPrivatefundDetail(item)">{{item.fund_short_name}}</span></div>
+		<div>{{item.product_review}}</div>
+		<div>
+			<div>
+				<div>募集进度</div>
+				<div>
+					<div class="progress">
+					  	<div class="progress-bar" role="progressbar" aria-valuenow="{{item.current_size}}" aria-valuemin="0" aria-valuemax="{{item.final_size}}" style="width: {{item.current_size*100/item.final_size}}%;">
+					    	<span class="sr-only">60% Complete</span>
+					  	</div>
+					</div>
+				</div>
+
+				<div>{{null==item.current_size?0:item.current_size}}万/{{item.final_size}}万</div>
+			</div>
+			<div>
+				<div>{{item.min_investment+"&nbsp;万"}}</div>
+				<div>{{null==item.duration?"--":item.duration+"&nbsp;"}}</div>
+			</div>
+			<div>
+				<div>{{"投资起点"}}</div>
+				<div>{{"存续期限"}}</div>
+			</div>
+			<div>
+				<span type="button" class="btn" ng-click="goPrivatefundDetail(item)">产品详情</span><span type="button" class="btn" ng-click="reservationTab(reservationTab(item,'1'))">立即预约</span>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+
+<div class="section2"><!--私募股权-->
+	
+	<div ng-repeat="item in priorPrivatefunds6">
+		<div><span type="button" class="btn" ng-click="goPrivatefundDetail(item)">{{item.fund_short_name}}</span></div>
+		<div>{{item.product_review}}</div>
+		<div>
+			<div>
+				<div>募集进度</div>
+				<div>
+					<div class="progress">
+					  	<div class="progress-bar" role="progressbar" aria-valuenow="{{item.current_size}}" aria-valuemin="0" aria-valuemax="{{item.final_size}}" style="width: {{item.current_size*100/item.final_size}}%;">
+					    	<span class="sr-only">60% Complete</span>
+					  	</div>
+					</div>
+				</div>
+
+				<div>{{null==item.current_size?0:item.current_size}}万/{{item.final_size}}万</div>
+			</div>
+			<div>
+				<div>{{item.min_investment+"&nbsp;万"}}</div>
+				<div>{{null==item.duration?"--":item.duration+"&nbsp;"}}</div>
+			</div>
+			<div>
+				<div>{{"投资起点"}}</div>
+				<div>{{"存续期限"}}</div>
+			</div>
+			<div>
+				<span type="button" class="btn" ng-click="goPrivatefundDetail(item)">产品详情</span><span type="button" class="btn" ng-click="reservationTab(item,'1')">立即预约</span>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+
+
+
+<div class="news-wrap">
+	<h4>私募焦点<a href="#/news/focus" ui-sref="news.focus">更多</a></h4>
+	<div class="main">
+		<div class="withImg">
+			<ul>
+				<li ng-repeat="item in newLatest3">
+					<div><img ng-click="goNewsDetails(item)" ng-src="{{item.picUrl}}"></div>
+					<div>
+						<div class="title"><a href="javascript:void();" ng-click="goNewsDetails(item)">{{item.title}}</a></div>
+						<div class="time">{{item.updateTime}}</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="noImg">
+			<div>
+				<div class="col-header">相关推荐</div>
+				<ul>
+					<li ng-repeat="item in newLatest6">
+						<div><a href="javascript:void();" ng-click="goNewsDetails(item)">{{item.title}}</a></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

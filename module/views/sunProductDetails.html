@@ -1,0 +1,385 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+<link rel="stylesheet" type="text/css" href="css/sunProductDetail.css"/>
+<script type="text/javascript" src="lib/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+$(function () {
+    var seriesOptions = [],
+        seriesCounter = 0,
+        names = ['MSFT', 'AAPL'];
+
+    /**
+     * Create the chart when all data is loaded
+     * @returns {undefined}
+     */
+    function createChart() {
+
+        $('#container').tjcharts('StockChart', {
+
+            rangeSelector: {
+                selected: 4
+            },
+
+            yAxis: {
+                labels: {
+                    formatter: function () {
+                        return (this.value > 0 ? ' + ' : '') + this.value + '%';
+                    }
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 2,
+                    color: 'silver'
+                }]
+            },
+
+            plotOptions: {
+                series: {
+                    compare: 'percent'
+                }
+            },
+
+            tooltip: {
+                pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.change}%)<br/>',
+                valueDecimals: 2
+            },
+
+            series: seriesOptions
+        });
+    }
+
+    $.each(names, function (i, name) {
+
+        $.getJSON('http://www.hcharts.cn/datas/jsonp.php?filename=' + name.toLowerCase() + '-c.json&callback=?',    function (data) {
+
+            seriesOptions[i] = {
+                name: name,
+                data: data
+            };
+
+            // As we're loading the data asynchronously, we don't know what order it will arrive. So
+            // we keep a counter and create the chart when all the data is loaded.
+            seriesCounter += 1;
+
+            if (seriesCounter === names.length) {
+                createChart();
+            }
+        });
+    });
+});
+</script>
+<script src="lib/js/tjstock.js"></script>
+<div class="bread-nav">
+	<ul>
+		<li><i class="iconfont">&#xe90b;</i><a href="#/index">首页</a></li>
+		<li><a href="">阳光私募</a></li>
+		<li><a href="">私募产品</a></li>
+		<li class="unClickable">中信嘉和10号</li>
+	</ul>
+</div>
+<div class="mainContent">
+	<div class="pro-title-wrap">
+		<div class="pro-title">中信嘉和10号</div>
+		<div class="tags-group">
+			<span>国有独资</span>
+			<span>国有独资</span>
+			<span>国有独资</span>
+			<span>国有独资</span>
+		</div>
+		<div class="proRates">
+			<ul>
+				<li><span>单位净值：</span><span class="ng-binding">7.1900</span><span class="gray ml10px fs12px">(2016-08-12)</span></li>
+				<li><span>累计收益：</span><span class="ng-binding">363.15%</span></li>
+			</ul>
+		</div>
+		<div class="proDet-title-table">
+			<table>
+				<tr>
+					<td>累计净值</td>
+					<td class="gray">7.1900</td>
+					<td>成立日期</td>
+					<td class="gray">2014-11-03</td>
+					<td>今年收益</td>
+					<td class="gray">69.96%</td>
+				</tr>
+				<tr>
+					<td>基金经理</td>
+					<td class="gray">赵军</td>
+					<td>基金公司</td>
+					<td class="gray">淡水泉</td>
+					<td>产品状态</td>
+					<td class="gray">正在运行</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<div id="bigTabs" class="tabs sunProductDet emptyRow1000">
+	<ul>
+		<li><a id="yejiA" class="active">基金业绩</a></li>
+		<li><a id="jingliA">基金经理</a></li>
+		<li><a id="JJcompanyA">基金公司</a></li>
+		<li><a id="RGknowsA">认购须知</a></li>
+	</ul>
+</div>
+<div class="mainContent p-T-0">
+	<!--基金业绩-->
+	<div class="detailSections-wrap" id="yeji">
+		<div class="sunProDet-doubleChart"><!--代表产品-->
+			<div>
+				<div class="borderL-3">净值走势</div>
+				<style>
+				.tjcharts-range-selector-buttons,.tjcharts-input-group,g.tjcharts-input-group>g, g.tjcharts-input-group>g *{display: none;}
+				
+				</style>
+				<div id="container" style="height: 260px; width: 510px"></div>
+			</div>
+			<div>
+				<div class="borderL-3">历史净值表</div>
+				<table class="incomeTab">
+					<tbody>
+						<tr class="first">
+							<td>年度</td>
+							<td>期间收益</td>
+							<td>行业平均</td>
+							<td>沪深300</td>
+							<td>排名</td>
+						</tr>
+						<!-- ngRepeat: item in incomes -->
+						<tr>
+							<td>今年</td>
+							<td class="positive">4.45%</td>
+							<td class="positive">4.45%</td>
+							<td>--</td>
+							<td>546/1801</td>
+						</tr>
+						<tr>
+							<td>2015年</td>
+							<td class="positive">1.85%</td>
+							<td class="negative">-1.85%</td>
+							<td class="negative">-1.45%</td>
+							<td>369/2164</td>
+						</tr>
+						<tr>
+							<td>2014年</td>
+							<td class="positive">11.45%</td>
+							<td class="positive">11.45%</td>
+							<td class="positive">1.45%</td>
+							<td>546/1801</td>
+						</tr>
+						<tr>
+							<td>2013年</td>
+							<td class="positive">21.45%</td>
+							<td>--</td>
+							<td class="positive">1.45%</td>
+							<td>369/2164</td>
+						</tr>
+						<tr>
+							<td>2012年</td>
+							<td class="positive">1.45%</td>
+							<td class="positive">1.45%</td>
+							<td class="positive">1.45%</td>
+							<td>546/1801</td>
+						</tr>
+						<tr>
+							<td>总收益</td>
+							<td class="positive">361.15%</td>
+							<td class="positive">63.32%</td>
+							<td>--</td>
+							<td>2/216</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="historyDate-wrap">
+			<div class="tabsOnLeft">
+				<li class="active">历史平均业绩</li>
+				<li>年度平均业绩</li>
+			</div>
+			<div class="th">
+				<li class="nth-of-type-1">&nbsp;</li>
+				<li class="nth-of-type-2">基金业绩</li>
+				<li class="nth-of-type-3">沪深300</li>
+				<li class="nth-of-type-4">同类平均</li>
+				<li class="nth-of-type-5">同类排名</li>
+				<li class="nth-of-type-6">四分位排名</li>
+			</div>
+			<div class="tbody">
+				<ul ng-repeat="item in sunProductHistory">
+					<li class="nth-of-type-1">{{item.history}}</li>
+					<li class="nth-of-type-2 {{item.UpOrDown_1}}">{{item.yeji}}</li>
+					<li class="nth-of-type-3 {{item.UpOrDown_2}}">{{item.hushen}}</li>
+					<li class="nth-of-type-4 {{item.UpOrDown_3}}">{{item.TLpingjun}}</li>
+					<li class="nth-of-type-5">{{item.TLpaiming}}</li>
+					<li class="nth-of-type-6">
+						<div class="levels {{item.fourPaimingC}}">
+							<div class="textBox">{{item.fourPaiming}}</div>
+							<div class="nth-of-type-1"></div>
+							<div class="nth-of-type-2"></div>
+							<div class="nth-of-type-3"></div>
+							<div class="nth-of-type-4"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="riskEvaluate-wrap">
+			<div class="borderL-3">风险评估指标</div>
+			<div class="th">
+				<li class="nth-of-type-1">&nbsp;</li>
+				<li class="nth-of-type-2">近一年</li>
+				<li class="nth-of-type-3">近二年</li>
+				<li class="nth-of-type-4">近三年</li>
+				<li class="nth-of-type-5">近五年</li>
+				<li class="nth-of-type-6">成立以来</li>
+			</div>
+			<div class="tbody">
+				<ul ng-repeat="item in sunProductRiskEvalue">
+					<li class="nth-of-type-1">{{item.trTitle}}</li>
+					<li class="nth-of-type-2 {{item.UpOrDown_1}}">{{item.one}}</li>
+					<li class="nth-of-type-3 {{item.UpOrDown_2}}">{{item.two}}</li>
+					<li class="nth-of-type-4 {{item.UpOrDown_3}}">{{item.three}}</li>
+					<li class="nth-of-type-5 {{item.UpOrDown_4}}">{{item.five}}</li>
+					<li class="nth-of-type-6 {{item.UpOrDown_5}}">{{item.all}}</li>
+				</ul>
+				<div class="attachBox">
+					<div class="title">名词解释</div>
+					<div class="clearFloat">
+						<div><span>夏普比率：</span>反映每单位风险的超额收益，该比率越大越好。</div>
+						<div><span>CALMAR比率：</span>描述年化收益和历史最大回撤之间的关系，该比率越大越好。</div>
+						<div><span>索提诺比率：</span>反映每单位下行风险的超额收益，该比率越大越好。</div>
+						<div><span>月胜率：</span>统计期内盈利月数/统计期总月数。</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--基金经理-->
+	<div class="detailSections-wrap hide" id="jingli">
+		<div class="text-center"><img src="img/home/userIco.jpg"></div>
+		<p>赵军，南开大学数学学士、金融学硕士，历任中信证券资产管理部分析师、嘉实基金管理公司基金丰和基金经理、研究总监、机构投资总监、总裁助理。赵军先生精通国内资本市场投资运作，并拥有管理全国社保基金、企业年金、保险机构和银行资金的丰富经验。赵军先生在12年的证券投资管理工作中，历经牛熊市场转换，在公募及阳光私募的过往业绩均排在同业同期的前百分之二十。</p>
+	</div>
+	<!--基金公司-->
+	<div class="detailSections-wrap hide" id="JJcompany">
+		<p>2007年6月，源于共同的理想和对投资的热爱，七位曾经的同事创立了淡水泉投资 在这里，我们打破了投资和研究人员分立的传统投研工作机制，实行投资经理团队制，并建立了与此相适应的i-FARM研究平台，引进了专业的对冲基金风险管理系统。</p>
+        <p>淡水泉的团队成员具有多年的行业经验，工作经历包括国内知名基金公司、国际投行、会计师事务所、券商研究所、另类投资、风控系统服务商、期货公司、以及退休年金管理公司等。</p>
+        <p>淡水泉管理层拥有主要股权，所有员工都有机会参与公司收益的分配和股权安排，团队崇尚长期价值和专业能力，在成立之初即布局海外，发起设立了淡水泉海外对冲基金，成为目前国内少数几家同时管理国内和海外产品的管理公司之一。</p>
+	</div>
+	<!--认购须知-->
+	<div class="detailSections-wrap hide" id="RGknows">
+        <div class="someTextRows">
+            <div class="title">基金详情</div>
+            <div class="clearFloat">
+                <div><span>基金全称：</span>平安信托-淡水泉成长一期</div>
+                <div><span>成立日期：</span>2007-09-06</div>
+                <div><span>基金经理：</span>赵军</div>
+                <div><span>基金状态：</span>正在运行</div>
+                <div><span>发行平台：</span> 淡水泉</div>
+                <div><span>托管银行：</span> 建设银行</div>
+                <div><span>基金类型：</span> 信托</div>
+                <div><span>投资策略：</span> 股票策略</div>
+                <div><span>子 策 略：</span> 股票多头</div>
+            </div>
+        </div>
+        <div class="someTextRows">
+            <div class="title">认购须知</div>
+            <div class="clearFloat">
+                <div><span>开放日期：</span> 每月15日及最后一个交易日</div>
+                <div><span>封闭期长：</span> 1年</div>
+                <div><span>认购起点：</span> 200万</div>
+                <div><span>认购费率：</span> 1.00%</div>
+                <div><span>管理费率：</span> 1.55%</div>
+                <div><span>赎回费率：</span> 5.00%</div>
+                <div><span>业绩报酬：</span> 20.00%</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mayLike-wrap">
+	<div class="title">你可能感兴趣的产品</div>
+	<div class="section3">
+		<div class="section1-l">
+			<div ng-include="sunUrl"></div>
+		</div>
+		<div class="section1-c">
+			<div ng-include="sunUrl"></div>
+		</div>
+		<div class="section1-r">
+			<div ng-include="sunUrl"></div>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" type="text/css" href="css/reservation.css"/>
+<div ng-controller="reservationFixedCtrl">
+	<div class="reservation-fixed-wrap" ng-hide="reservationFixed1" ng-init="reservationFixed1=false">
+		<div class="main">
+			<div class="folderBtn" ng-click="reservationFixedTabOut()"><div ng-click="reservationFixedTabOut()">点击隐藏</div><div class="iconfont">&#xe92b;</div></div>
+			<div class="contentBox">
+				<div class="phoneBox">
+					<div class="iconfont">&#xe91b;</div>
+					<div>
+						<div>找私募，问天玑金服</div>
+						<div>0755-88695093</div>
+					</div>
+				</div>
+				<div>
+					<div class="inputs-group">
+						<input placeholder="您的姓名" maxlength="20" ng-model="reservationName" />
+						<input placeholder="手机号码" maxlength="11" ng-model="reservationTel" />
+						<a href="javascript:void();" ng-click="reservationBtnDetail(privatefundDetail,'1')">立即预约</a>
+					</div>
+					<div class="whiteText">天玑专业投资顾问将在24小时内尽快与您联系</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="reservation-fixed-wrap folded" ng-hide="reservationFixed2" ng-init="reservationFixed2=true">
+		<div class="main">
+			<div class="folderBtn" ng-click="reservationFixedTabOff()"><div ng-click="reservationFixedTabOff()">点击展开</div><div class="iconfont">&#xe92e;</div></div>
+			<div class="contentBox">
+				<div>
+					只推荐靠谱私募的平台
+				</div>
+				<div class="phoneBox">
+					<div class="iconfont">&#xe91b;</div>
+					<div>0755-88695093</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<script type="text/javascript">
+	$("#yejiA").click(function(){
+        $("#bigTabs li a").removeClass("active");
+        $(this).addClass("active");
+        $(".detailSections-wrap").addClass("hide");
+        $("#yeji").removeClass("hide");
+    });
+	$("#jingliA").click(function(){
+        $("#bigTabs li a").removeClass("active");
+        $(this).addClass("active");
+        $(".detailSections-wrap").addClass("hide");
+        $("#jingli").removeClass("hide");
+    });
+	$("#JJcompanyA").click(function(){
+        $("#bigTabs li a").removeClass("active");
+        $(this).addClass("active");
+        $(".detailSections-wrap").addClass("hide");
+        $("#JJcompany").removeClass("hide");
+    });
+	$("#RGknowsA").click(function(){
+        $("#bigTabs li a").removeClass("active");
+        $(this).addClass("active");
+        $(".detailSections-wrap").addClass("hide");
+        $("#RGknows").removeClass("hide");
+    });
+</script>
+
+

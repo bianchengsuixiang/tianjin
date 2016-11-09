@@ -1,0 +1,101 @@
+.sun-t{
+	width:324px;
+	height:195px;
+	background: #131522;
+	text-align: center;
+}
+.sun-t>a>h4{
+	font-size: 16px;
+	line-height: 56px;
+	color: #FFFFFF;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 10px;
+	padding-top:6px;
+}
+.sun-t>.sun-t-tag{
+	width:324px;
+	height:36px;
+}
+.sun-t>.sun-t-tag>.btn{
+	padding:0 4px;
+	margin:0;
+	line-height: 18px;
+	font-size: 12px;
+	color: #e5873f;
+	border: 1px solid #683f1f;
+}
+.sun-t>.sun-t-b{
+	text-align: left;
+	width:324px;
+	height:81px;
+	border-top: 1px solid #342415;
+	padding-top:16px;
+}
+.sun-t>.sun-t-b>p{
+	line-height:30px;
+	font-size: 14px;
+	color:#af764a;
+}
+.sun-t>.sun-t-b>p>span:nth-of-type(1){
+	display: inline-block;
+	text-indent: 84px;
+}
+.sun-t>.sun-t-b>p>span:nth-of-type(2){
+	display: inline-block;
+	text-indent: 26px;
+	color: #d32009;
+}
+.sun-b{
+	width:324px;
+	height:195px;
+	background: #ffffff;
+}
+.sun-b>img{
+	display: block;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	color: #fff;
+	border-radius: 50%;
+	margin:10px auto 0;
+	background: gray;
+}
+.sun-b>p{
+	line-height: 38px;
+	text-align: center;
+	color: #515056;
+	font-size: 14px;
+}
+.sun-b>div{
+	padding-top: 4px;
+	height: 62px;
+}
+.sun-b>div>span:nth-of-type(1){
+	border:1px solid #e4883d;
+	margin-left:23px;
+	color: #e4883d;
+	padding:6px 30px;
+}
+.sun-b>div>span:nth-of-type(1):hover{
+    background-color: #cf7127;
+    color: #fff;
+    background-image: -moz-linear-gradient(top, #f8b45e, #cf7127); /* Firefox */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8b45e), color-stop(1, #cf7127)); /* Saf4+, Chrome */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8b45e', endColorstr='#cf7127', GradientType='0'); /* IE*/
+}
+.sun-b>div>span:nth-of-type(2){
+	margin-left:42px;
+	background: #e4883d;
+	color: white;
+	padding:6px 30px;
+}
+.sun-b>div>span:nth-of-type(2):hover{
+    background-color: #cf7127;
+    color: #fff;
+    background-image: -moz-linear-gradient(top, #f8b45e, #cf7127); /* Firefox */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8b45e), color-stop(1, #cf7127)); /* Saf4+, Chrome */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8b45e', endColorstr='#cf7127', GradientType='0'); /* IE*/
+}

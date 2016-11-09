@@ -1,0 +1,13 @@
+[{
+	"profit_cate":"1",
+	"name":"政信类"
+},{
+	"profit_cate":"2",
+	"name":"1年期"
+},{
+	"profit_cate":"3",
+	"name":"高收益"
+},{
+	"profit_cate":"4",
+	"name":"小额畅打"
+}]

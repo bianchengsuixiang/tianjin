@@ -1,0 +1,150 @@
+.reservation-fixed-wrap {
+  background-color: #e4883d;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding: 20px 0 14px 0;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 11;
+}
+.reservation-fixed-wrap.folded {
+  padding: 10px 0 7px 0;
+}
+.reservation-fixed-wrap.folded .main .folderBtn {
+  margin-top: -40px;
+}
+.reservation-fixed-wrap .main {
+  width: 1000px;
+  margin: auto;
+  position: relative;
+}
+.reservation-fixed-wrap .main .folderBtn {
+  position: absolute;
+  width: 125px;
+  height: 31px;
+  top: 0;
+  left: 50%;
+  margin-left: -63px;
+  background: url(../img/foldBtnBg.png) no-repeat top center;
+  text-align: center;
+  color: #fff;
+  padding: 5px 0;
+  font-size: 12px;
+  margin-top: -51px;
+  cursor: pointer;
+}
+.reservation-fixed-wrap .main .folderBtn > div.iconfont {
+  font-size: 12px;
+}
+.reservation-fixed-wrap .main .contentBox > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.reservation-fixed-wrap .main .contentBox > div.phoneBox {
+  float: left;
+}
+.reservation-fixed-wrap .main .contentBox > div.phoneBox > div {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.reservation-fixed-wrap .main .contentBox > div.phoneBox > div:first-child {
+  border: 1px solid #fff;
+  text-align: center;
+  border-radius: 999px;
+  width: 37px;
+  height: 37px;
+  line-height: 37px;
+  font-size: 20px;
+}
+.reservation-fixed-wrap .main .contentBox > div.phoneBox > div:nth-of-type(2) > div:nth-of-type(1) {
+  font-size: 14px;
+}
+.reservation-fixed-wrap .main .contentBox > div.phoneBox > div:nth-of-type(2) > div:nth-of-type(2) {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+}
+.reservation-fixed-wrap .main .contentBox > div:nth-of-type(2) {
+  float: right;
+}
+.reservation-fixed-wrap .main .contentBox > div:nth-of-type(2) > .inputs-group {
+  font-size: 14px;
+}
+.reservation-fixed-wrap .main .contentBox > div:nth-of-type(2) > .inputs-group input {
+  width: 216px;
+  padding: 8px 10px;
+  background: #fff;
+  border-radius: 3px;
+  border: 0;
+  outline: none;
+  color: #333;
+  margin-right: 10px;
+  margin-bottom: 7px;
+}
+.reservation-fixed-wrap .main .contentBox > div:nth-of-type(2) > .inputs-group input:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.reservation-fixed-wrap .main .contentBox > div:nth-of-type(2) > .inputs-group .err {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 36px;
+  color: red;
+  line-height: 36px;
+  padding-right: 10px;
+}
+.reservation-fixed-wrap .main .contentBox > div:nth-of-type(2) > .inputs-group a {
+  border: 1px solid #fff;
+  color: #fff;
+  width: 216px;
+  padding: 7px 10px;
+  border-radius: 3px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+.reservation-fixed-wrap .main .contentBox > div:nth-of-type(2) > .inputs-group a:hover {
+  background-color: #cf7127;
+  color: #fff;
+  border-color: #cf7127;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transform: translate(0 -2px);
+}
+.reservation-fixed-wrap .main .contentBox > div:nth-of-type(2) > .inputs-group a:focus {
+  background-color: #b3550b;
+}
+.reservation-fixed-wrap.folded .main > .contentBox {
+  text-align: center;
+}
+.reservation-fixed-wrap.folded .main > .contentBox > div {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+.reservation-fixed-wrap.folded .main > .contentBox > div:nth-of-type(1) {
+  font-size: 18px;
+  border-right: 1px solid #fff;
+  padding-right: 30px;
+  margin-right: 20px;
+  margin-left: 31px;
+}
+.reservation-fixed-wrap.folded .main > .contentBox > div > div:first-child {
+  border: 1px solid #fff;
+  text-align: center;
+  border-radius: 999px;
+  width: 27px;
+  height: 27px;
+  line-height: 27px;
+  font-size: 14px;
+}
+.reservation-fixed-wrap.folded .main > .contentBox > div > div:nth-of-type(2) {
+  font-size: 24px;
+}
+.wrapFooter {
+  height: 426px !important;
+}
+/*# sourceMappingURL=reservation.css.map */

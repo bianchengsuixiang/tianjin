@@ -1,0 +1,13 @@
+[{
+	"investment_range":"1",
+	"name":"100万以下(含)"
+},{
+	"investment_range":"2",
+	"name":"100万-300万(含)"
+},{
+	"investment_range":"3",
+	"name":"300万-500万(含)"
+},{
+	"investment_range":"4",
+	"name":"500万以上"
+}]

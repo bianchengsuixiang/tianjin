@@ -1,0 +1,152 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+	
+<!--<link rel="stylesheet" type="text/css" href="css/sunCompany.css"/>-->
+<section id="trustComDetailBread-nav">
+	<ul>
+		<li><i class="iconfont">&#xe90b;</i><a href="#/index">首页</a></li>
+		<li><a href="">阳光私募</a></li>
+		<li><a href="">私募公司</a></li>
+		<li class="unClickable">{{trustComDetail.company_short_name}}</li>
+	</ul>
+</section>
+<section id="trustComDetailIntro">
+	<div><img ng-src="{{trustComDetail.logo_image==null?'img/home/defaultImg.jpg':trustComDetail.logo_image}}" /></div>
+	<div>
+		<div>{{trustComDetail.company_short_name}}</div>
+		<table>
+			<tr>
+				<td>成立日期：</td>
+				<td>{{trustComDetail.establish_date}}</td>
+				<td>是否上市</td>
+				<td>{{trustComDetail.if_list==1?"是":"否"}}</td>
+				<td>注册资本</td>
+				<td>{{trustComDetail.registered_capital}}</td>
+			</tr>
+			<tr>
+				<td>注册地区</td>
+				<td>{{trustComDetail.register_address}}</td>
+				<td>股东背景</td>
+				<td>{{trustComDetail.shareholder_background}}</td>
+				<td>法人代表</td>
+				<td>{{trustComDetail.legal_person==null?"--":trustComDetail.legal_person}}</td>
+			</tr>
+			<tr>
+				<td>大股东</td>
+				<td colspan="3">{{trustComDetail.shareholder==null?"--":comDetailShareholder}}</td>
+				<td>董事长</td>
+				<td>{{trustComDetail.legal_person==null?"--":trustComDetail.legal_person}}</td>
+			</tr>
+		</table>
+	</div>
+</section>
+<section id="trustComDetail">
+	<section id="trustComDetailAbout"><!--公司简介-->
+		<div class="summary">
+			<div>公司简介</div>
+		</div>
+		<p>{{trustComDetail.company_profile}}</p>
+	</section>
+	<section id="trustComDetailShareholder"><!--股东构成-->
+		<div class="summary">
+			<div>股东构成</div>
+		</div>
+		<table>
+			<tr class="th">
+				<td>序号</td>
+				<td>股东名称</td>
+				<td>公司性质</td>
+				<td>持股比例</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>中国中信集团有限公司</td>
+				<td>央企</td>
+				<td>80%</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>中国中信集团有限公司</td>
+				<td>央企</td>
+				<td>80%</td>
+			</tr>
+		</table>
+	</section>
+	<section id="trustComDetailHonor"><!--所获荣誉-->
+		<div class="summary">
+			<div>所获荣誉</div>
+		</div>
+		<p>{{trustComDetail.honor}}</p>
+		<!--<p>中信信托在《金融时报》和中国社会科学院金融研究所的联合评选中连续三年获得年度"最佳信托公司奖"</p>-->
+	</section>
+	<section id="trustComDetailHistory"><!--发展历程-->
+		<div class="summary">
+			<div>发展历程</div>
+		</div>
+		<p>{{trustComDetail.history==null?"--":trustComDetail.history}}</p>
+		<!--<p>1988年3月5日<br/>经原中国人民银行批准，中信信托投资有限责任公司前身中信兴业信托投资公司成立，中信兴业信托投资公司，是中国中信集团公司的全资子公司。</p>
+		<p>1988年3月5日<br/>经原中国人民银行批准，中信信托投资有限责任公司前身中信兴业信托投资公司成立，中信兴业信托投资公司，是中国中信集团公司的全资子公司。</p>
+		<p>1988年3月5日<br/>经原中国人民银行批准，中信信托投资有限责任公司前身中信兴业信托投资公司成立，中信兴业信托投资公司，是中国中信集团公司的全资子公司。</p>-->
+	</section>
+</section>
+<section id="trustComDetailPros"><!--旗下产品-->
+		<h4>旗下产品</h4>
+		<div>
+			<ul class="th">
+				<li class="li1">信托公司</li>
+				<li class="li2">产品名称</li>
+				<li class="li3">
+					<p>预期年</p>
+					<p>化收益</p>
+				</li>
+				<li class="li4">
+					<p>投资</p>
+					<p>起点</p>
+				</li>
+				<li class="li5">
+					<p>投资</p>
+					<p>期限</p>
+				</li>
+				<li class="li6">
+					<p>付息</p>
+					<p>方式</p>
+				</li>
+				<li class="li7">
+					<p>投资</p>
+					<p>领域</p>
+				</li>
+				<li class="li8">
+					<p>项目所</p>
+					<p>在地</p>
+				</li>
+				<li class="li9">
+					<p>产品</p>
+					<p>状态</p>
+				</li>
+				<li class="li10">操作</li>
+			</ul>
+			<ul class="tbd">
+				<li class="li1">
+					<a href="javascript:void();">
+						<img src="" alt="图片" />
+						<p>中信信托</p>
+					</a>
+				</li>
+				<li class="li2">
+					<a href="javascript:void();">广州后花园</a>
+				</li>
+				<li class="li3">6.5-6.8%</li>
+				<li class="li4">100万</li>
+				<li class="li5">18个月</li>
+				<li class="li6">按年付息</li>
+				<li class="li7">房地产</li>
+				<li class="li8">其他地区</li>
+				<li class="li9">在售</li>
+				<li class="li10"><a href="javascript:void();" ng-click="reservationTab(item,'3')">立即预约</a></li>
+			</ul>
+		</div>
+</section>
+

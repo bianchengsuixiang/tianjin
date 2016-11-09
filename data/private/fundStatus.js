@@ -1,0 +1,25 @@
+[{
+	"fund_status":"1",
+	"name":"募集中"
+},{
+	"fund_status":"2",
+	"name":"开放运行"
+},{
+	"fund_status":"3",
+	"name":"封闭运行"
+},{
+	"fund_status":"4",
+	"name":"提前清算"
+},{
+	"fund_status":"5",
+	"name":"到期清算"
+},{
+	"fund_status":"6",
+	"name":"发行失败"
+},{
+	"fund_status":"7",
+	"name":"更换管理人"
+},{
+	"fund_status":"-1",
+	"name":"其他"
+}]

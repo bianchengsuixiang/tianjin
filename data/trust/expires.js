@@ -1,0 +1,13 @@
+[{
+	"term_of_investment":"1",
+	"name":"12个月以下(含)"
+},{
+	"term_of_investment":"2",
+	"name":"12-18个月(含)"
+},{
+	"term_of_investment":"3",
+	"name":"18-24个月(含)"
+},{
+	"term_of_investment":"4",
+	"name":"24个月以上"
+}]

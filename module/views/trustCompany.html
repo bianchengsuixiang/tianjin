@@ -1,0 +1,75 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+<section id="trustCompany">
+	<section class="section-t">
+		<section>
+			<div>注册资本：</div>
+			<div class="capitalCate">
+				<div>
+					<div class="active divTab">全部</div>
+					<div  ng-repeat="item in capitalCate" selectId="{{item.registered_capital_cate}}" class="divTab">{{item.name}}</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div>股东背景：</div>
+			<div class="shareholderBackground">
+				<div>
+					<div class="active divTab">全部</div>
+					<div  ng-repeat="item in shareholderBackground" selectId="{{item.shareholder_background}}" class="divTab">{{item.name}}</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div>注册地区：</div>
+			<div class="registerAddress">
+				<div>
+					<div class="active divTab" >全部</div>
+					<div  ng-repeat="item in registerAddress" selectId="{{item.register_address_range}}" class="divTab">{{item.name}}</div>
+				</div>
+			</div>
+		</section>
+		<section class="lastSection"></section>
+	</section>
+	<section class="section-b">
+		<div>
+			<div>
+				<input type="text" placeholder="公司名|全名|法人|股东" ng-model="trustComKeword"/>
+				<div class="iconfont" ng-click="trustComSearch()">&#xe920;</div>
+			</div>
+			<div>共找到<span>{{trustComSum}}</span>款符合条件的产品</div>
+		</div>
+		<div>
+			<ul>
+				<li class="li1">公司名称</li>
+				<li class="li2">成立时间</li>
+				<li class="li3">注册资本</li>
+				<li class="li4">注册地区</li>
+				<li class="li5">股东背景</li>
+				<li class="li6">法人代表</li>
+				<li class="li7">平均收益率</li>
+			</ul>
+		</div>
+		<div>
+			<ul ng-repeat="item in trustCompanys">
+				<li><a href="javascript:void();" ng-click="goTrustComDetailCom(item)"><img ng-src="{{item.logo_image==null?'img/home/defaultImg.jpg':item.logo_image}}" />{{item.company_short_name==null?"--":item.company_short_name}}</a></li>
+				<li>{{item.establish_date==null?"--":item.establish_date | limitTo:10}}</li>
+				<li>{{item.registered_capital==null?"--":item.registered_capital}}</li>
+				<li>{{item.register_address==null?"--":item.register_address}}</li>
+				<li>{{item.shareholder_background_des==null?"--":item.shareholder_background_des}}</li>
+				<li>{{item.legal_person==null?"--":item.legal_person}}</li>
+				<li>{{item.average_rate==null?"--":item.average_rate+"%"}}</li>
+			</ul>
+		</div>
+	</section>
+	<section class="text-center">
+		<link rel="stylesheet" type="text/css" href="css/kkpagerTrustCom.css"/>
+		<div></div>
+		<div id="trustComPager"></div>
+	</section>
+</section>
+
+

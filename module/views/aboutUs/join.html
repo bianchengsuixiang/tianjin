@@ -1,0 +1,279 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+<script type="text/javascript" src="lib/js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="module/controller/about.js" ></script>	
+<div id="homeHeader2">
+	<div class="header">
+		<div class="logo" ui-sref="index"></div>
+		<ul class="nav nav-pills" role="tablist">
+		  <li role="presentation"><a href="#/index" ui-sref="index">首页</a></li><!--color:#e4883d;-->
+		  <li role="presentation"><a href="#/sun/home" ui-sref="sun.home">阳光私募</a></li>
+		  <li role="presentation"><a href="#/private/home" ui-sref="private.home">私募股权</a></li>
+		  <li role="presentation"><a href="#/trust/home" ui-sref="trust.home">信托资管</a></li>
+		  <li role="presentation"><a href="#/news/home" ui-sref="news.home">金融资讯</a></li>
+		  <li role="presentation"><a href="#/about" class="currentA"  ui-sref="about" >关于天玑</a></li>
+		  <li role="presentation" style="color:#c1bebb;">天玑俱乐部</li>
+		  <li role="presentation" style="color:#c1bebb;">天玑商学院</li>
+		</ul>
+		<div class="login">
+			<div class="unloginBtn">
+				<a href="javascript:void:();" ng-click="loginTab()">登录</a>
+				<a href="javascript:void:();" ng-click="registerTab()">注册</a>
+			</div>
+			<div class="logined_wrap">
+				<div class="userWP">
+					<span class="round"><img src="img/userDefaultAvatar.png"></span>
+					<span>{{userName}}</span>
+					<span class="triangle"></span>
+				</div>
+				<div class="dropBox">
+					<ul>
+						<li class="ToforgetPwd">修改密码</li>
+						<li class="logout" ng-click="loginOutBtn()">退出登录</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="head2" class="hide">
+	<nav>
+		<div class="logo" ui-sref="index"><img src="img/header/logo.png"></div>
+		<ul class="nav">
+			<li><a href="#/index" ui-sref="index">首页</a></li>
+			<li><a href="#/sun/home" ui-sref="sun.home">阳光私募</a></li>
+			<li><a href="#/private/home" ui-sref="private.home">私募股权</a></li>
+			<li><a href="#/trust/home" ui-sref="trust.home">信托资管</a></li>
+			<li><a href="#/news/home" ui-sref="news.home">金融资讯</a></li>
+			<li><a href="#/about" ui-sref="about"  class="currentFixedA">关于天玑</a></li>
+		</ul>
+		<ul class="nav-right">
+			<li>
+				<a class="iconfont" href="#">&#xe93a;</a>
+				<a class="iconfont" href="#">&#xe93b;</a>
+				<a style="font-size: 18px;" class="iconfont" href="#">&#xe92a;</a>
+				<a class="iconfont" href="#">&#xe939;</a>
+			</li>
+			<li class="login_wrap"><a href="javascript:void();" ng-click="loginTab()">登录</a><a href="javascript:void();" ng-click="registerTab()">注册</a></li>
+			<li>0755-83695501</li>
+		</ul>
+	</nav>
+</div>
+<div class="mainAbout">
+	<div class="about">
+		<div class="headline">
+			<ul>
+				<li class="headline1"><a href="#/about" ui-sref="about">关于天玑</a></li>
+			
+				<li class="headline1"><a href="#/contact" ui-sref="contact">联系我们</a></li>
+			
+				<li class="active headline1"><a href="#/join" ui-sref="join">加入我们</a></li>
+			
+				<li class="headline1"><a href="#/media" ui-sref="media">媒体报道</a></li>
+			
+				<li class="headline1"><a href="#/declaraction" ui-sref="declaraction">免责声明</a></li>
+			</ul>	
+		</div>
+		<div class="cantian">
+			<div class="join">
+				<div class="joinImg">
+					<p class="joinP1">请发送您的简历至：<a href="#">hr.tech@tianjiwealth.com</a></p>
+				</div>
+				<h3><span class="horizon-3px">产品设计</span></h3>
+				<ul class="joinUl">
+					<li>产品经理<span>+</span></li>
+					<div class="require">
+						<li class="li1">工作职责：</li>
+						<li class="joinLi1 li1">1、负责网站和微信服务号的产品设计和产品文档撰写；</li>
+						<li class="joinLi1 li1">2、把握市场发展趋势，跟踪分析竞争对手，定期输出竞品分析报告；</li>
+						<li class="joinLi1 li1">3、全程参与产品的研发周期，对设计、开发、测试等进行过程跟进，推动产品功能上线；</li>
+						<li class="joinLi1 li1">4、负责收集用户反馈和运营建议，提供可落地执行的产品解决方案，对产品持续主动优化；</li>
+						<li class="li1">能力要求：</li>
+						<li class="joinLi1 li1">1、2年以上互联网产品经验，有互联网金融行业经验者优先；</li>
+						<li class="joinLi1 li1">2、熟练使用Axure、XMind、Word、Excel、PPT、Visio等常用工具；</li>
+						<li class="joinLi1 li1">3、有事业心，热爱产品，对挖掘用户需求保持狂热，擅长解决问题；</li>
+						<li class="joinLi1 li1">4、踏实做事，接地气，懂人性，有同理心，擅长聆听和理解用户需求；</li>
+						<li class="joinLi1 li1">5、具备较强的逻辑思维能力、沟通协调能力和团队合作精神，执行力强；</li>
+						<li class="joinLi1 li1">6、具备优秀的产品原型设计能力和产品文档撰写能力，有一定的审美能力；</li>
+					</div>
+					<li>UI设计师<span>+</span></li>
+					<div class="require">
+						<li class="li1">工作职责：</li>
+						<li class="joinLi1 li1">1、负责PC端和专题页的相关设计工作，能够从用户体验出发进行整体把控；</li>
+						<li class="joinLi1 li1">2、能够准确理解产品定位和用户需求，参与设计体验、交互呈现，提升界面易用性；</li>
+						<li class="joinLi1 li1">3、关注行业设计动态与发展方向，准确把握公司设计风格，控制相关创意工作的出品质量；</li>
+						<li class="joinLi1 li1">4、能够独立完成网站设计和编写布局静态页面；</li>
+						<li class="li1">能力要求：</li>
+						<li class="joinLi1 li1">1、2年以上设计相关工作经验，有已上线的作品者优先；</li>
+						<li class="joinLi1 li1">2、熟悉PC端和移动端交互设计，具备一定的用户体验知识；</li>
+						<li class="joinLi1 li1">3、具备良好的合作意识和团队精神，富有工作激情、创作欲望和责任心；</li>
+						<li class="joinLi1 li1">4、执行力强，自我驱动力强，擅长主动沟通，能够理解用户需求，注重设计品质；</li>
+						<li class="joinLi1 li1">5、精通Photoshop、illustrator等设计软件，熟练使用Html、CSS和Javascript编写静态页面；</li>
+						<li class="joinLi1 li1">6、了解设计行业趋势，有丰富的设计理论知识，对产品界面趋势有敏锐的洞察力和领悟力；</li>
+						<li class="joinLi1 li1">7、有互联网金融行业的工作经验者优先；</li>
+					</div>
+				</ul>
+				<h3><span class="horizon-3px">技术开发</span></h3>
+				<ul class="joinUl">
+					<li>测试工程师 <span>+</span></li>
+					<div class="require">
+						<li class="li1">工作职责：</li>
+						<li class="joinLi1 li1">1、完成公司项目、产品的相关测试工作；</li>
+						<li class="joinLi1 li1">2、根据产品需求和设计文档，制定测试计划，并分析测试需求、设计测试流程；</li>
+						<li class="joinLi1 li1">3、根据产品测试需求完成测试环境的设计与配置工作；</li>
+						<li class="joinLi1 li1">4、执行具体测试任务并确认测试结果、缺陷跟踪，完成测试报告以及测试结果分析；</li>
+						<li class="joinLi1 li1">5、在测试各环节与开发、产品等部门沟通保证测试输入和输出的正确性和完备性；</li>
+						<li class="joinLi1 li1">6、完成产品缺陷验证和确认，对于难以重现的缺陷，需要完成可能性原因分析与验证；</li>
+						<li class="joinLi1 li1">7、定期提交产品缺陷统计分析报告并完成产品测试总结报告；</li>
+						<li class="li1">能力要求：</li>
+						<li class="joinLi1 li1">1、细心，有过移动APP与后台Web系统的测试经验；</li>
+						<li class="joinLi1 li1">2、2年以上软件测试经验；</li>
+						<li class="joinLi1 li1">3、具备计算机、操作系统、网络、数据库相关知识；</li>
+						<li class="joinLi1 li1">4、掌握各种软件测试技术、方法、如功能测试、性能测试、安全性、可靠性、界面等；</li>
+						
+					</div>
+					<li>JAVA开发工程师<span>+</span></li>
+					<div class="require">
+						<li class="li1">工作职责：</li>
+						<li class="joinLi1 li1">1、负责进行框架核心代码开发，根据业务的发展对技术架构不断持续优化；</li>
+						<li class="joinLi1 li1">2、负责技术选型分析、撰写相关技术文档；</li>
+						<li class="joinLi1 li1">3、负责指导业务开发小组、跨地域业务开发小组完成系统业务的设计、实现、集成、测试；</li>
+						<li class="joinLi1 li1">4、负责系统架构的高可靠性、高可扩展性、高安全性、高并发性优化，提出并实施合理解决方案，提升开发效率和系统性能；</li>
+						<li class="li1">能力要求：</li>
+						<li class="joinLi1 li1">1、本科及以上学历，三年以上大型互联网项目的设计、分析、架构经验；</li>
+						<li class="joinLi1 li1">2、熟悉缓存技术，应用优化，服务器优化，集群技术处理、应用负载均衡、系统性能调优等技术，具有高并发平台环境下的系统开发及优化；</li>
+						<li class="joinLi1 li1">3、精通熟练应用Spring、Struts、MyBatis、Memcached/Redis，jQuery等技术框架；</li>
+						<li class="joinLi1 li1">4、掌握linux基本操作，熟悉主流应用服务器Apache、Nginx、Tomca等；</li>
+						<li class="joinLi1 li1">5、具备互联网行业应用系统等具有高并发性能、高可靠可用系统设计经验者优先；</li>
+					</div>
+					<li>前端开发工程师<span>+</span></li>	
+					<div class="require">
+						<li class="li1">工作职责：</li>
+						<li class="joinLi1 li1">1、负责 HTML5 开发，与后台人员配合完成HTML、CSS以及动态交互效果的制作；</li>
+						<li class="joinLi1 li1">2、负责处理不同PC端、移动端浏览器的兼容性的改善与优化；</li>
+						<li class="joinLi1 li1">3、持续优化WEB前端页面展现，提升用户体验；</li>
+						<li class="li1">能力要求：</li>
+						<li class="joinLi1 li1">1、精通Web前端技术，包括XHTML/XML/CSS/JavaScript/Ajax等，熟悉 W3C 标准，对页面的性能和浏览器兼容有丰富的实践经验；</li>
+						<li class="joinLi1 li1">2、熟悉各种前端框架,熟练使用AngularJS，Jquer,Easyu框架等；</li>
+						<li class="joinLi1 li1">3、熟悉Html5、CSS3.0、Bootstarp熟练运用页面布局；</li>
+						<li class="joinLi1 li1">4、具有很强的团队合作能力，有良好的组织、协作和沟通能力；</li>
+						
+					</div>
+				</ul>
+				<h3><span class="horizon-3px">市场运营</span></h3>
+				<ul class="joinUl">
+					<li>视觉设计师<span>+</span></li>
+					<div class="require">
+						<li class="li1">工作职责：</li>
+						<li class="joinLi1 li1">1、配合开发运营，完成日常的线上大型活动、专题设计（PC端为主）；</li>
+						<li class="joinLi1 li1">2、为日常的线上运营活动、产品专题，功能页面及提供美术支持；</li>
+						<li class="joinLi1 li1">3、负责线下宣传品如海报、画册等相关物料的设计；</li>
+						<li class="joinLi1 li1">4、根据公司的品牌发展方向，统一协调整体视觉输出，不同项目遵循特定风格、定位、主题；</li>
+						<li class="joinLi1 li1">5、配合运营推广部门针对性的推广投放进行视觉把控、审美界定；</li>
+						<li class="li1">能力要求：</li>
+						<li class="joinLi1 li1">1、2年以上创意设计经验，具有专业美术设计背景或美术相关院校毕业，大专以上学历；</li>
+						<li class="joinLi1 li1">2、熟练使用Indesign、Axture、Photoshop、Illustrator、AI、cdr等专业设计软件；</li>
+						<li class="joinLi1 li1">3、广告、设计行业有平面设计、美术指导经验；</li>
+						<li class="joinLi1 li1">4、有大型网站建站、运维项目工作经验者优先考虑；</li>
+						<li class="joinLi1 li1">5、如有手绘插画功底的优先考虑；</li>
+						<li class="joinLi1 li1">6、学习能力强、富于创造力，有良好的创意表达能力；</li>
+						<li class="joinLi1 li1">7、自己能做好作品，也能帮助设计师做好作品，人有趣，能担当。</li>
+					</div>
+					<li>SEO经理<span>+</span></li>
+					<div class="require">
+						<li class="li1">工作职责：</li>
+						<li class="joinLi1 li1">1、制定SEO推广计划和投放策略，并对推广效果进行监控优化；</li>
+						<li class="joinLi1 li1">2、管理广告投放，分析优化各广告渠道的效果，进行针对性策略投放；</li>
+						<li class="joinLi1 li1">3、研究各渠道广告形式，探寻更好的SEM推广方向和效果；</li>
+						<li class="joinLi1 li1">4、对数据变化敏感，有较强的数据分析和挖掘能力；</li>
+						<li class="joinLi1 li1">5、研究竞争对手及其他网站SEM营销策略，提出调整方案，不断优化账户提高ROI；</li>
+						<li class="li1">能力要求：</li>
+						<li class="joinLi1 li1">1、三年以上sem相关工作经验，精通搜索营销关键词的广告模式，精通百度竞价、Google Adwords、360点睛等多个平台；</li>
+						<li class="joinLi1 li1">2、有广点通，粉丝通，今日头条等社交媒体广告渠道和信息流广告投放经验的加分；</li>
+						<li class="joinLi1 li1">3、具备账户的搭建、优化、数据分析等账户操作技能，对数据变化敏感，有较强的数据分析和挖掘能力；</li>
+						<li class="joinLi1 li1">4、能独立负责整个项目，制定广告投放策略和优化方案，能组建和带领团队；</li>
+						<li class="joinLi1 li1">5、负责过年消费500万以上账户，获得百度资格证书优先；</li>
+					</div>
+				</ul>
+				<h3><span class="horizon-3px">财富中心</span></h3>
+				<ul class="joinUl">
+					<li>渠道经理<span>+</span></li>
+					<div class="require">
+						<li class="li1">工作职责：</li>
+						<li class="joinLi1 li1">1、依托公司平台通过电话、网络、面谈等方式服务于理财师及同业机构，达成相关业务指标；</li>
+						<li class="joinLi1 li1">2、为理财师及同业机构提供快速、准确的理财产品销售支持专业服务；</li>
+						<li class="joinLi1 li1">3、完成公司制定的业绩目标；</li>
+						<li class="li1">能力要求：</li>
+						<li class="joinLi1 li1">1、大专及以上学历，专业不限，金融，财务，营销优先；</li>
+						<li class="joinLi1 li1">2、热爱金融营销服务工作，有创业激情和互联网思维；</li>
+						<li class="joinLi1 li1">3、勤奋主动，积极进取，愿意挑战高薪，有清晰的人生和职业规划；</li>
+						<li class="joinLi1 li1">4、具有良好的客户沟通、关系管理以及营销能力；</li>
+						<li class="joinLi1 li1">5、有金融相关行业销售或呼叫中心销售工作经验优先考虑；</li>
+					</div>
+					<li>理财顾问<span>+</span></li>
+					<div class="require">
+						<li class="li1">工作职责：</li>
+						<li class="joinLi1 li1">1、负责电话销售；</li>
+						<li class="joinLi1 li1">2、负责渠道拓展；</li>
+						<li class="joinLi1 li1">3、负责客户服务；</li>
+						<li class="li1">能力要求：</li>
+						<li class="joinLi1 li1">1、专业方面，对宏观经济有一定认知；</li>
+						<li class="joinLi1 li1">2、逻辑思维有一定的框架；</li>
+						<li class="joinLi1 li1">3、文字编辑能力较强；</li>
+						<li class="joinLi1 li1">4、语言组织及表达能力强；</li>
+						<li class="joinLi1 li1">5、具有很强的团队合作能力，有良好的组织、协作和沟通能力；</li>
+						<li class="joinLi1 li1">6、思维灵活，能够积极配合和服从上级的工作安排；</li>
+						<li class="joinLi1 li1">7、有1年左右的私募基金销售经验；</li>
+					</div>
+					<li>客服主管<span>+</span></li>
+					<div class="require">
+						<li class="li1">工作职责：</li>
+						<li class="joinLi1 li1">1、管理客服团队，对所属员工进行客服培训、激励、管理和考核；</li>
+						<li class="joinLi1 li1">2、对用户反馈的各类问题进行搜集，并做好信息分析、整理及反馈工作；</li>
+						<li class="joinLi1 li1">3、及时跟踪和处理一些特殊疑难问题；</li>
+						<li class="joinLi1 li1">4、协助领导维护与完善客服管理制度，制定部门管理规范，优化工作流程。</li>
+						<li class="li1">能力要求：</li>
+						<li class="joinLi1 li1">1、熟知信托、资管、私募基金等产品要素，有相关销售经验优先。</li>
+						<li class="joinLi1 li1">2、熟知客户服务相关的行业知识，三年以上客服工作实践且有一定的客服管理经验；</li>
+						<li class="joinLi1 li1">3、通信运营商（移动、联通、电信）或互联网公司客服工作经验优先；</li>
+						<li class="joinLi1 li1">4、熟悉用户心理，具有较强的服务意识和丰富的沟通服务技巧；</li>
+						<li class="joinLi1 li1">5、较强的责任心和执行力，富有工作热情和团队意识；</li>
+					</div>
+				</ul>
+				<h3><span class="horizon-3px">综合管理</span></h3>
+				<ul class="joinUl">
+					<li>行政前台<span>+</span></li>
+					<div class="require">
+						<li class="li1">工作职责：</li>
+						<li class="joinLi1 li1">1、负责接听电话，记录留言，按要求转接电话或记录信息，确保及时准确；</li>
+						<li class="joinLi1 li1">2、负责复印、传真和打印等设备的使用与管理工作；</li>
+						<li class="joinLi1 li1">3、对来访客人做好接待、登记、引导，安排洽谈地点，及时通知被访人员；</li>
+						<li class="joinLi1 li1">4、负责公司保洁工作的督办与检查，展示公司良好形象；</li>
+						<li class="joinLi1 li1">5、负责公司快递、信件、包裹的收发工作及饮用水的订购；</li>
+						<li class="joinLi1 li1">6、不定时检查物品库存，及时申请采购，做好后勤保障工作；</li>
+						<li class="joinLi1 li1">7、负责对办公用品的领用、发放、出入库做好登记；</li>
+						<li class="joinLi1 li1">8、建立办公用品管理台账，保证账物相符；</li>
+						<li class="joinLi1 li1">9、负责公司固定资产管理等行政事务；</li>
+						<li class="joinLi1 li1">10、完成其他部门交办的协助性工作；</li>
+						<li class="joinLi1 li1">11、协助上级完成日常工作，完成上级交办事务；</li>
+						<li class="li1">能力要求：</li>
+						<li class="joinLi1 li1">1、大专及以上学历，身高163cm以上，1年以上相关工作经验；</li>
+						<li class="joinLi1 li1">2、形象气质佳，亲和力强，性格开朗，普通话标准，具有良好的沟通能力、团队协作精神；</li>
+						<li class="joinLi1 li1">3、相貌端正，待人热诚，良好的服务意识、耐心和责任心，工作积极主动；</li>
+						<li class="joinLi1 li1">4、踏实做事，接地气，懂人性，有同理心，擅长聆听和理解用户需求；</li>
+						<li class="joinLi1 li1">5、熟练掌握office办公软件；</li>
+						<li class="joinLi1 li1">6、良好的沟通技巧和协调能力；</li>
+					</div>
+					
+				</ul>
+			</div>
+	   </div>
+		
+		
+	</div>
+</div>
+
+<footer ng-include="'module/template/footer.html'"></footer>

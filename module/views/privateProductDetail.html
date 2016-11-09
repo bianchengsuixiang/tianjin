@@ -1,0 +1,257 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+<link rel="stylesheet" type="text/css" href="css/privateProductDetail.css"/>
+<div class="bread-nav">
+	<ul>
+		<li><i class="iconfont">&#xe90b;</i><a href="#/index">首页</a></li>
+		<li><a href="#/private/private/home" ui-sref="private.home">私募股权</a></li>
+		<li><a href="">私募股权详情</a></li>
+		<li class="unClickable">{{privatefundDetail.fund_name}}</li>
+	</ul>
+</div>
+<div class="mainContent privatePro">
+	<div class="pro-title-wrap">
+		<div class="pro-title">{{privatefundDetail.fund_name}}</div>
+	</div>
+	<div class="detailSections-wrap">
+		<dl>
+			<dt><span>产品要素</span></dt>
+			<dd>
+				<table class="trustProTable">
+					<tr>
+						<td>管理机构</td>
+						<td>{{privatefundDetail.management_org}}</td>
+						<td>募集状态</td>
+						<td>{{privatefundDetail.fund_status_desc}}</td>
+					</tr>
+					<tr>
+						<td>投资方向</td>
+						<td>{{privatefundDetail.investment_direction_desc}}</td>
+						<td>目标规模</td>
+						<td>{{null==privatefundDetail.final_size?"--":privatefundDetail.final_size}}万</td>
+					</tr>
+					<tr>
+						<td>投资起点</td>
+						<td>{{privatefundDetail.min_investment}}万</td>
+						<td>存续期限</td>
+						<td>{{privatefundDetail.duration}}年</td>
+					</tr>
+					<tr>
+						<td>基金类型</td>
+						<td>{{privatefundDetail.fund_type_desc}}</td>
+						<td>资本类型</td>
+						<td>{{privatefundDetail.capital_type_desc}}</td>
+					</tr>
+					<tr>
+						<td>开始募集时间</td>
+						<td>{{privatefundDetail.start_time}}</td>
+						<td>募集完成时间</td>
+						<td>{{privatefundDetail.stop_time}}</td>
+					</tr>
+					<tr>
+						<td>管理费</td>
+						<td>{{privatefundDetail.management_fee}}%/年</td>
+						<td>收益分成</td>
+						<td>{{privatefundDetail.profit_given}}</td>
+					</tr>
+				</table>
+			</dd>
+		</dl>
+		<dl>
+			<dt><span>产品点评</span></dt>
+			<dd>
+				<p>{{privatefundDetail.product_review}}</p>
+			</dd>
+		</dl>
+		<dl>
+			<dt><span>投资事项</span></dt>
+			<dd>
+				<!--
+					
+					<p class="title">投资方向</p>
+				<p>重点投向已挂牌新三板公司的定向增发，并购机会、期权、优先股、可转债以及拟在新三板挂牌的未上市公司；适度参与 PRE-IPO 类项目。</p>
+				<p class="title">基金亮点</p>
+				<p>（1）鼎锋同时具有一二级市场优势，具备全产业链的资产管理能力：鼎锋资产投资的探路者、兴森科技、天壕节能、勤上光电已成功实现 IPO 退出，目前有 5 家在审的 IPO 项目；鼎锋连续多年获得业界最高荣誉，包括金牛奖、晨星中国最佳对冲基金等，管理的 30余只阳光私募类产品均大幅超过市场大盘指数并取得绝对正收益。</p>
+				<p>（2）项目来源优势：与国内重点券商、律师事务所、会计师事务所、创投公司、高新园区都有广泛的接触和深度的合作，有优质的项目渠道。</p>
+				<p>（3）投研优势：主要高管和研究团队对企业运作有深刻的理解，善于把握产业的变迁和价值分配路径；善于运用系统的“增长型”研究方法分析和评估公司增长的驱动因素；提倡定价和估值方法的多样化， 善于从产业资本的角度、 根据不同公司的商业模式特点对公司定价；注重实地调研。</p>
+				<p>（4）投资管理优势：基于与多家上市公司的战略合作以及广阔的产业视野，能更好地推动企业的资本运作、收购兼并和产业整合；在公司治理、投融资、市值管理方面都聚集了优秀的人才，能给企业提供更优质的增值服务，通过投后管理创造价值。</p>
+					
+				-->
+				{{privatefundDetail.investment_thing}}
+			    
+			</dd>
+		</dl>
+		<dl>
+			<dt><span>管理机构</span></dt>
+			<dd>
+				<p class="title">机构简介</p>
+				
+				
+				<!--
+                	<p>上海鼎锋资产管理有限公司成立于2007年11月，注册资本3190万元人民币，主要从事证券投资及股权投资的管理与咨询业务，团队规模超过20人。目前总体管理规模超过40亿元人民币。公司还从事股权投资，目前已有超过10个私募股权项目投资，已完成投资3亿元人民币；各项目总体收益率水平良好。</p>
+				<p>鼎锋资产成功保荐贵州茅台、北大荒、广博股份、华宏科技、北京君正等十余家多领域的企业改制与上市、参与十余家上市公司的股权及债权的融资和并购重组业务，具有丰富的投资银行业务理论和实践经验。鼎锋资产在一级市场成功投资的探路者、兴森科技、天壕节能和勤上光电已成功实现IPO退出。</p>
+				<p>鼎锋资产连续多年获得业界最高荣誉，包括：“金牛奖”、“最佳私募基金奖”、“年度基金奖”“晨星中国最佳对冲基金”等，拥有良好的品牌形象与市场影响力。 管理的30余只阳光私募类产品，管理规模超过30亿人民币，产品均大幅超越市场大盘指数并取得绝对正收益。</p>
+				
+                -->
+				{{privatefundDetail.org_profile}}
+				
+				<p class="title">管理团队</p>
+				<ul class="teamMemberUl" >
+					
+					
+                    <li ng-repeat="item in privatefundDetail.positions">
+                    		
+                         <div class="wholeWrap">
+							
+							<div class="teamerImg"><img ng-src="{{null==item.head_image_id?'img/private/teamerSample.jpg':item.head_image_id}}" alt="姓名" /></div>
+							<div class="teamerName">{{item.name}}</div>
+							<div class="teamerPosition">{{item.position}}</div>
+							<div class="teamerInfo">
+								{{item.profile}}
+								
+							</div>
+							
+							
+						</div>
+                            
+					</li>
+                    
+					
+					
+					<!--
+					
+                    <li>
+						<div class="wholeWrap">
+							<div class="teamerImg"><img src="img/private/teamerSample.jpg" alt="姓名" /></div>
+							<div class="teamerName">吴刚</div>
+							<div class="teamerPosition">董事长</div>
+							<div class="teamerInfo">
+								吴刚，现任昆吾九鼎投资管理有限公司董事长。吴刚先生此前曾担任闽发证券投资银行部项目经理、广西北部湾国际港务集团总裁助理、中国证监会机构监管部及风险处置办公室副处长、处长。吴刚先生拥有北京大学金融学博士学位，及注册会计师、律师、资产评估师职称。
+							</div>
+						</div>
+					</li>	
+                   
+					<li>
+						<div class="wholeWrap">
+							<div class="teamerImg"><img src="img/private/teamerSample.jpg" alt="姓名" /></div>
+							<div class="teamerName">吴刚</div>
+							<div class="teamerPosition">董事长</div>
+							<div class="teamerInfo">
+								吴刚，现任昆吾九鼎投资管理有限公司董事长。吴刚先生此前曾担任闽发证券投资银行部项目经理、广西北部湾国际港务集团总裁助理、中国证监会机构监管部及风险处置办公室副处长、处长。吴刚先生拥有北京大学金融学博士学位，及注册会计师、律师、资产评估师职称。
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="wholeWrap">
+							<div class="teamerImg"><img src="img/private/teamerSample.jpg" alt="姓名" /></div>
+							<div class="teamerName">吴刚</div>
+							<div class="teamerPosition">董事长</div>
+							<div class="teamerInfo">
+								吴刚，现任昆吾九鼎投资管理有限公司董事长。吴刚先生此前曾担任闽发证券投资银行部项目经理、广西北部湾国际港务集团总裁助理、中国证监会机构监管部及风险处置办公室副处长、处长。吴刚先生拥有北京大学金融学博士学位，及注册会计师、律师、资产评估师职称。
+							</div>
+						</div>
+					</li>
+					
+					
+					-->
+					
+				</ul>
+			</dd>
+		</dl>
+		<div class="clearFloat"></div>
+	</div>
+</div>
+<div class="mayLike-wrap">
+	<div class="title">你可能感兴趣的产品</div>
+	<div class="section3" >
+		
+		<div ng-repeat="item in interested">
+			
+				
+					
+					
+					
+					<div><span type="button" class="btn" ng-click="goPrivatefundDetail(item)">{{item.fund_short_name}}</span></div>
+					<div>{{item.product_review}}</div>
+					<div>
+						<div>
+							<div>募集进度</div>
+							<div>
+								<div class="progress">
+								  	<div class="progress-bar" role="progressbar" aria-valuenow="{{item.current_size}}" aria-valuemin="0" aria-valuemax="{{item.final_size}}" style="width: {{item.current_size*100/item.final_size}}%;">
+								    	<span class="sr-only">60% Complete</span>
+								  	</div>
+								</div>
+							</div>
+			
+							<div>{{null==item.current_size?0:item.current_size}}万/{{item.final_size}}万</div>
+						</div>
+						<div>
+							<div>{{item.min_investment+"&nbsp;万"}}</div>
+							<div>{{null==item.duration?"--":item.duration+"&nbsp;年"}}</div>
+						</div>
+						<div>
+							<div>{{"投资起点"}}</div>
+							<div>{{"存续期限"}}</div>
+						</div>
+						<div>
+							<span type="button" class="btn" ng-click="goPrivatefundDetail(item)">产品详情</span><span type="button" class="btn" ng-click="reservationTab(reservationTab(item,'1'))">立即预约</span>
+						</div>
+					</div>
+		</div>
+			
+		
+		</div>
+	</div>
+<!--
+	<div ng-include="'module/template/reservation.html'"></div>
+	作者：offline
+	时间：2016-09-29
+	描述：__
+-->
+
+<link rel="stylesheet" type="text/css" href="css/reservation.css"/>
+<div ng-controller="reservationFixedCtrl">
+	<div class="reservation-fixed-wrap" ng-hide="reservationFixed1" ng-init="reservationFixed1=false">
+		<div class="main">
+			<div class="folderBtn" ng-click="reservationFixedTabOut()"><div ng-click="reservationFixedTabOut()">点击隐藏</div><div class="iconfont">&#xe92b;</div></div>
+			<div class="contentBox">
+				<div class="phoneBox">
+					<div class="iconfont">&#xe91b;</div>
+					<div>
+						<div>找私募，问天玑金服</div>
+						<div>0755-88695093</div>
+					</div>
+				</div>
+				<div>
+					<div class="inputs-group">
+						<input placeholder="您的姓名" maxlength="20" ng-model="reservationName" />
+						<input placeholder="手机号码" maxlength="11" ng-model="reservationTel" />
+						<a href="javascript:void();" ng-click="reservationBtnDetail(privatefundDetail,'1')">立即预约</a>
+					</div>
+					<div class="whiteText">天玑专业投资顾问将在24小时内尽快与您联系</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="reservation-fixed-wrap folded" ng-hide="reservationFixed2" ng-init="reservationFixed2=true">
+		<div class="main">
+			<div class="folderBtn" ng-click="reservationFixedTabOff()"><div ng-click="reservationFixedTabOff()">点击展开</div><div class="iconfont">&#xe92e;</div></div>
+			<div class="contentBox">
+				<div>
+					只推荐靠谱私募的平台
+				</div>
+				<div class="phoneBox">
+					<div class="iconfont">&#xe91b;</div>
+					<div>0755-88695093</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+

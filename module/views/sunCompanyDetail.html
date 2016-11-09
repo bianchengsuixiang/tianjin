@@ -1,0 +1,161 @@
+<section class="bread-nav">
+	<ul>
+		<li><i class="iconfont">&#xe90b;</i><a href="#/index">首页</a></li>
+		<li><a href="">阳光私募</a></li>
+		<li><a href="">私募公司</a></li>
+		<li class="unClickable">{{"中信嘉和10号"}}</li>
+	</ul>
+</section>
+<section class="companyIntro">
+	<div><img src="img/sun/sunCompany.jpg" /></div>
+	<div>
+		<div>{{companyDetail.companyName}}</div>
+		<table>
+			<tr>
+				<td>成立日期：</td>
+				<td>{{companyDetail.inceptionDate==null?'2014-07-20':companyDetail.inceptionDate}}</td>
+				<td>备案号</td>
+				<td>{{companyDetail.registerNumber==null?"P1000294":companyDetail.registerNumber}}</td>
+				<td>核心人物</td>
+				<td>{{companyDetail.keyPerson==null?"赵军":companyDetail.keyPerson}}</td>
+			</tr>
+			<tr>
+				<td>所在地区</td>
+				<td>{{companyDetail.city}}</td>
+				<td>注册资本</td>
+				<td>{{"1000万"}}</td>
+				<td>管理规模</td>
+				<td>{{companyDetail.companyAssetSize}}</td>
+			</tr>
+			<tr>
+				<td>累计平均收益</td>
+				<td>{{companyDetail.retIncep==null?"50.84%":companyDetail.retIncep}}</td>
+				<td>今年平均收益</td>
+				<td colspan="3">{{companyDetail.retYtd==null?"70.21%":companyDetail.retYtd}}</td>
+			</tr>
+		</table>
+	</div>
+</section>
+<section class="companyProduct">
+	<div>代表产品
+		<div><div>代表产品</div></div>
+		<div>
+			<li>{{"淡水泉成长1期"}}</li>
+			<li>单位净值:{{"463.15"}}</li>
+			<li>净值日期:{{"2016-08-15"}}</li>
+			<li>成立日期:{{"2007-09-06"}}</li>
+		</div>
+		<div></div>
+		<div>
+			<table class="incomeTab">
+				<tr class="first">
+					<td>年度</td>
+					<td>期间收益</td>
+					<td>行业平均</td>
+					<td>沪深300</td>
+					<td>排名</td>
+				</tr>
+				<tr>
+					<td>{{obj1.year}}</td>
+					<td class="negative">{{obj1.retained}}</td>
+					<td class="negative">{{obj1.avgret}}</td>
+					<td>{{obj1.hs300}}</td>
+					<td>{{obj1.rank}}</td>
+				</tr>
+				<tr>
+					<td>{{obj2.year}}</td>
+					<td class="positive">{{obj2.retained}}</td>
+					<td class="positive">{{obj2.avgret}}</td>
+					<td>{{obj2.hs300}}</td>
+					<td>{{obj2.rank}}</td>
+				</tr>
+				<tr>
+					<td>{{obj3.year}}</td>
+					<td class="positive">{{obj3.retained}}</td>
+					<td class="negative">{{obj3.avgret}}</td>
+					<td class="negative">{{obj3.hs300}}</td>
+					<td>{{obj3.rank}}</td>
+				</tr>
+				<!--<tr>
+					<td>2014年</td>
+					<td  class="positive">11.45%</td>
+					<td class="positive">11.45%</td>
+					<td class="positive">1.45%</td>
+					<td>546/1801</td>
+				</tr>
+				<tr>
+					<td>2013年</td>
+					<td  class="positive">21.45%</td>
+					<td>--</td>
+					<td  class="positive">1.45%</td>
+					<td>369/2164</td>
+				</tr>
+				<tr>
+					<td>2012年</td>
+					<td class="positive">1.45%</td>
+					<td class="positive">1.45%</td>
+					<td class="positive">1.45%</td>
+					<td>546/1801</td>
+				</tr>-->
+				<tr>
+					<td>总收益</td>
+					<td class="positive">{{obj1.count}}</td>
+					<td class="positive">{{obj2.count}}</td>
+					<td>{{obj3.count}}</td>
+					<td>2/216</td>
+				</tr>
+			</table>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div>
+		<div><div>旗下产品</div></div>
+		<div>
+			<li class="active">运行中</li>
+			<li>已清盘</li>
+		</div>
+		<div>
+			<li>基金名称</li>
+			<li>基金经理</li>
+			<li>投资策略</li>
+			<li>成立日期</li>
+			<li>近6个月收益</li>
+			<li>近一年收益</li>
+			<li>累计收益</li>
+			<li>最新净值</li>
+			<li>净值日期</li>
+		</div>
+		<div>
+			<ul ng-repeat="item in companyPros">
+				<li><a href="#/sun/productDetails" ui-sref="sun.productDetails">{{item.title}}</a></li>
+				<li><a href="">{{item.funderManager}}</a></li>
+				<li>{{item.pattern}}</li>
+				<li>{{item.funderDate}}</li>
+				<li>{{item.income1}}</li>
+				<li>{{item.income2}}</li>
+				<li>{{item.sum}}</li>
+				<li>{{item.latest}}</li>
+				<li>{{item.worthDate}}</li>
+			</ul>
+		</div>
+	</div><!--旗下产品-->
+	<div>
+		<div><div>详细信息</div></div>
+		<div class="tabTitle">
+			<li  class="active" ng-click="sunCompanyTab1()">核心人物</li>
+			<li  ng-click="sunCompanyTab2()">公司介绍</li>
+			<li  ng-click="sunCompanyTab3()">投资理念</li>
+			<li  ng-click="sunCompanyTab4()">研究团队</li>
+		</div>
+		<div>
+			<div class="figure" ng-hide="sunCompany1">
+				<p>{{companyDetail.keyPerson}}</p>
+			</div>
+			<div class="intro" ng-hide="sunCompany2">{{companyDetail.companyProfile}}</div>
+			<div class="idea" ng-hide="sunCompany3">{{companyDetail.philosopy}}</div>
+			<div class="team" ng-hide="sunCompany4">{{companyDetail.teamProfile}}</div>
+		</div>
+	</div><!--详细信息-->
+</section>
+
+

@@ -1,0 +1,160 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+<script type="text/javascript" src="lib/js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="module/controller/about.js" ></script>	
+<div id="homeHeader2">
+	<div class="header">
+		<div class="logo" ui-sref="index"></div>
+		<ul class="nav nav-pills" role="tablist">
+		  <li role="presentation"><a href="#/index" ui-sref="index">首页</a></li><!--color:#e4883d;-->
+		  <li role="presentation"><a href="#/sun/home" ui-sref="sun.home">阳光私募</a></li>
+		  <li role="presentation"><a href="#/private/home" ui-sref="private.home">私募股权</a></li>
+		  <li role="presentation"><a href="#/trust/home" ui-sref="trust.home">信托资管</a></li>
+		  <li role="presentation"><a href="#/news/home" ui-sref="news.home">金融资讯</a></li>
+		  <li role="presentation"><a href="#/about" class="currentA"  ui-sref="about" >关于天玑</a></li>
+		  <li role="presentation" style="color:#c1bebb;">天玑俱乐部</li>
+		  <li role="presentation" style="color:#c1bebb;">天玑商学院</li>
+		</ul>
+		<div class="login">
+			<div class="unloginBtn">
+				<a href="javascript:void:();" ng-click="loginTab()">登录</a>
+				<a href="javascript:void:();" ng-click="registerTab()">注册</a>
+			</div>
+			<div class="logined_wrap">
+				<div class="userWP">
+					<span class="round"><img src="img/userDefaultAvatar.png"></span>
+					<span>{{userName}}</span>
+					<span class="triangle"></span>
+				</div>
+				<div class="dropBox">
+					<ul>
+						<li class="ToforgetPwd">修改密码</li>
+						<li class="logout" ng-click="loginOutBtn()">退出登录</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="head2" class="hide">
+	<nav>
+		<div class="logo" ui-sref="index"><img src="img/header/logo.png"></div>
+		<ul class="nav">
+			<li><a href="#/index" ui-sref="index">首页</a></li>
+			<li><a href="#/sun/home" ui-sref="sun.home">阳光私募</a></li>
+			<li><a href="#/private/home" ui-sref="private.home">私募股权</a></li>
+			<li><a href="#/trust/home" ui-sref="trust.home">信托资管</a></li>
+			<li><a href="#/news/home" ui-sref="news.home">金融资讯</a></li>
+			<li><a href="#/about" ui-sref="about"  class="currentFixedA">关于天玑</a></li>
+		</ul>
+		<ul class="nav-right">
+			<li>
+				<a class="iconfont" href="#">&#xe93a;</a>
+				<a class="iconfont" href="#">&#xe93b;</a>
+				<a style="font-size: 18px;" class="iconfont" href="#">&#xe92a;</a>
+				<a class="iconfont" href="#">&#xe939;</a>
+			</li>
+			<li class="login_wrap"><a href="javascript:void();" ng-click="loginTab()">登录</a><a href="javascript:void();" ng-click="registerTab()">注册</a></li>
+			<li>0755-83695501</li>
+		</ul>
+	</nav>
+</div>
+<div class="mainAbout">
+	<div class="about">
+		<div class="headline">
+			<ul>
+				<li class="headline1"><a href="#/about" ui-sref="about">关于天玑</a></li>
+			
+				<li class="headline1"><a href="#/contact" ui-sref="contact">联系我们</a></li>
+			
+				<li class="headline1"><a href="#/join" ui-sref="join">加入我们</a></li>
+			
+				<li class="active headline1"><a href="#/media" ui-sref="media">媒体报道</a></li>
+			
+				<li class="headline1"><a href="#/declaraction" ui-sref="declaraction">免责声明</a></li>
+			</ul>	
+		</div>
+		<div class="cantian">
+			<div class="media">
+			<ul class="newsHome">
+			<li class="">
+				<div><a title=""  href="#/news/news/newsDetail" ui-sref="news.newsDetail"><img ng-src="img/news/sample1.jpg" src="img/news/sample1.jpg"></a></div>
+				<div>
+					<div class="title"><a title="" href="#/news/news/newsDetail" ui-sref="news.newsDetail" class="">各省金融业占GDP图谱：中西部增长快 北京上海最高</a></div>
+					<div class="shortCut ">据各省份最新公布的统计数据整理，今年上半年上海金融业增加值以17.1%的增速居各省、自治区、直辖市首位。在中国经济结构由工业主导向第三产业主导转变的过程中，金融...</div>
+					<div class="time ">今天  17:30</div>
+				</div>
+			</li>
+			<li class="">
+				<div><a title="" href="#/news/news/newsDetail" ui-sref="news.newsDetail"><img ng-src="img/news/sample2.jpg" src="img/news/sample2.jpg"></a></div>
+				<div>
+					<div class="title"><a title="" href="#/news/news/newsDetail" ui-sref="news.newsDetail" class="">中江信托-金马414号</a></div>
+					<div class="shortCut ">据各省份最新公布的统计数据整理，今年上半年上海金融业增加值以17.1%的增速居各省、自治区、直辖市首位。在中国经济结构由工业主导向第三产业主导转变的过程中，金融...</div>
+					<div class="time ">昨天  08:30</div>
+				</div>
+			</li>
+			<li class="">
+				<div><a title="" href="#/news/news/newsDetail" ui-sref="news.newsDetail"><img ng-src="img/news/default.jpg" src="img/news/default.jpg"></a></div>
+				<div>
+					<div class="title"><a title="" href="#/news/news/newsDetail" ui-sref="news.newsDetail" class="">中江信托-金马414号</a></div>
+					<div class="shortCut ">据各省份最新公布的统计数据整理，今年上半年上海金融业增加值以17.1%的增速居各省、自治区、直辖市首位。在中国经济结构由工业主导向第三产业主导转变的过程中，金融...</div>
+					<div class="time ">2016-08-30  15:30</div>
+				</div>
+			</li>
+			<li class="">
+				<div><a title="" href="#/news/news/newsDetail" ui-sref="news.newsDetail"><img ng-src="img/news/sample2.jpg" src="img/news/sample2.jpg"></a></div>
+				<div>
+					<div class="title"><a title="" href="#/news/news/newsDetail" ui-sref="news.newsDetail" class="">中江信托-金马414号</a></div>
+					<div class="shortCut ">据各省份最新公布的统计数据整理，今年上半年上海金融业增加值以17.1%的增速居各省、自治区、直辖市首位。在中国经济结构由工业主导向第三产业主导转变的过程中，金融...</div>
+					<div class="time ">昨天  08:30</div>
+				</div>
+			</li>
+			<li class="">
+				<div><a title="" href="#/news/news/newsDetail" ui-sref="news.newsDetail"><img ng-src="img/news/sample2.jpg" src="img/news/sample2.jpg"></a></div>
+				<div>
+					<div class="title"><a title="" href="#/news/news/newsDetail" ui-sref="news.newsDetail" class="">中江信托-金马414号</a></div>
+					<div class="shortCut ">据各省份最新公布的统计数据整理，今年上半年上海金融业增加值以17.1%的增速居各省、自治区、直辖市首位。在中国经济结构由工业主导向第三产业主导转变的过程中，金融...</div>
+					<div class="time ">昨天  08:30</div>
+				</div><br />
+			</li>
+			<li class="">
+				<div><a title=""  href="#/news/news/newsDetail" ui-sref="news.newsDetail"><img ng-src="img/news/sample1.jpg" src="img/news/sample1.jpg"></a></div>
+				<div>
+					<div class="title"><a title="" href="#/news/news/newsDetail" ui-sref="news.newsDetail" class="">各省金融业占GDP图谱：中西部增长快 北京上海最高</a></div>
+					<div class="shortCut ">据各省份最新公布的统计数据整理，今年上半年上海金融业增加值以17.1%的增速居各省、自治区、直辖市首位。在中国经济结构由工业主导向第三产业主导转变的过程中，金融...</div>
+					<div class="time ">今天  17:30</div>
+				</div>
+			</li>
+		</ul>
+			<div id="pageDiv">
+				<ul id="page">
+				<li class="iconfont" >&#xe91d;</li>
+				<li class="iconfont" >&#xe902;</li>
+				<li class="current">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+				<li>10</li>
+				<li class="iconfont" >&#xe903;</li>
+				<li class="pageLi iconfont">&#xe914;</li>	
+			</ul>
+			<span id="span">
+				共15页
+			</span>
+			</div>	
+		</div>
+	</div>
+		
+		
+	</div>
+</div>
+
+<footer ng-include="'module/template/footer.html'"></footer>

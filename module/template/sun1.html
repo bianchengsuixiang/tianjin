@@ -1,0 +1,19 @@
+<!--<link rel="stylesheet" type="text/css" href="css/sun1.css"/>-->
+<div class="sun-t">
+	<a href="javascript:void();"><h4 ng-click="goSunProDetails(item)">{{item.fundShortName}}</h4></a>
+	<div class="sun-t-tag">
+		<span type="button" class="btn" ng-repeat="tags in item.tag">{{tags==null?"--":tags}}</span>
+		<!--<span type="button" class="btn">{{"年化收益超39%"}}</span>-->
+	</div>
+	<div class="sun-t-b">
+		<p><span>2015收益排名:</span><span>{{item.lastYearOrder==null?"--":item.lastYearOrder}}</span></p>
+		<p><span>2016收益排名:</span><span>{{item.thisYearOrder==null?"--":item.thisYearOrder}}</span></p>
+	</div>
+</div>
+<div class="sun-b">
+	<img ng-src="{{item.headPortrait==null?'img/home/defaultImg.jpg':item.headPortrait}}" alt="图片"/>
+	<p>{{"基金经理："+(item.fundManagerName==null?"--":item.fundManagerName)}}</p>
+	<div>
+		<span type="button" class="btn" ng-click="goSunProDetails(item)">产品详情</span><span type="button" class="btn" ng-click="reservationTab(item,'2')">立即预约</span>
+	</div>
+</div>

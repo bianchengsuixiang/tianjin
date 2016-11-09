@@ -1,0 +1,163 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+<link rel="stylesheet" type="text/css" href="css/trustProductDetail.css"/>
+<div class="bread-nav">
+	<ul>
+		<li><i class="iconfont">&#xe90b;</i><a href="#/index">首页</a></li>
+		<li><a href="">信托资管</a></li>
+		<li><a href="">信托产品</a></li>
+		<li class="unClickable">{{trustProDetail.trust_short_name}}</li>
+	</ul>
+</div>
+<div class="mainContent">
+	<div class="pro-title-wrap">
+		<div class="pro-title">{{trustProDetail.trust_short_name}}</div>
+		<div class="tags-group">
+			<span ng-repeat="tag in features">{{tag}}</span>
+		</div>
+		<div class="proRates">
+			<ul>
+				<li><span>预期年化收益：</span><span class="ng-binding">{{trustProDetail.expect_annual_yield_start+"%-"+trustProDetail.expect_annual_yield_end+"%"}}</span></li>
+				<li><span>投资起点：</span><span class="ng-binding">{{trustProDetail.min_investment}}万</span></li>
+				<li><span>投资期限：</span><span class="ng-binding">{{trustProDetail.term_of_investment}}个月</span></li>
+				<li><span>产品状态：</span><span class="ng-binding">{{trustProDetail.product_status_des}}</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="detailSections-wrap">
+		<dl>
+			<dt><span>基本信息</span></dt>
+			<dd>
+				<table class="trustProTable">
+					<tr>
+						<td>产品全称</td>
+						<td colspan="3">{{trustProDetail.trust_name==null?"--":trustProDetail.trust_name}}</td>
+					</tr>
+					<tr>
+						<td>发行机构</td>
+						<td>{{trustProDetail.company.company_name==null?"--":trustProDetail.company.company_name}}</td>
+						<td>产品类型</td>
+						<td>{{trustProDetail.product_type_des==null?"--":trustProDetail.product_type_des}}</td>
+					</tr>
+					<tr>
+						<td>发行规模</td>
+						<td>{{trustProDetail.issue_size==null?"--":trustProDetail.issue_size}}</td>
+						<td>投资领域</td>
+						<td>{{trustProDetail.investment_field_des==null?"--":trustProDetail.investment_field_des}}</td>
+					</tr>
+					<tr>
+						<td>托管银行</td>
+						<td>{{trustProDetail.custodial_bank==null?"--":trustProDetail.custodial_bank}}</td>
+						<td>项目所在地</td>
+						<td>{{trustProDetail.project_location_des==null?"--":trustProDetail.project_location_des}}</td>
+					</tr>
+					<tr>
+						<td>起售时间</td>
+						<td>{{trustProDetail.sale_time==null?"--":trustProDetail.sale_time}}</td>
+						<td>收益分配方式</td>
+						<td>{{trustProDetail.issue_size==null?"--":trustProDetail.issue_size}}</td>
+					</tr>
+					<tr>
+						<td>收益说明</td>
+						<td>{{trustProDetail.income_description1==null?"--":trustProDetail.income_description1}}<br>{{trustProDetail.income_description2==null?"--":trustProDetail.income_description2}}<br>{{trustProDetail.income_description3==null?"--":trustProDetail.income_description3}}</td>
+						<td>募集账户</td>
+						<td>
+							<ng-bing-html ng-bind-html="accountInfo"></ng-bing-html>
+						</td>
+					</tr>
+				</table>
+			</dd>
+		</dl>
+		<dl>
+			<dt><span>资金用途</span></dt>
+			<dd>
+				<p>{{trustProDetail.use_of_proceed==null?"--":trustProDetail.use_of_proceed}}</p>
+			</dd>
+		</dl>
+		<dl>
+			<dt><span>还款来源</span></dt>
+			<dd>
+				<p ng-bind-html="repaySource"></p><!--设计格式为p标签，实际只有BR标签-->
+			</dd>
+		</dl>
+		<dl>
+			<dt><span>风控措施</span></dt>
+			<dd ng-bind-html="riskControl">
+				
+			</dd>
+		</dl>
+		<dl>
+			<dt><span>融资方介绍</span></dt>
+			<dd>
+				<p class="textIndent">{{trustProDetail.finance_introduce==null?"--":trustProDetail.finance_introduce}}</p>
+			</dd>
+		</dl>
+	</div>
+</div>
+<div class="mayLike-wrap">
+	<div class="title">你可能感兴趣的产品</div>
+	<div class="section3">
+		<div ng-repeat="item in trustProDetailsPro3">
+			<div><!--div上部分-->
+				<div>
+					<div><img ng-src="{{item.picUrl==null?'img/home/defaultImg.jpg':item.picUrl}}" /></div>
+					<div>{{item.trust_short_name==null?"--"item.trust_short_name | limitTo:13}}</div>
+				</div>
+				<div>
+					<span type="button" class="btn" ng-repeat="tags in item.features">收益高</span>
+				</div>
+			</div>
+			<div><!--div下部分-->
+				<div>预期年化收益</div>
+				<div>{{item.expect_annual_yield_start+"%-"+item.expect_annual_yield_end+"%"}}</div>
+				<div><span>{{item.min_investment==null?"--":item.min_investment}}</span>&nbsp;万起&nbsp;&nbsp;期限&nbsp;<span>{{item.term_of_investment==null?"--":item.term_of_investment+"个月"}}</span></div>
+				<div><span type="button" class="btn">产品详情</span><span type="button" class="btn" ng-click="reservationTab(item,'3')">立即预约</span></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--<div ng-include="'module/template/reservation.html'"></div>-->
+<link rel="stylesheet" type="text/css" href="css/reservation.css"/>
+<div ng-controller="reservationFixedCtrl">
+	<div class="reservation-fixed-wrap" ng-hide="reservationFixed1" ng-init="reservationFixed1=false">
+		<div class="main">
+			<div class="folderBtn" ng-click="reservationFixedTabOut()"><div ng-click="reservationFixedTabOut()">点击隐藏</div><div class="iconfont">&#xe92b;</div></div>
+			<div class="contentBox">
+				<div class="phoneBox">
+					<div class="iconfont">&#xe91b;</div>
+					<div>
+						<div>找私募，问天玑金服</div>
+						<div>0755-88695093</div>
+					</div>
+				</div>
+				<div>
+					<div class="inputs-group">
+						<input placeholder="您的姓名" maxlength="20" ng-model="reservationName" />
+						<input placeholder="手机号码" maxlength="11" ng-model="reservationTel" />
+						<a href="javascript:void();" ng-click="reservationBtnDetail(trustProDetail,'3')">立即预约</a>
+					</div>
+					<div class="whiteText">天玑专业投资顾问将在24小时内尽快与您联系</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="reservation-fixed-wrap folded" ng-hide="reservationFixed2" ng-init="reservationFixed2=true">
+		<div class="main">
+			<div class="folderBtn" ng-click="reservationFixedTabOff()"><div ng-click="reservationFixedTabOff()">点击展开</div><div class="iconfont">&#xe92e;</div></div>
+			<div class="contentBox">
+				<div>
+					只推荐靠谱私募的平台
+				</div>
+				<div class="phoneBox">
+					<div class="iconfont">&#xe91b;</div>
+					<div>0755-88695093</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>

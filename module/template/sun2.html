@@ -1,0 +1,26 @@
+<!--<link rel="stylesheet" type="text/css" href="css/sun2.css"/>-->
+<div class="sun-t">
+	<a href="javascript:void();"><h4 ng-click="goSunProDetails(item)">{{item.fundShortName}}</h4></a>
+	<div class="sun-t-tag">
+		<!--<span type="button" class="btn">{{"业绩优异"}}</span>
+		<span type="button" class="btn">{{"年化收益超39%"}}</span>-->
+		<span type="button" class="btn" ng-repeat="tags in item.tag">{{tags==null?"--":tags}}</span>
+	</div>
+	<div class="sun-t-b">
+		<div class="sun-t-b-l">
+			<p>{{item.nav==null?"--":item.nav |limitTo:6}}</p>
+			<p>{{"最新净值"}}</p>
+		</div>
+		<div class="sun-t-b-r">
+			<p>{{item.retincep*100 | limitTo:6}}%</p>
+			<p>{{"累计收益"}}</p>
+		</div>
+	</div>
+</div>
+<div class="sun-b">
+	<img ng-src="{{item.headPortrait==null?'img/home/defaultImg.jpg':item.headPortrait}}" alt="图片"/>
+	<p>{{"基金经理："+(item.fundManagerName==null?"--":item.fundManagerName)}}</p>
+	<div>
+		<span type="button" class="btn" ui-sref="sun.productDetails">产品详情</span><span type="button" class="btn" ng-click="reservationTab()">立即预约</span>
+	</div>
+</div>

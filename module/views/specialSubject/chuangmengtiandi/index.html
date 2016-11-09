@@ -1,0 +1,90 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+	
+<!--<script type="text/javascript" src="js/default.js"></script>-->
+<!--<script src="../special_common/js/common.js" type="text/javascript" charset="utf-8"></script>-->
+<!--<link rel="stylesheet" type="text/css" href="../special_common/css/common.css"/>-->
+<link rel="stylesheet" type="text/css" href="module/views/specialSubject/chuangmengtiandi/css/default.css"/>
+		<div class="main">
+			<img src="module/views/specialSubject/chuangmengtiandi/img/first1.jpg" alt="" class="firImg"/>
+			<div class="first">
+				<ul class="lgos">
+					<li class="active li1">
+						<a href="javascript:void();"><img src="module/views/specialSubject/chuangmengtiandi/img/pusi.jpg"  /></a>		
+					</li><li class="li2">
+						<a href="javascript:void();"><img src="module/views/specialSubject/chuangmengtiandi/img/lenovo.jpg"  /></a>	
+					</li><li class="li3">
+						<a href="javascript:void();"><img src="module/views/specialSubject/chuangmengtiandi/img/ledou.jpg"  /></a>
+					</li><li class="li4">
+						<a href="javascript:void();"><img src="module/views/specialSubject/chuangmengtiandi/img/Tencent.jpg"  /></a>	
+					</li><li class="li5">
+						<a href="javascript:void();"><img src="module/views/specialSubject/chuangmengtiandi/img/wanda.jpg"  /></a>
+					</li>
+				</ul>
+			</div>
+			<div class="second">
+				<img src="module/views/specialSubject/chuangmengtiandi/img/second1.jpg" class="sec-img" alt=""/>
+				<img src="module/views/specialSubject/chuangmengtiandi/img/firArrow.jpg"  class="fiIcon" alt="" />
+			</div>
+			<div class="third">
+				<img src="module/views/specialSubject/chuangmengtiandi/img/secArrow.jpg" class="secIcon"/>
+				<div id='img'>
+					<img src="module/views/specialSubject/chuangmengtiandi/img/vanda.png" alt="" class="vanda"/>
+					<img src="module/views/specialSubject/chuangmengtiandi/img/weiying.jpg" alt=""/>
+					<img src="module/views/specialSubject/chuangmengtiandi/img/yuewen.jpg" alt=""/>
+					<img src="module/views/specialSubject/chuangmengtiandi/img/pandaTV.jpg" alt=""/>
+					<img src="module/views/specialSubject/chuangmengtiandi/img/miaopai.jpg" alt=""/>
+					<img src="module/views/specialSubject/chuangmengtiandi/img/xinghedongli.jpg" alt=""/>	
+				</div>
+				<p>额度紧张募集中，马上预约，打造"东方迪士尼"商业帝国</p>
+			</div>
+			<div class="wechat">
+				<img src="module/views/specialSubject/chuangmengtiandi/img/weixin.jpg" alt="" class="weixin"/>
+				<img src="module/views/specialSubject/chuangmengtiandi/img/triArrow.jpg" class="thiIcon"/>
+			</div>
+		</div>
+		<!--底部预约栏-->
+		<link rel="stylesheet" type="text/css" href="css/reservation.css"/>
+		<div ng-controller="reservationFixedCtrl">
+			<div class="reservation-fixed-wrap" ng-hide="reservationFixed1" ng-init="reservationFixed1=false">
+				<div class="main">
+					<div class="folderBtn" ng-click="reservationFixedTabOut()"><div ng-click="reservationFixedTabOut()">点击隐藏</div><div class="iconfont">&#xe92b;</div></div>
+					<div class="contentBox">
+						<div class="phoneBox">
+							<div class="iconfont">&#xe91b;</div>
+							<div>
+								<div>找私募，问天玑金服</div>
+								<div>0755-88695093</div>
+							</div>
+						</div>
+						<div>
+							<div class="inputs-group">
+								<input placeholder="您的姓名" />
+								<input placeholder="手机号码" />
+								<a>立即预约</a>
+							</div>
+							<div class="whiteText">天玑专业投资顾问将在24小时内尽快与您联系</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="reservation-fixed-wrap folded" ng-hide="reservationFixed2" ng-init="reservationFixed2=true">
+				<div class="main">
+					<div class="folderBtn" ng-click="reservationFixedTabOff()"><div ng-click="reservationFixedTabOff()">点击展开</div><div class="iconfont">&#xe92e;</div></div>
+					<div class="contentBox">
+						<div>
+							只推荐靠谱私募的平台
+						</div>
+						<div class="phoneBox">
+							<div class="iconfont">&#xe91b;</div>
+							<div>0755-88695093</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>

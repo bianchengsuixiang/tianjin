@@ -1,0 +1,205 @@
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+<header id="tophead">
+	<nav>
+		<ul class="nav">
+			<li><a href="#/index">首页</a></li>
+			<li><a href="#/sun/home" ui-sref="sun.home" class="currentA">阳光私募</a></li>
+			<li><a href="#/private/home" ui-sref="private.home">私募股权</a></li>
+			<li><a href="#/trust/home" ui-sref="trust.home">信托资管</a></li>
+			<li><a href="#/news/home" ui-sref="news.home">金融资讯</a></li>
+			<li><a href="#/about" ui-sref="about">关于天玑</a></li>
+		</ul>
+		<ul class="nav-right">
+			<li class="login_wrap">
+				<div class="unloginBtn">	
+					<a href="javascript:void();" ng-click="loginTab()">登录</a>
+					<a href="javascript:void();" ng-click="registerTab()">注册</a>
+				</div>
+				<div class="logined_wrap">
+					<div class="userWP">
+						<span>{{userName}}</span>
+						<span class="triangle"></span>
+					</div>
+					<div class="dropBox">
+						<ul>
+							<li class="ToforgetPwd">修改密码</li>
+							<li class="logout" ng-click="loginOutBtn()">退出登录</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a class="iconfont" href="#">&#xe93a;</a>
+				<a class="iconfont" href="#">&#xe93b;</a>
+				<a style="font-size: 18px;" class="iconfont" href="#">&#xe92a;</a>
+				<a class="iconfont" href="#">&#xe939;</a>
+			</li>
+			<li>0755-83695501</li>
+		</ul>
+	</nav>
+</header>
+<header id="head2" class="hide">
+	<nav>
+		<div class="logo" ui-sref="index"><img src="img/header/logo.png"></div>
+		<ul class="nav">
+			<li><a href="#/index">首页</a></li>
+			<li><a href="#/sun/home" ui-sref="sun.home" class="currentFixedA">阳光私募</a></li>
+			<li><a href="#/private/home" ui-sref="private.home">私募股权</a></li>
+			<li><a href="#/trust/home" ui-sref="trust.home">信托资管</a></li>
+			<li><a href="#/news/home" ui-sref="news.home">金融资讯</a></li>
+			<li><a href="#/about" ui-sref="about">关于天玑</a></li>
+		</ul>
+		<ul class="nav-right">
+			<li>
+				<a class="iconfont" href="#">&#xe93a;</a>
+				<a class="iconfont" href="#">&#xe93b;</a>
+				<a style="font-size: 18px;" class="iconfont" href="#">&#xe92a;</a>
+				<a class="iconfont" href="#">&#xe939;</a>
+			</li>
+			<li class="login_wrap"><a href="#">登录</a><a href="#">注册</a></li>
+			<li>0755-83695501</li>
+		</ul>
+	</nav>
+</header>
+<header id="head" class="disabled">
+	<div>
+		<div class="logo" ui-sref="index"></div>
+		<span>阳光私募</span>
+		<ul class="nav-right">
+			<li class="active"><a href="javascript:void();">私募首页</a></li>
+			<li><a href="javascript:void();">私募产品</a></li>
+			<li><a href="javascript:void();">私募公司</a></li>
+		</ul>
+	</div>
+</header>
+
+<link rel="stylesheet" type="text/css" href="../../css/userSearch.css"/>
+<script type="text/javascript" src="../../lib/js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="module/controller/userSearch.js" ></script>	
+<div class="main">
+	<div id="mask">
+		<div id="result">
+			<p class="result1">您的测评结果是:<span>进取型</span></p>
+			<div class="resultL">
+				<p class="fit">适合您的产品为:</p>
+				<p class="result2">低、中低、中等、中高及高风险产品</p>
+			</div>
+			<div class="clearFloat mt30px">
+				<div class="evaluation">
+					重新测评
+				</div>
+				
+				<a class="continueWP hide" href="#/sun/home" ui-sref="sun.home">
+					<div class="continue">
+						继续浏览产品
+					</div>
+				</a>
+				<a class="continueWP disable">
+					<div class="continue">
+						继续浏览产品
+					</div>
+				</a>
+				
+			</div>
+			<div class="clearFloat"></div>
+		</div>
+	</div>
+	<div class="submit">
+		<p>声明：本人已如实填写《私募基金投资者风险识别能力和承受能力问卷调查》，并了解了自己的风险承受类型和适合购买的产品类型。</p>
+		<div id="btn">
+			提交
+		</div>
+	</div>
+	<div class="questionnaire">
+		<h2>私募投资者风险问卷调查</h2>
+		<p class="tip"><span>风险提示：</span>&nbsp;私募基金投资需承担各类风险，本金可能遭受损失。同时，私募基金投资还要考虑市场风险、信用风险、流动性风险、操作风险等各类投资风险。您在基金认购过程中应当注意核对自己的风险识别和风险承担能力，选择与自己风险识别能力和风险承受能力相匹配的私募基金。</p>
+		<p class="question">1. 您的年龄介于：</p>
+		<input type="radio" name="age" id="age" value='2' /><p class="p1">18-29岁</p><br />
+		<input type="radio" name="age" id="age" value="5" /><p class="p1">30-39岁</p><br />
+		<input type="radio" name="age" id="age" value="4" checked="checked"/><p class="p1">40-49岁</p><br />
+		<input type="radio" name="age" id="age" value="3" /><p class="p1">50-65岁</p><br />
+		<input type="radio" name="age" id="age" value="0" /><p class="p1">大于65岁</p>
+		<div class="hr"></div>
+		<p class="question">2. 您的学历：</p>
+		<input type="radio" name="education" id="education" value="0" /><p class="p1">初中及以下</p><br />
+		<input type="radio" name="education" id="education" value="2" /><p class="p1">高中或中专</p><br />
+		<input type="radio" name="education" id="education" value="3" checked="checked"/><p class="p1">大学</p><br />
+		<input type="radio" name="education" id="education" value="4" /><p class="p1">硕士</p><br />
+		<input type="radio" name="education" id="education" value="5" /><p class="p1">博士及以上</p>
+		<div class="hr"></div>
+		<p class="question">3. 您的职业为：</p>
+		<input type="radio" name="profession" id="profession" value="1" /><p class="p1">无固定职业</p><br />
+		<input type="radio" name="profession" id="profession" value="2" /><p class="p1">专业技术人员</p><br />
+		<input type="radio" name="profession" id="profession" value="3" checked="checked"/><p class="p1">一般企事业单位员工</p><br />
+		<input type="radio" name="profession" id="profession" value="4" /><p class="p1">机关和事业单位员工</p><br />
+		<input type="radio" name="profession" id="profession" value="5" /><p class="p1">金融行业一般从业人员</p>
+		<div class="hr"></div>
+		<p class="question">4. 您的家庭可支配年收入为(折合人民币)：</p>
+		<input type="radio" name="income" id="income" value="4" /><p class="p1">50万元以下</p><br />
+		<input type="radio" name="income" id="income" value="7" /><p class="p1">50-100万元</p><br />
+		<input type="radio" name="income" id="income" value="8" /><p class="p1">100-500万元</p><br />
+		<input type="radio" name="income" id="income" value="9" checked="checked"/><p class="p1">500-1000万元</p><br />
+		<input type="radio" name="income" id="income" value="10" /><p class="p1">1000万元以上</p>
+		<div class="hr"></div>
+		<p class="question">5. 在您每年的家庭可支配收入中，可用于金融投资（储蓄存款除外）的比例为？</p>
+		<input type="radio" name="invest" id="invest" value="2" /><p class="p1">5%以下</p><br />
+		<input type="radio" name="invest" id="invest" value="4" /><p class="p1">5-15%</p><br />
+		<input type="radio" name="invest" id="invest" value="6" checked="checked"/><p class="p1">15-30%</p><br />
+		<input type="radio" name="invest" id="invest" value="8" /><p class="p1">30-50%</p><br />
+		<input type="radio" name="invest" id="invest" value="10" /><p class="p1">大于50%</p>
+		<div class="hr"></div>
+		<p class="question">6. 您曾经投资过以下哪些金融产品？</p>
+		<input type="radio" name="product" id="product" value="0" /><p class="p1">没有投资过</p><br />
+		<input type="radio" name="product" id="product" value="4" /><p class="p1">投资过储蓄、债券、银行理财产品</p><br />
+		<input type="radio" name="product" id="product" value="6" /><p class="p1">投资过股票、保险、基金、储蓄、债券、外汇、银行理财产品</p><br />
+		<input type="radio" name="product" id="product" value="8" checked="checked"/><p class="p1">投资过股票、保险、基金、储蓄、债券、外汇、银行理财产品，及其他金融衍生品</p><br />
+		<input type="radio" name="product" id="product" value="10" /><p class="p1">投资过信托、私募基金、股票、保险、基金、储蓄、债券、外汇、银行理财产品，及其他金融衍生品</p><br />
+		<div class="hr"></div>
+		<p class="question">7. 您从事投资基金、股票、信托、私募证券或金融衍生产品等风险投资品的年限？</p>
+		<input type="radio" name="term" id="term" value="0" /><p class="p1">没有经验</p><br />
+		<input type="radio" name="term" id="term" value="2" /><p class="p1">少于2年</p><br />
+		<input type="radio" name="term" id="term" value="4" /><p class="p1">2-5年</p><br />
+		<input type="radio" name="term" id="term" value="8" checked="checked"/><p class="p1">5-10年</p><br />
+		<input type="radio" name="term" id="term" value="10" /><p class="p1">10年以上</p>
+		<div class="hr"></div>
+		<p class="question">8. 您计划的投资期限是多久?</p>
+		<input type="radio" name="deadline" id="deadline" value="2" /><p class="p1">1年以下</p><br />
+		<input type="radio" name="deadline" id="deadline" value="4" /><p class="p1">1-3年</p><br />
+		<input type="radio" name="deadline" id="deadline" value="6" /><p class="p1">3-5年</p><br />
+		<input type="radio" name="deadline" id="deadline" value="8" checked="checked"/><p class="p1">5-10年</p><br />
+		<input type="radio" name="deadline" id="deadline" value="10" /><p class="p1">10年以上</p>
+		<div class="hr"></div>
+		<p class="question">9. 以下五个答案中哪一项最符合您目前投资的主要目的描述?</p>
+		<input type="radio" name="description" id="description" value="10" /><p class="p1">高风险高收益，期望年收益率25%以上</p><br />
+		<input type="radio" name="description" id="description" value="7" checked="checked"/><p class="p1">关注长期回报，能够接受短期波动，期望年收益率15-25%左右</p><br />
+		<input type="radio" name="description" id="description" value="5" /><p class="p1">长期理财，不太关心短期回报及波动，期望年收益率8-15%左右</p><br />
+		<input type="radio" name="description" id="description" value="3" /><p class="p1">只想确保资产的安全性和抵御通货膨胀，期望年收益率5-8%左右</p><br />
+		<input type="radio" name="description" id="description" value="1" /><p class="p1">短期资金闲置，能获得高于活期存款利率的收益率就可以</p>
+		<div class="hr"></div>
+		<p class="question">10. 您曾经购买过何种类型的基金产品?</p>
+		<input type="radio" name="type" id="type" value="5" checked="checked"/><p class="p1">偏股型、债券型、保本型、货币型</p><br />
+		<input type="radio" name="type" id="type" value="3" /><p class="p1">债券型、保本型、货币型</p><br />
+		<input type="radio" name="type" id="type" value="2" /><p class="p1">保本型、货币型</p><br />
+		<input type="radio" name="type" id="type" value="0" /><p class="p1">购买过但不清楚类型</p><br />
+		<input type="radio" name="type" id="type" value="0" /><p class="p1">没有购买过</p>
+		<div class="hr"></div>
+		<p class="question">11. 假设有两种投资：投资A预期获得10%的收益，可能承担的损失非常小；投资 B预期获得 30%的收益，但可能承担较大亏损。您会怎么支配您的投资?</p><br />
+		<input type="radio" name="question" id="question" value="3" /><p class="p1">全部投资于收益较小且风险较小的A</p><br />
+		<input type="radio" name="question" id="question" value="5" /><p class="p1">同时投资于A和B，但大部分资金投资于收益较小且风险较小的A</p><br />
+		<input type="radio" name="question" id="question" value="7" checked="checked"/><p class="p1">同时投资于A和B，但大部分资金投资于收益较大且风险较大的B</p><br />
+		<input type="radio" name="question" id="question" value="10" /><p class="p1">全部投资于收益较大且风险较大的B</p>
+		<div class="hr"></div>
+		<p class="question">12. 您认为自己能承受的最大投资损失是多少?</p>
+		<input type="radio" name="loss" id="loss" value="0" /><p class="p1">不能承受损失</p><br />
+		<input type="radio" name="loss" id="loss" value="4" /><p class="p1">10%以内</p><br />
+		<input type="radio" name="loss" id="loss" value="6" /><p class="p1">10-20%</p><br />
+		<input type="radio" name="loss" id="loss" value="8" checked="checked"/><p class="p1">20-40%</p><br />
+		<input type="radio" name="loss" id="loss" value="10" /><p class="p1">超过40%</p>
+		<div class="hr"></div>
+	</div>
+</div>

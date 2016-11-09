@@ -1,0 +1,115 @@
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	$("body").scrollTop(0);
+	});
+</script>
+<div class="sunHomeBanner">
+	<div class="sunBannerSwiper">
+	  	<div class="swiper-wrapper">
+	    	<div class="swiper-slide" onclick="document.location.href='#/pe/zt-2'"><a title="" href="javascript:void();" style="background-image: url(img/home/1.jpg);"></a></div>
+		    <div class="swiper-slide" onclick="document.location.href='#/pe/zt-1'"><a title="" href="javascript:void();" style="background-image: url(img/home/2.jpg);"></a></div>
+		    <div class="swiper-slide" onclick="document.location.href='#/trust/zt-1'"><a title="" href="javascript:void();" style="background-image: url(img/home/3.jpg);"></a></div>
+	  	</div>
+	  	<div class="swiper-pagination" id="sunBanner-pagination"></div>
+	</div>
+</div>
+<section class="hots" >
+	<h4>热门专题</h4>
+	<ul>
+		<li><a title="天玑财富创梦天地私募股权" href="#/pe/zt-2" ui-sref="specialSubject.chuangmengtiandi"><img src="img/sun/hosts-CMTD.jpg" alt="天玑财富创梦天地私募股权"/></a></li>
+		<li><a title="天玑财富创梦天地私募股权" href="#/pe/zt-2" ui-sref="specialSubject.chuangmengtiandi"><img src="img/sun/hosts-CMTD2.jpg" alt="天玑财富创梦天地私募股权"/></a></li>
+		<li><a title="天玑财富军工新材料私募股权" href="#/trust/zt-1" ui-sref="specialSubject.jungong"><img src="img/sun/hosts-JG.jpg" alt="天玑财富军工新材料私募股权"/></a></li>
+		<li><a title="天玑财富中汇支付Pre-IPO私募股权" href="#/pe/zt-1" ui-sref="specialSubject.zhonghuizhifu"><img src="img/sun/hosts-ZHZF.jpg" alt="天玑财富中汇支付Pre-IPO私募股权"/></a></li>
+	</ul>
+</section>
+<section class="rank">
+	<h4>阳光私募排名<a href="#/sun/product" ui-sref="sun.product">更多</a></h4>
+	<section>
+		<ul>
+			<li><a href="" class="active">全部</a></li>
+			<li><a href="">股票策略</a></li>
+			<li><a href="">宏观策略</a></li>
+			<li><a href="">管理期货</a></li>
+			<li><a href="">事件驱动</a></li>
+			<li><a href="">相对价值</a></li>
+			<li><a href="">债券策略</a></li>
+			<li><a href="">组合策略</a></li>
+		</ul>
+		<ul>
+			<li><a href="">排名</a></li>
+			<li><a href="">产品名称</a></li>
+			<li><a href="">基金经理</a></li>
+			<li><a href="">成立日期</a></li>
+			<li><a href="">累计收益</a></li>
+			<li><a href="">最新净值</a></li>
+			<li><a href="">产品状态</a></li>
+			<li><a href="">操作</a></li>
+		</ul>
+		<div>
+			<li ng-repeat="item in sunHome">
+				<div><div>{{item.totalOrder==null?'--':item.totalOrder}}</div></div>
+				<div><a ui-sref="sun.productDetails" href="#/sun/productDetails">{{item.fundShortName==null?'--':item.fundShortName}}</a></div>
+				<div><a href="">{{item.fundManagerName==null?'--':item.fundManagerName}}</a></div>
+				<div>{{item.inceptionDate==null?'--':item.inceptionDate}}</div>
+				<div>{{item.cumulativeNavWithdrawal==null?'--':item.cumulativeNavWithdrawal}}</div>
+				<div class="ng-class:useClass;">{{item.nav==null?'--':item.nav}}</div>
+				<div>{{item.fundStatus==null?'--':item.fundStatus}}</div>
+				<div><a href="javascript:void();" ng-click="reservationTab(item,2)">立即预约</a></div>
+			</li>
+		</div>
+	</section>
+</section>
+
+<!--合格投资者认定-->
+<div class="z-Qualified hide">
+	<div class="Qualified">
+		<div class="Qualified-top">
+			<div class="Qualified-logo"><img src="img/sun/hegelogo.png" alt="logo"/></div>
+			<div class="Qualified-phone">
+				<span><img src="img/sun/phone.png" alt="icon" /><b>0755-83695501</b></span>
+			</div>
+		</div>
+		<div class="Qualified-container">
+			<div class="Qualified-text">
+				<ul>
+					<li>根据《私募投资基金监督管理暂行办法》第四章第十四条规定："私募基金管理人、
+						私募基金销售机构不得向合格投资者之外的单位和个人募集资金，不得通过报刊 
+						电台、电视、互联网等公众传播媒体或者讲座、报告会 分析会和布告、传单、手
+						机短信、微信、博客和电子邮件等方式，向不特定对象宣传推介。"</li><br />
+					<li style="color: #e4883d;">天玑金服谨遵《私募投资基金监督管理暂行办法》之规定，只向特定的合格投资者宣传推介
+						相关私募投资基金产品。
+					</li><br />
+					<li>阁下如有意进行私募投资基金投资且满足《私募投资基金监督管理暂行办法》关于"合规投资者"标准之规定，
+						即具备相应风险识别能力和风险承担能力，投资于单只私募基金的金额不低于100 万元，且个人金融类资产
+						不低于300万元或者最近三年个人年均收入不低于50万元人民币。请阁下详细阅读本提示，并注册成为天玑
+						金服特定的合规投资者，方可获得天玑金服私募投资基金产品宣传推介服务。
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="Qualified-Verification">
+			<div class="z-Verification"> 
+				<p>根据《私募投资基金监督管理暂行办法》规定，您需要进行身份认证后才能继续访问。</p><br />
+				<form>
+					<div class="phone">
+						<input type="text"  placeholder="&nbsp手机号"/>
+					</div><br />
+					<div class="Code">
+						<input type="text"  placeholder="&nbsp短信验证码"/>
+						<button type="submit">获取验证码</button>
+					</div><br />
+					<div class="radio">
+						<input type="checkbox"/> &nbsp; <a href="javascript:void(0)">我已阅读并符合合格投资者认定</a>
+					</div><br />
+					<div class="sumbitBox hide">
+						<a ui-sref="userSearch" href="#/userSearch"><button type="submit">提交</button></a>
+					</div>
+					<div class="sumbitBox disable">
+						<a href="javascript:void(0)"><button type="submit">提交</button></a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

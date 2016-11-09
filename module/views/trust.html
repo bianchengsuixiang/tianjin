@@ -1,0 +1,77 @@
+<header id="tophead">
+	<nav>
+		<ul class="nav">
+			<li><a href="#/index">首页</a></li>
+			<li><a href="#/sun/home" ui-sref="sun.home">阳光私募</a></li>
+			<li><a href="#/private/home" ui-sref="private.home">私募股权</a></li>
+			<li><a href="#/trust/home" ui-sref="trust.home" class="currentA">信托资管</a></li>
+			<li><a href="#/news/home" ui-sref="news.home">金融资讯</a></li>
+			<li><a href="#/about" ui-sref="about">关于天玑</a></li>
+		</ul>
+		<ul class="nav-right">
+			<li class="login_wrap">
+				<div class="unloginBtn">	
+					<a href="javascript:void();" ng-click="loginTab()">登录</a>
+					<a href="javascript:void();" ng-click="registerTab()">注册</a>
+				</div>
+				<div class="logined_wrap">
+					<div class="userWP">
+						<span>{{userName}}</span>
+						<span class="triangle"></span>
+					</div>
+					<div class="dropBox">
+						<ul>
+							<li class="ToforgetPwd">修改密码</li>
+							<li class="logout" ng-click="loginOutBtn()">退出登录</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a class="iconfont" href="#">&#xe93a;</a>
+				<a class="iconfont" href="#">&#xe93b;</a>
+				<a style="font-size: 18px;" class="iconfont" href="#">&#xe92a;</a>
+				<a class="iconfont" href="#">&#xe939;</a>
+			</li>
+			<li>0755-83695501</li>
+		</ul>
+	</nav>
+</header>
+<header id="head2" ng-hide="headFixed">
+	<nav>
+		<div class="logo" ui-sref="index"><img src="img/header/logo.png"></div>
+		<ul class="nav">
+			<li><a href="#/index">首页</a></li>
+			<li><a href="#/sun/home" ui-sref="sun.home">阳光私募</a></li>
+			<li><a href="#/private/home" ui-sref="private.home">私募股权</a></li>
+			<li><a href="#/trust/home" ui-sref="trust.home"  class="currentFixedA">信托资管</a></li>
+			<li><a href="#/news/home" ui-sref="news.home">金融资讯</a></li>
+			<li><a href="#/about" ui-sref="about">关于天玑</a></li>
+		</ul>
+		<ul class="nav-right">
+			<li>
+				<a class="iconfont" href="#">&#xe93a;</a>
+				<a class="iconfont" href="#">&#xe93b;</a>
+				<a style="font-size: 18px;" class="iconfont" href="#">&#xe92a;</a>
+				<a class="iconfont" href="#">&#xe939;</a>
+			</li>
+			<li class="login_wrap"><a href="javascript:void();" ng-click="loginTab()">登录</a><a href="javascript:void();" ng-click="registerTab()">注册</a></li>
+			<li>0755-83695501</li>
+		</ul>
+	</nav>
+</header>
+<header id="head">
+	<div>
+		<div class="logo" ui-sref="index"></div>
+		<span ui-sref="trust.home">信托资管</span>
+		<ul class="nav-right">
+			<li class="active"><a href="#/trust/home" ui-sref="trust.home">信托首页</a></li>
+			<li><a ui-sref="trust.product" href="#/trust/product">信托产品</a></li>
+			<li><a ui-sref="trust.company" href="#/trust/company">信托公司</a></li>
+		</ul>
+	</div>
+</header>
+<section>
+	<div ui-view></div>
+</section>
+<footer ng-include="'module/template/footer.html'"></footer>

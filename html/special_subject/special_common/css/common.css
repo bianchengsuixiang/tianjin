@@ -1,0 +1,4 @@
+#login .loginTitle.active,#login .registerTitle.active{
+    color: rgb(228, 136, 61);
+    border-bottom: 2px solid rgb(228, 136, 61);
+}

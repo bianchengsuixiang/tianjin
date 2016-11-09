@@ -1,0 +1,13 @@
+[{
+	"register_address_range":"1",
+	"name":"京津翼"
+},{
+	"register_address_range":"2",
+	"name":"江浙沪"
+},{
+	"register_address_range":"3",
+	"name":"珠三角"
+},{
+	"register_address_range":"4",
+	"name":"其他地区"
+}]

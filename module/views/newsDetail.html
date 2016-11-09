@@ -1,0 +1,56 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+<div class="bread-nav">
+	<ul>
+		<li><i class="iconfont">&#xe90b;</i><a href="#/index">首页</a></li>
+		<li><a href="#/news/home" ui-sref="news.home">金融资讯</a></li>
+		<li><a href="#/news/home" ui-sref="news.home">财经新闻</a></li>
+		<li class="unClickable">{{newsDetail.title}}</li>
+	</ul>
+</div>
+<div class="newsContent">
+	<div class="nc-left">
+		<div class="news-title">{{newsDetail.title}}</div>
+		<div class="news-soure">发布时间：{{newsDetail.updateTime}} &nbsp;&nbsp;来源：{{newsDetail.source}}</div>
+		<div class="shortCutBox">
+			<span class="midGray">[摘要]{{newsDetail.summary}}</span>
+		</div>
+		<div class="textContent">
+     	<ng-bing-html ng-bind-html="content"></ng-bing-html>
+		</div>
+	</div>
+	<div class="nc-right">
+		<div class="hotNews">
+			<div class="col-header">热门资讯</div>
+			<ul>
+				<li ng-repeat="item in hotNews">
+					<div><a href="javascript:void();" ng-click="goNewsDetails(item)">{{item.title}}</a></div>
+				</li>
+			</ul>
+		</div>
+		<div class="qrcode-box">
+			<div class="qrcodeImg"></div>
+			<div>微信扫一扫<br>关注天玑公众号</div>
+		</div>
+	</div>
+</div>
+<div class="clearFloat mb30px"></div>
+<!--<div class="nc-right-fixed">
+	<div class="nc-right">
+		<div class="hotNews">
+			<div class="col-header">热门资讯</div>
+			<ul>
+				<li ng-repeat="item in hotNews">
+					<div><a href="javascript:void();" ng-click="goNewsDetails(item)">{{item.title}}</a></div>
+				</li>
+			</ul>
+		</div>
+		<div class="qrcode-box">
+			<div class="qrcodeImg"></div>
+			<div>微信扫一扫<br>关注天玑公众号</div>
+		</div>
+	</div>
+</div>-->

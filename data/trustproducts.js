@@ -1,0 +1,91 @@
+[{
+	"img":"img/trust/trustCompany-logo.jpg",
+	"title":"中江信托-金马414号",
+	"investment_trends":"基础设施",
+	"investment_start":"100万",
+	"investment_term":"12个月",
+	"Rate1":"7.2%",
+	"Rate2":"7.5%",
+	"tags":["国有独资","私人持股","哼哼哈哈"]
+},{
+	"img":"img/trust/trustCompany-logo.jpg",
+	"title":"中江信托-金马414号",
+	"investment_trends":"基础设施",
+	"investment_start":"100万",
+	"investment_term":"12个月",
+	"Rate1":"7.2%",
+	"Rate2":"7.5%",
+	"tags":["国有独资","私人持股","哼哼哈哈水电费"]
+},{
+	"img":"img/trust/trustCompany-logo.jpg",
+	"title":"中江信托-金马414号",
+	"investment_trends":"基础设施",
+	"investment_start":"100万",
+	"investment_term":"12个月",
+	"Rate1":"7.2%",
+	"Rate2":"7.5%",
+	"tags":["国有独资","私人持股","哼哼哈哈"]
+},{
+	"img":"img/trust/trustCompany-logo.jpg",
+	"title":"中江信托-金马414号",
+	"investment_trends":"基础设施",
+	"investment_start":"100万",
+	"investment_term":"12个月",
+	"Rate1":"7.2%",
+	"Rate2":"7.5%",
+	"tags":["国有独资","私人持股","哼哼"]
+},{
+	"img":"img/trust/trustCompany-logo.jpg",
+	"title":"中江信托-金马414号",
+	"investment_trends":"基础设施",
+	"investment_start":"100万",
+	"investment_term":"12个月",
+	"Rate1":"7.2%",
+	"Rate2":"7.5%",
+	"tags":["国有独资","私人持股"]
+},{
+	"img":"img/trust/trustCompany-logo.jpg",
+	"title":"中江信托-金马414号",
+	"investment_trends":"基础设施",
+	"investment_start":"100万",
+	"investment_term":"12个月",
+	"Rate1":"7.2%",
+	"Rate2":"7.5%",
+	"tags":["国有独资","私人持股"]
+},{
+	"img":"img/trust/trustCompany-logo.jpg",
+	"title":"中江信托-金马414号",
+	"investment_trends":"基础设施",
+	"investment_start":"100万",
+	"investment_term":"12个月",
+	"Rate1":"7.2%",
+	"Rate2":"7.5%",
+	"tags":["国有独资","私人持股","哼哼哈哈水电费"]
+},{
+	"img":"img/trust/trustCompany-logo.jpg",
+	"title":"中江信托-金马414号",
+	"investment_trends":"基础设施",
+	"investment_start":"100万",
+	"investment_term":"12个月",
+	"Rate1":"7.2%",
+	"Rate2":"7.5%",
+	"tags":["国有独资","私人持股"]
+},{
+	"img":"img/trust/trustCompany-logo.jpg",
+	"title":"中江信托-金马414号",
+	"investment_trends":"基础设施",
+	"investment_start":"100万",
+	"investment_term":"12个月",
+	"Rate1":"7.2%",
+	"Rate2":"7.5%",
+	"tags":["国有独资","私人持股"]
+},{
+	"img":"img/trust/trustCompany-logo.jpg",
+	"title":"中江信托-金马414号",
+	"investment_trends":"基础设施",
+	"investment_start":"100万",
+	"investment_term":"12个月",
+	"Rate1":"7.2%",
+	"Rate2":"7.5%",
+	"tags":["国有独资","私人持股"]
+}]

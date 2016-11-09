@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="私募、私募基金、阳光私募、私募股权、天玑私募基金、信托、天玑金服、天玑、天玑在线理财"/>
+		<meta name="Description" content="天玑金服基于私募行业大数据、通过互联网+模式和技术、致力于为投资者提供个性化、稳定、持续的资产配置方案"/>
+		<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>-->
+		<meta http-equiv = "X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>天玑金服——私募股权、阳光私募、信托资管、在线理财的一站式服务平台</title>
+		<!--[if lte IE9]>
+			<script> 
+				location.href="html/recommendBrowser/recommendBrowser.html";
+	           (function() {//H5新标签的兼容
+	           		var h5="section,header,footer,article,aside,video,canvas,audio".split(",");
+	           		for(var i=0;i<h5.length;i++){
+	           			document.createElement(h5[i]);
+	           		}
+	           })(); 
+	        </script>
+		<![endif]-->
+		<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="lib/css/swiper-3.3.1.min.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/css/nprogress.css"/>
+		<link rel="stylesheet" type="text/css" href="css/home.css"/><!--主页css-->
+		<link rel="stylesheet" type="text/css" href="css/about.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sun.css"/><!--阳光私募页css-->
+		<link rel="stylesheet" type="text/css" href="css/sunProduct.css"/><!--阳光私募产品页css-->
+		<link rel="stylesheet" type="text/css" href="css/sunCompany.css"/><!--阳光私募公司页面css-->
+		<link rel="stylesheet" type="text/css" href="css/private.css"/><!--私募股权首页-->
+		<link rel="stylesheet" type="text/css" href="css/trust.css"/><!--信托资管css首页-->
+		<link rel="stylesheet" type="text/css" href="css/news.css"/><!--金融资讯首页-->
+		<script src="lib/js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/js/angular-sanitize.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/js/angular-ui-router.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/js/nprogress.js" type="text/javascript" charset="utf-8"></script>
+		<script src="module/controller/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="module/controller/home.js" type="text/javascript" charset="utf-8"></script>
+		<script src="module/controller/sun.js" type="text/javascript" charset="utf-8"></script>
+		<script src="module/controller/trust.js" type="text/javascript" charset="utf-8"></script>
+		<script src="module/controller/news.js" type="text/javascript" charset="utf-8"></script>
+		<script src="module/controller/private.js" type="text/javascript" charset="utf-8"></script>
+		<script src="module/controller/specialSubject.js" type="text/javascript" charset="utf-8"></script>
+		<script src="module/controller/comprehensivePage.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-app="myIndex" ng-controller="indexCtrl">
+		<div ui-view></div>
+		<!--预约弹窗开始-->
+		<div id="reservationModal" ng-hide="reservationOff" ng-init="reservationOff=true">
+			<div>
+				<div class="reservationOff"><a href="javascript:void();" class="iconfont" ng-click="reservationTabOff()">&#xe908;</a></div>
+				<div class="reservation">
+					<h3>产品预约</h3>
+					<form method="post">
+						<!--提示的语句：<div class="tips">请输入手机号</div>-->
+						<div class="nameInputBox">
+							<input ng-class="{errInput:input1}" type="text" placeholder="您的姓名" ng-model="reservationName" maxlength="6"/>
+							<span class="err" ng-hide="reservationNameErr" ng-init="reservationNameErr=true">请输入姓名</span>
+						</div>
+						<div class="phoneInputBox">
+							<input ng-class="{errInput:input2}" type="text" placeholder="您的手机" name="reservationTel" ng-model="reservationTel" maxlength="11" />
+							<span class="err" ng-hide="reservationTelErr" ng-init="reservationTelErr=true">请输入有效的手机号</span>
+						</div>
+						<div class="sumbitBox"><button ng-click="reservationBtn()">立即预约</button></div>
+						<div class="gray hasBorder">天玑专业投资顾问将尽快与您联系</div>
+						<div class="gray noBorder">
+							<p>如需产品的详细资料</p>
+							<p>请联系我们：0755-88695093</p>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<div class="successReservation hide">
+				<div class="reservationOff"><a href="javascript:void();" class="iconfont" ng-click="reservationTabOff()">&#xe908;</a></div>
+				<div class="reservation">
+					<div class="successIcon"><img src="img/icon-success.png"></div>
+					<div class="tipRow">恭喜你，预约提交成功</div>
+					<div class="sumbitBox"><button type="button">确定</button></div>
+				</div>
+			</div>
+			
+		</div>
+		<!--预约弹窗结束-->
+		<!--登录注册弹窗开始-->
+		<div id="login" ng-hide="loginOff" ng-init="loginOff=true">
+			<div>
+				<div><a href="javascript:void();" class="iconfont" ng-click="loginOut()">&#xe908;</a></div>
+				<div>
+					<a href="javascript:void();" ng-style="loginTabStyle" ng-click="loginTab()">登录</a>
+					<a href="javascript:void();"  ng-click="registerTab()" ng-style="registerTabStyle">注册</a>
+				</div>
+				<div>
+					<form method="post" ng-hide="flag1" name="login" ng-init="falg1=true">
+						<div>
+							<input type="text" ng-class="{errInput:input3}" placeholder="手机号" name="loginTel" ng-model="loginTel" maxlength="11"/>
+							<span class="err" ng-hide="loginTelErr" ng-init="loginTelErr=true">请输入有效的手机号</span>
+						</div>
+						<div>
+							<input type="password" ng-class="{errInput:input4}" placeholder="密码" ng-model="loginPwd" name="pwd" minlength="6" maxlength="16" />
+							<span class="err" ng-hide="loginPwdErr" ng-init="loginPwdErr=true">密码为6-16位数字或字母</span>
+						</div>
+						<div><label><input type="checkbox" ng-model="rememberChecked" ng-init="rememberChecked=true"/><span>&nbsp;&nbsp;记住我</span></label><a href="javascript:void();" class="ToforgetPwd">忘记密码?</a></div>
+						<div><button ng-click="loginBtn()">登录</button></div>
+					</form>
+					<form method="post" ng-hide="flag2" name="register" ng-init="flag2=true">
+						<div>
+							<input type="text" ng-class="{errInput:input5}" name="tel" ng-model="registerTel" placeholder="手机号" maxlength="11" />
+							<span class="err" ng-hide="registerTelErr" ng-init="registerTelErr=true">请输入有效手机号</span>
+						</div>
+						<div>
+							<input type="text" ng-class="{errInput:input6}" placeholder="验证码" name="val" ng-model="registerVal" maxlength="4" />
+							<span class="err" ng-hide="registerValErr" ng-init="registerValErr=true">请输入4位验证码</span>
+							<span ng-click="getRegisterVal()"><img ng-src="{{reservationImg}}" alt="验证码"  ng-click="getRegisterVal()"/></span>
+						</div>
+						<div>
+							<input type="text" ng-class="{errInput:input7}" placeholder="手机验证码" ng-model="registerPhoneCode" minlength="4" maxlength="6" />
+							<span class="err" ng-hide="registerPhoneCodeErr" ng-init="registerPhoneCodeErr=true">手机验证码</span>
+							<span  ng-click="getPhoneCode()" ng-style="codeColor" class="phoneCode">获取验证码</span>
+						</div>
+						<div>
+							<input type="password" ng-class="{errInput:input8}" ng-model="registerPwd" placeholder="6-16位字母数字的组合" minlength="6" maxlength="16" />
+							<span class="err" ng-hide="registerPwdErr" ng-init="registerPwdErr=true">输入6-16位密码</span>
+						</div>
+						<div>
+							<input type="password" ng-class="{errInput:input9}" ng-model="registerRepwd" placeholder="确认密码" minlength="6" maxlength="16"/>
+							<span class="err" ng-hide="registerRepwdErr" ng-init="registerRepwdErr=true">密码不一致</span>
+						</div>
+						<div>
+							<label><input type="checkbox" ng-model="registerChecked" ng-init="registerChecked=true"/><span>&nbsp;&nbsp;我已阅读并同意</span></label>
+							<a href="html/agreement.html" target="_blank">《天玑用户服务协议》</a>
+						</div>
+						<div>
+							<button ng-click="registerBtn()">立即注册</button>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--登录注册弹窗结束-->
+		<!--重置密码 start-->
+		<div id="forgetPwd">
+			<div>
+				<div class="ToClose"><a href="javascript:void();" class="iconfont">&#xe908;</a></div>
+				<div class="title">
+					<a href="javascript:void();" ng-style="loginTabStyle" ng-click="loginTab()">重置密码</a>
+				</div>
+				<div class="main-wrap">
+					<form method="post" name="resetPwd">
+						<div class="singleRow">
+							<input type="text" name="tel" ng-model="registerTel" placeholder="手机号" required ng-minlength="11" ng-maxlength="11" ng-pattern="/^1\d{10}$/"/>
+							<span style="color:red" ng-show="register.tel.$dirty && register.tel.$invalid">
+							<span ng-show="register.tel.$error.required">请输入手机号</span>
+						</div>
+						<div class="singleRow codeWrap">
+							<input placeholder="请输入右侧的验证码" type="text" ng-minlength="4" name="valuecode" ng-model="valuecode" ng-maxlength="4" ng-pattern="/[0-9A-Za-z]{4}$/" required/>
+							<span><img src="img/code.png" alt="验证码"></span>
+						</div>
+						<div class="singleRow sendCode">
+							<input placeholder="手机验证码" type="text" ng-minlength="4" ng-maxlength="4" required/>
+							<span>获取验证码</span>
+						</div>
+						<div class="singleRow">
+							<input type="password" placeholder="新密码（6-12位字母和密码的组合）" ng-minlength="6" ng-maxlength="12" required/>
+						</div>
+						<div class="singleRow resetBtnWrap">
+							<button class="resetBtn" ng-disabled="!register.$valid&&register.tel.$error.required&&register.tel.$error.tel">确定</button>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--重置密码 end-->
+		
+		<script type="text/javascript">
+			//	服务协议窗操作事件
+			$(document).on("click",".Toagreement",function(){
+				$(".z-Agreement").removeClass("hide");
+			});
+			$(document).on("click",".Agreement-esc",function(){
+				$(".z-Agreement").addClass("hide");
+			});
+			//	重置密码窗操作事件
+			$(".ToforgetPwd").click(function(){
+				$("#forgetPwd").show();
+			});
+			$(".ToClose").click(function(){
+				$(this).parents("#forgetPwd").hide();
+			});
+		</script>
+		<script src="lib/js/kkpager.min.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

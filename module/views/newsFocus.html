@@ -1,0 +1,18 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+<!--<link rel="stylesheet" type="text/css" href="css/news.css"/>-->
+<div class="mainContent">
+	<ul class="newsHome">
+		<li ng-repeat="item in news3">
+			<div><a href="javascript:void();" ng-click="goNewsDetails(item)"><img ng-src="{{item.picUrl}}"></a></div>
+			<div>
+				<div class="title"><a href="javascript:void();" ng-click="goNewsDetails(item)">{{item.title}}</a></div>
+				<div class="shortCut">{{item.summary}}</div>
+				<div class="time">{{item.updateTime}}<!--  {{item.time}}--></div>
+			</div>
+		</li>
+	</ul>
+</div>

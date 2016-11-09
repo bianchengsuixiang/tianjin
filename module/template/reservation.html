@@ -1,0 +1,41 @@
+<link rel="stylesheet" type="text/css" href="css/reservation.css"/>
+<div ng-controller="reservationFixedCtrl">
+	<div class="reservation-fixed-wrap" ng-hide="reservationFixed1" ng-init="reservationFixed1=false">
+		<div class="main">
+			<div class="folderBtn" ng-click="reservationFixedTabOut()"><div ng-click="reservationFixedTabOut()">点击隐藏</div><div class="iconfont">&#xe92b;</div></div>
+			<div class="contentBox">
+				<div class="phoneBox">
+					<div class="iconfont">&#xe91b;</div>
+					<div>
+						<div>找私募，问天玑金服</div>
+						<div>0755-88695093</div>
+					</div>
+				</div>
+				<div>
+					<div class="inputs-group">
+						<input placeholder="您的姓名" />
+						<input placeholder="手机号码" />
+						<a href="javascript:void();" ng-click="reservationBtnDetail()">立即预约</a>
+					</div>
+					<div class="whiteText">天玑专业投资顾问将在24小时内尽快与您联系</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="reservation-fixed-wrap folded" ng-hide="reservationFixed2" ng-init="reservationFixed2=true">
+		<div class="main">
+			<div class="folderBtn" ng-click="reservationFixedTabOff()"><div ng-click="reservationFixedTabOff()">点击展开</div><div class="iconfont">&#xe92e;</div></div>
+			<div class="contentBox">
+				<div>
+					只推荐靠谱私募的平台
+				</div>
+				<div class="phoneBox">
+					<div class="iconfont">&#xe91b;</div>
+					<div>0755-88695093</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="../../img/favicon.ico" rel="icon" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" async="false" href="../../css/home.css"/><!--主页css-->
+		<title>天玑金服</title>
+		<style>
+			body{
+				background: url(images/bg.jpg) no-repeat top center;
+                font: 16px/18px Tahoma,Helvetica,"微软雅黑",san-serif;
+			    animation: scrollBgGridLinks 35s linear;
+			    -mozkit-animation: scrollBgGridLinks 35s linear;
+			    -webkit-animation: scrollBgGridLinks 35s linear;
+			    animation-fill-mode: forwards;
+			    -webkit-animation-fill-mode: forwards;
+			    -moz-animation-fill-mode: forwards;
+			}
+			@keyframes scrollBgGridLinks{
+				0% {
+				    background-position-y: 0;
+				}
+				100% {
+				    background-position-y: -230px;
+				}
+			}
+			.fixed{
+				background: url(images/modalBg.png) no-repeat top center;
+				width: 803px;
+				height: 602px;
+				margin: auto;
+    			margin-top: 50px;
+    			padding-top: 466px;
+			}
+			.fixed .btn{
+				background: url(images/btn-qianwang.jpg) no-repeat top center;
+				width: 190px;
+				height: 44px;
+				margin: auto;
+				display: block;
+				cursor: pointer;
+			}
+			.fixed .btn:hover{
+				background: url(images/btn-qianwang-hover.jpg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="fixed">
+			<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=IE11浏览器" class="btn"></a>
+		</div>
+	</body>
+</html>

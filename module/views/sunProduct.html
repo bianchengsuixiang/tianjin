@@ -1,0 +1,102 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").scrollTop(0);
+	});
+</script>
+<section class="sunProduct" ng-controller="funderCtrl">
+	<section class="section-t">
+		<section>
+			<div>基金经理：</div>
+			<div class="funderManager">
+				<div>
+					<div class="active manager" ng-click="managerTab()">全部</div>
+					<div  ng-repeat="item in funderManager" ng-click="managerTab(item)" class="manager">{{item.name}}</div>
+					<div class="more" ng-click="moreTab1()" ng-hide="moreOff1">更多<span class="iconfont">&nbsp;&#xe901;</span></div>
+					<div class="fold" ng-click="foldTab1()" ng-hide="foldOn1">收起<span class="iconfont">&nbsp;&#xe904;</span></div>
+				</div>
+				<div ng-hide="moreHide1">
+					<div ng-repeat="item in funderManagers" ng-click="managerTab(item)" class="manager">{{item.name}}</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div>基金公司：</div>
+			<div class="funderCompany">
+				<div>
+					<div class="active company" ng-click="managerTab()">全部</div>
+					<div  ng-repeat="item in funderCompany" ng-click="managerTab(item)" class="company">{{item.name}}</div>
+					<div class="more" ng-click="moreTab2()" ng-hide="moreOff2">更多<span class="iconfont">&nbsp;&#xe901;</span></div>
+					<div class="fold" ng-click="foldTab2()" ng-hide="foldOn2">收起<span class="iconfont">&nbsp;&#xe904;</span></div>
+				</div>
+				<div ng-hide="moreHide2">
+					<div ng-repeat="item in funderCompanys" ng-click="managerTab(item)" class="company">{{item.name}}</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div>投资策略：</div>
+			<div class="investPattern">
+				<div>
+					<div class="active pattern" ng-click="managerTab()">全部</div>
+					<div  ng-repeat="item in pattern" ng-click="managerTab(item)" class="pattern">{{item.name}}</div>
+					<div class="more" ng-click="moreTab3()" ng-hide="moreOff3">更多<span class="iconfont">&nbsp;&#xe901;</span></div>
+					<div class="fold" ng-click="foldTab3()" ng-hide="foldOn3">收起<span class="iconfont">&nbsp;&#xe904;</span></div>
+				</div>
+				<div ng-hide="moreHide3">
+					<div ng-repeat="item in patterns" ng-click="managerTab(item)"  class="pattern">{{item.name}}</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div>是否分级：</div>
+			<div class="isGrading">
+				<div class="active grading">全部</div>
+				<div class="grading">分级</div>
+				<div class="grading">不分级</div>
+			</div>
+		</section>
+	</section>
+	<section>
+		<div>
+			<div>
+				<input type="text" placeholder="请输入产品关键字" ng-model="query"/>
+				<div class="iconfont">&#xe920;</div>
+			</div>
+			<div>共找到<span>{{"56"}}</span>款符合条件的产品</div>
+		</div>
+		<div>
+			<ul>
+				<li>产品名称</li>
+				<li>基金经理</li>
+				<li>投资策略</li>
+				<li>运行时间</li>
+				<li>近6个月收益</li>
+				<li>近1年收益</li>
+				<li>累计收益</li>
+				<li>最新净值</li>
+				<li>&nbsp;</li>
+				<li>操作</li>
+			</ul>
+		</div>
+		<div>
+			<ul ng-repeat="item in sumProducts | filter:query">
+				<li><a href="#/sun/productDetails" ui-sref="sun.productDetails">{{item.fundShortName==null?'--':item.fundShortName}}</a></li>
+				<li><a href="">{{item.fundManagerName==null?'--':item.fundManagerName}}</a></li>
+				<li>{{item.strategy==null?'--':item.strategy}}</li>
+				<li>{{item.runtime==null?'--':item.runtime}}</li>
+				<li>{{item.sixm==null?'--':item.sixm}}</li>
+				<li>{{item.ret1y==null?'--':item.ret1y}}</li>
+				<li>{{item.cumulativeNavWithdrawal==null?'--':item.cumulativeNavWithdrawal}}</li>
+				<li>{{item.nav==null?'--':item.nav}}</li>
+				<li class="iconfont chart">&nbsp;
+					<!--&#xe99b;
+					<div></div>-->
+				</li>
+				<li><a href="javascript:void();" class="last" ng-click="reservationTab(item,2)">立即预约</a></li>
+			</ul>
+		</div>
+	</section>
+	<section>
+		<div></div>
+	</section>
+</section>
